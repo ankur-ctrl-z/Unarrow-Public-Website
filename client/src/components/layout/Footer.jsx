@@ -27,7 +27,7 @@ const Footer = () => {
                 placeholder="Enter Your Email "
               />
               <CustomButton
-                className={"rounded-lg ml-[4.5rem] border-l-2 h-[3.5rem] w-[12rem]"}
+                className={"rounded-lg ml-[7.44rem] border-l-2 h-[3.5rem] w-[12rem]"}
                 label={"SUBSCRIBE"}
               />
             </div>
