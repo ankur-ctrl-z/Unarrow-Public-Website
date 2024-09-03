@@ -1,8 +1,9 @@
 import React from "react";
 import CustomButton from "../customs/CustomButton";
-import { useNavigate } from "react-router-dom"; // Add this line if using React Router for navigation
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const workprocess = [
+const workProcessData = [
   {
     id: 1,
     serviceNo: "01",
@@ -27,10 +28,12 @@ const workprocess = [
 ];
 
 const WorkProcess = () => {
-  const navigate = useNavigate(); // Add this line for navigation
-  function learnMoreHandler(path){
+  const navigate = useNavigate();
+  
+  const learnMoreHandler = (path) => {
     navigate(path);
-  }
+  };
+
   return (
     <div className="w-full relative h-full bg-[#011415]">
       <div className="w-11/12 mx-auto p-5">
@@ -44,29 +47,29 @@ const WorkProcess = () => {
 
           {/* work process */}
           <div className="-mt-10 flex flex-col justify-center items-center">
-            {workprocess.map((work) => {
-              return (
-                <div
-                  key={work.id}
-                  className="flex flex-col md:flex-row justify-start items-start gap-8 md:gap-28 max-w-[80rem] border-b-2 rounded-2xl py-8"
-                >
-                  <div className="flex justify-start text-[rgba(255,255,255,0.5)] font-Roboto text-[3.75rem] font-normal leading-normal">
-                    {work.serviceNo}
-                  </div>
-                  <div className="text-start text-white font-Roboto text-[2.1875rem] font-bold leading-normal p-3">
-                    {work.service}
-                  </div>
-                  <div className="text-start text-white font-Roboto max-w-md">
-                    {work.desc}
-                  </div>
-                  <CustomButton
-                    label={"Learn More"}
-                    className={"bg-inherit text-[#db4a2b] underline"}
-                    onClick={() =>learnMoreHandler(work.path)} // Updated for navigation
-                  />
+            {workProcessData.map((work) => (
+              <div
+                key={work.id}
+                className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-28 border-b-2 hover:border-[#db4a2b] duration-200 transition-all rounded-2xl py-8"
+              >
+                <div className="flex justify-start text-[rgba(255,255,255,0.5)] font-Roboto text-[3.75rem] font-normal leading-normal">
+                  {work.serviceNo}
                 </div>
-              );
-            })}
+                <div className="text-start text-white font-Roboto text-[2.1875rem] font-bold leading-normal p-3">
+                  {work.service}
+                </div>
+                <div className="text-start text-white font-Roboto max-w-md">
+                  {work.desc}
+                </div>
+                
+                <button
+                  onClick={() => learnMoreHandler(work.path)}
+                  className="underline text-lg font-Roboto p-2 font-semibold text-[#db4a2b] text-start"
+                >
+                  Learn more
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>

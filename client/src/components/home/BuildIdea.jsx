@@ -1,10 +1,7 @@
 import React from "react";
-import CustomArrow from "../customs/CustomArrow";
-import CustomButton from "../customs/CustomButton";
-import { FiArrowUpRight } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router";
-
+import CustomTheams from "../customs/CustomTheams";
 import img1 from "../../assets/image-1.png";
 import img2 from "../../assets/image-2.png";
 
@@ -37,21 +34,16 @@ const BuildIdea = () => {
       </div>
 
       {/* description-section */}
-      <div className="w-full py-10 bg-[#354171]">
-        <p className="text-white max-w-[66rem] py-2 ml-[8rem] font-Roboto text-[2.5rem] leading-[3rem] font-bold">
-          <span className="text-gray-400">
-            Your Website is your 24/7 Sales person.
-          </span>{" "}
-          Don’t just settle{" "}
-          <span className="text-gray-400"> for an ordinary one.</span> Go{" "}
-          <span className="text-gray-400">beyond</span> with <span className="animate-pulse text-[#db2b2bfb]">“Unarrow”..</span>
-        </p>
-
-        <div onClick={handleCall} className="flex mt-3 ml-[8rem] ">
-          <CustomButton label={"Learn More"} />
-          <CustomArrow icon={<FiArrowUpRight />} />
-        </div>
-      </div>
+      <CustomTheams 
+        onClick={handleCall} 
+        text={
+          <>
+           <span className="text-gray-400">Your Website is your 24/7 Sales person</span>. 
+            Don’t just settle <span className="text-gray-400"> for an ordinary one</span>. 
+            Go beyond with <span className="text-[#db4a2b] animate-pulse">“Unarrow”...</span>
+          </>
+        } 
+      />
     </div>
   );
 };

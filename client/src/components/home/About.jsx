@@ -1,8 +1,8 @@
 import React from "react";
+import aboutImage from "../../assets/about.png";
 import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
-import aboutImage from "../../assets/about.png";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
@@ -37,7 +37,7 @@ const About = () => {
               efficiency.
             </p>
 
-            <div onClick={handleCall} className="flex mt-8 ml-16">
+            <div onClick={handleCall} className="flex w-[12rem] mt-8 ml-16">
               <CustomButton label={"Learn More"} />
               <CustomArrow icon={<FiArrowUpRight />} />
             </div>
