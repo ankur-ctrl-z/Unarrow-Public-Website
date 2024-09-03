@@ -86,6 +86,24 @@
   
   
   
+  /* our-work section bullet color  */
+
+  ul {
+    list-style: none;
+  }
   
+  ul li::before {
+    content: '•'; 
+    color: red; /* Bullet color */
+    margin-right: 6px;
+    font-size: 20px; /* Bullet size */
+  }
   
-  
+
+
+  /* Our Team Member-Section*/
+  .teammember{
+    border-radius: 1.25rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.50) 100%), rgba(241, 234, 234, 0.2);
+    /* filter: blur(); */
+  }
