@@ -12,6 +12,7 @@ import { ImLocation } from "react-icons/im";
 const Footer = () => {
   return (
     <div className="w-full relative  bg-[#000000]">
+      <hr />
       <div className="w-11/12 mx-auto p-5">
 
         <div className="flex flex-col">

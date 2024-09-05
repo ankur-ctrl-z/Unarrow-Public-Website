@@ -110,14 +110,3 @@
 
 
 
-.text{
-  color: rgba(255, 255, 255, 0.00);
-  -webkit-text-stroke-width: 4;
-  -webkit-text-stroke-color: #DB4A2B;
-  font-family: "Roboto Serif";
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 5.875rem; /* 78.333% */
-  letter-spacing: 0.675rem;
-}

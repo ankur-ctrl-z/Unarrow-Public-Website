@@ -36,7 +36,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="w-full relative h-full bg-[#011415] py-14 p-5 lg:p-20">
+      <div className="w-full relative h-full bg-[#011415] py-14 p-20 ">
         <div className="w-11/12 mx-auto">
           <div className="flex flex-col md:flex-row flex-wrap justify-center items-center">
             <div className="flex flex-col gap-4 md:w-[50%] lg:w-[35%]">
@@ -93,6 +93,7 @@ const Contact = () => {
                   <input
                     className="mt-2 bg-transparent mb-1 focus:outline-none"
                     type="text"
+                    required
                     placeholder="First Name"
                     name="firstname"
                     value={formData.firstname}
@@ -105,6 +106,7 @@ const Contact = () => {
                   <input
                     className="mt-8 bg-transparent mb-1 focus:outline-none"
                     type="text"
+                    required
                     placeholder="Last Name"
                     name="lastname"
                     value={formData.lastname}
@@ -119,10 +121,11 @@ const Contact = () => {
                   EMAIL ADDRESS
                   <br />
                   <input
-                    className="bg-transparent mb-1 focus:outline-none"
+                    className="bg-transparent mt-2 mb-1 focus:outline-none"
                     type="email"
                     placeholder="tanul@unarrow.com"
                     name="email"
+                    required
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -133,8 +136,9 @@ const Contact = () => {
                   PHONE
                   <br />
                   <input
-                    className="bg-transparent mb-1 focus:outline-none"
+                    className="bg-transparent mt-2 mb-1 focus:outline-none"
                     type="text"
+                    required
                     placeholder="+91"
                     name="phone"
                     value={formData.phone}
@@ -148,14 +152,15 @@ const Contact = () => {
                 <label className="w-full">
                   MESSAGE
                   <br />
-                  <textarea
-                    className="bg-transparent focus:outline-none"
+                  <textarea rows={1} 
+                    className="bg-transparent w-full mt-2 mb-1 focus:outline-none"
                     name="message"
+                    required
                     placeholder="Type your Message......"
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
-                  <hr className="-mt-6" />
+                  <hr className="-mt-1" />
                 </label>
               </div>
 

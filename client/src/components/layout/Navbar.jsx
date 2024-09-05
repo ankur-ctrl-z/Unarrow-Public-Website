@@ -15,7 +15,7 @@ const Navbar = () => {
     }
 
   return (
-    <header className='w-full relative'>
+    <header className='w-full fixed top-0 left-0 z-50'>
         <div className='w-11/12 text-center mx-auto bg-[#505050] rounded-full py-4 p-5'>
             {/* main div */}
             <div className='flex justify-between items-center'>

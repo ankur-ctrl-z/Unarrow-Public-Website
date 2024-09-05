@@ -31,10 +31,10 @@ const CardSlider = () => {
           {cards.map((card) => (
             <div
               key={card.id}
-              className="flex justify-center items-center mt-20 space-x-10 mb-10 gap-3"
+              className="flex justify-center items-center space-x-14 mt-14 mb-4 gap-3"
             >
-              <div className="w-6 h-6 -mb-[4.5rem] rounded-full bg-red-500"></div>
-              <div className="font-Roboto text-[5rem] font-bold leading-normal text-gray-300">
+              <div className="w-[35px] h-[35px] -mb-[4.4rem] rounded-full bg-red-500"></div>
+              <div className="font-Roboto text-[4.5rem] font-bold leading-normal text-gray-300">
                 {card.content}
               </div>
             </div>
