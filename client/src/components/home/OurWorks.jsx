@@ -3,10 +3,12 @@ import { FaTelegramPlane } from "react-icons/fa";
 import onetouch from "../../assets/one touch.png";
 import sja from "../../assets/sja.png";
 import jow from "../../assets/journeyonwheel.png";
+import CustomButton from "../customs/CustomButton";
 
 const OurWorks = () => {
   return (
-    <div className="w-full relative h-full bg-[#011415]">
+    
+    <div className="w-full relative h-full bg-[#011415] pb-14">
       <div className="w-11/12 mx-auto">
         <div>
           <div className="flex items-center justify-center gap-4 ml-14 py-14">
@@ -88,9 +90,12 @@ const OurWorks = () => {
                 </ul>
               </div>
             </div>
+
           </div>
         </div>
       </div>
+
+      <CustomButton label={'Show More'} className={'w-full rounded-none text-[1.45rem] mt-5 h-[4rem]'}/>
     </div>
   );
 };

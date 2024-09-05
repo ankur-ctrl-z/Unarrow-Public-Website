@@ -8,6 +8,8 @@ import OurWorks from "./OurWorks";
 import ClientsFeedback from "./ClientsFeedback";
 import OurTeamMember from "./OurTeamMember";
 import CustomTheams from "../customs/CustomTheams";
+import Contact from "./Contact";
+import FAQS from "./FAQS";
 
 const Home = () => {
   return (
@@ -27,6 +29,8 @@ const Home = () => {
           </>
         }
       />
+      <Contact/>
+      <FAQS/>
     </>
   );
 };
