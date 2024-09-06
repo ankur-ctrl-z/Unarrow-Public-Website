@@ -45,16 +45,16 @@ const Footer = () => {
 
               {/* social-icons */}
               <div className="flex mt-4 gap-5 text-white text-3xl">
-                <a href="">
+                <a className="hover:text-[#DB4A2B] duration-300 transition-all" href="">
                   <FaLinkedin />
                 </a>
-                <a href="">
+                <a className="hover:text-[#DB4A2B] duration-300 transition-all" href="">
                   <FaWhatsapp />
                 </a>
-                <a href="">
+                <a className="hover:text-[#DB4A2B] duration-300 transition-all" href="">
                   <FaSquareXTwitter />
                 </a>
-                <a href="">
+                <a className="hover:text-[#DB4A2B] duration-300 transition-all" href="">
                   <FaInstagram />
                 </a>
               </div>
@@ -73,8 +73,8 @@ const Footer = () => {
             <div className="font-Roboto flex flex-col gap-2">
               <h3 className="flex text-white font-semibold text-xl">RESOURCES</h3>
                <nav className="flex flex-col gap-2 text-lg justify-start text-white font-normal">
-               <Link to={"/careers"}>Careers</Link>
-               <Link to={"/blog"}>Blog</Link>
+               <Link className="hover:text-[#DB4A2B] duration-300 transition-all" to={"/careers"}>Careers</Link>
+               <Link className="hover:text-[#DB4A2B] duration-300 transition-all" to={"/blogs"}>Blogs</Link>
                </nav>
             </div>
 

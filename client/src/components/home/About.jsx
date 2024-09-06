@@ -47,6 +47,7 @@ const About = () => {
           <div className="w-1/2 mb-20 z-10">
             <img
               src={aboutImage}
+              loading="lazy"
               className="w-[35rem]  h-[30rem] absolute border-2 hover:scale-105 duration-300 transition-all rounded-2xl z-30 object-cover m-auto"
               alt="This is an about image"
             />

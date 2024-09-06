@@ -6,7 +6,7 @@ import Ankur from "../../assets/Ankur.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Feedback.css'
+import '../styles/Feedback.css'
 
 
 const ClientsFeedback = () => {
