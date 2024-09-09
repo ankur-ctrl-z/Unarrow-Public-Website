@@ -4,6 +4,7 @@ import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import CustomOverlappinCard from '../customs/CustomOverlappingCards'
 
 const About = () => {
   const navigate = useNavigate();
@@ -45,13 +46,7 @@ const About = () => {
 
           {/* Right Section */}
           <div className="w-1/2 mb-20 z-10">
-            <img
-              src={aboutImage}
-              loading="lazy"
-              className="w-[35rem]  h-[30rem] absolute border-2 hover:scale-105 duration-300 transition-all rounded-2xl z-30 object-cover m-auto"
-              alt="This is an about image"
-            />
-            <div className="w-[35rem] h-[30rem] absolute hover:scale-105 duration-300 transition-all mt-10 -ml-10 bg-[#db4a2b] rounded-2xl"></div>
+            <CustomOverlappinCard image={aboutImage}/>
           </div>
         </div>
       </div>
