@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
 import { IoCall } from "react-icons/io5";
 import CustomButton from "../customs/CustomButton";
-
+import axios from 'axios';
 import CardSlider from "./CardSlider";
 
 const Contact = () => {
@@ -14,18 +14,6 @@ const Contact = () => {
     message: "",
   });
 
-  const formDataHandler = (event) => {
-    event.preventDefault();
-    console.log(formData);
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-  };
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -33,6 +21,29 @@ const Contact = () => {
       [name]: value,
     }));
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+ 
+    const data = {
+     firstName : formData.firstname,
+     LastName : formData.lastname,
+     email : formData.email,
+     phone : formData.phone,
+     message : formData.message,
+   };
+ 
+   try {
+     const response = await axios.post('/submit', data)
+     if (response.status === 201) {
+       console.log('Message saved successfully')
+     } else {
+       console.log('Failed to save message')
+     }
+   } catch (error) {
+     console.error('Error:', error)
+   }
+ };
 
   return (
     <>
@@ -84,7 +95,7 @@ const Contact = () => {
 
             <form
               className="text-white font-Roboto md:w-[50%] lg:w-[65%] mt-10"
-              onSubmit={formDataHandler}
+              onSubmit={handleSubmit}
             >
               <div className="flex gap-20">
                 <label className="w-full">
