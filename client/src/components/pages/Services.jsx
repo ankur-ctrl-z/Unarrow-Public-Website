@@ -1,6 +1,6 @@
 import React from "react";
 import OverlappingCards from "../customs/CustomOverlappingCards";
-import serviceImage from "../../assets/servicesImage.png";
+import serviceImage from "../../assets/servicesImage/servicesImage.png";
 import LeftCustomHeading from "../customs/LeftCustomHeading";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
 import CustomArrow from "../customs/CustomArrow";

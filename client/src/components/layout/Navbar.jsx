@@ -31,7 +31,7 @@ const Navbar = () => {
           </div>
 
           {/* nav-links */}
-          <nav className="flex gap-10 text-[1.34063rem] justify-center text-black font-semibold">
+          <nav className="flex gap-10 text-[1.34063rem] justify-center text-white font-semibold">
             <Link
               className="hover:text-[#DB4A2B] duration-300 transition-all"
               to={"/"}

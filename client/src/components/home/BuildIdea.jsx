@@ -2,8 +2,8 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router";
 import CustomTheams from "../customs/CustomTheams";
-import img1 from "../../assets/image-1.png";
-import img2 from "../../assets/image-2.png";
+import img1 from "../../assets/aboutUsImage/image-1.png";
+import img2 from "../../assets/aboutUsImage/image-2.png";
 import CustomBuildIdea from "../customs/CustomBuildIdea";
 
 const BuildIdea = () => {
@@ -22,8 +22,8 @@ const BuildIdea = () => {
             text={"WE"}
           />
           <CustomBuildIdea image={img1} text={"BUILD"} />
-          <CustomBuildIdea
-            image={img2}
+         
+          <CustomBuildIdea clasName={'bg-red-600'}
             icon={
               <FaArrowRight
                 size={130}
@@ -31,7 +31,7 @@ const BuildIdea = () => {
               />
             }
           />
-          <CustomBuildIdea image={img1} text={"IDEAS"} />
+          <CustomBuildIdea image={img2} text={"IDEAS"} />
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../assets/about.png";
+import aboutImage from "../../assets/aboutUsImage/about1.png";
 import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";

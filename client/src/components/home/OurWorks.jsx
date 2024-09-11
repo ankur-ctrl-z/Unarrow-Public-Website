@@ -1,8 +1,8 @@
 import React from "react";
 import { FaTelegramPlane } from "react-icons/fa";
-import onetouch from "../../assets/one touch.png";
-import sja from "../../assets/sja.png";
-import jow from "../../assets/journeyonwheel.png";
+import onetouch from "../../assets/workImage/one touch.png";
+import sja from "../../assets/workImage/sja.png";
+import jow from "../../assets/workImage/journeyonwheel.png";
 import CustomButton from "../customs/CustomButton";
 
 const OurWorks = () => {
