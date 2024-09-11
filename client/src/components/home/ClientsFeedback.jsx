@@ -1,12 +1,12 @@
 import React from "react";
 import ClientsReviewCard from "../customs/ClientsReviewCard";
-import img1 from "../../assets/clients-review-image.png";
-import Abhishek from "../../assets/Abhishek.png";
-import Ankur from "../../assets/Ankur.png";
+import img1 from "../../assets/feedbackImage/review1.png";
+import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
+import Ankur from "../../assets/TeamMemberImage/Ankur.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Feedback.css'
+import '../styles/Feedback.css'
 
 
 const ClientsFeedback = () => {

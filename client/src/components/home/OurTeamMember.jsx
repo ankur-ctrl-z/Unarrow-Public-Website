@@ -1,8 +1,8 @@
 import React from "react";
-import Tanul from "../../assets/Tanul.png";
-import Abhishek from "../../assets/Abhishek.png";
-import Ankur from "../../assets/Ankur.png";
-import Prateek from "../../assets/Prateek.png";
+import Tanul from "../../assets/TeamMemberImage/Tanul.png";
+import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
+import Ankur from "../../assets/TeamMemberImage//Ankur.png";
+import Prateek from "../../assets/TeamMemberImage/Prateek.png";
 import CustomTeamMember from "../customs/CustomTeamMember";
 
 const OurTeamMember = () => {

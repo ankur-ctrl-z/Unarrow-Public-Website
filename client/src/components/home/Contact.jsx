@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
 import { IoCall } from "react-icons/io5";
 import CustomButton from "../customs/CustomButton";
-import axios from 'axios';
+
 import CardSlider from "./CardSlider";
 
 const Contact = () => {

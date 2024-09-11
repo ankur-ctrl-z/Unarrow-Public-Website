@@ -1,42 +1,77 @@
-import './App.css'
-import { Route, Routes, BrowserRouter as Router} from 'react-router-dom'
-import Home from './components/home/Home'
-import Navbar from './components/layout/Navbar'
-import Services from './components/pages/Services'
-import AboutUs from './components/pages/AboutUs'
-import Careers from './components/pages/Careers'
-import Footer from './components/layout/Footer'
-import Contact from './components/pages/Contact'
-import Blogs from './components/pages/Blog'
-import Works from './components/pages/Works'
-import LearnMore from './components/pages/LearnMore'
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+
+// Lazy-loaded components
+const Home = React.lazy(() => import("./components/pages/Home"));
+const Services = React.lazy(() => import("./components/pages/Services"));
+const AboutUs = React.lazy(() => import("./components/pages/AboutUs"));
+const Careers = React.lazy(() => import("./components/pages/Careers"));
+const Contact = React.lazy(() => import("./components/pages/Contact"));
+
+// Non-lazy components
+import Blog from "./components/pages/Blog";
 
 function App() {
   return (
-    <>
-      <Router>
-       <Navbar/>
-        <Routes>
+    <Router>
+      <Navbar />
 
-        {/* page- navigation */}
-          <Route path='/service' element={<Services/>}/> 
-          <Route path='/aboutus' element={<AboutUs/>}/> 
-          <Route path='/careers' element={<Careers/>}/> 
-          <Route path='/contact' element={<Contact/>}/> 
-          <Route path='/blogs' element={<Blogs/>}/>
-          <Route path='/works' element={<Works/>}/>
-         
-          <Route path='/learnmore' element={<LearnMore/>}/>
+      <Routes>
+        {/* Lazy loaded routes wrapped in Suspense */}
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<div>Loading Home...</div>}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <Suspense fallback={<div>Loading Services...</div>}>
+              <Services />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/aboutus"
+          element={
+            <Suspense fallback={<div>Loading About Us...</div>}>
+              <AboutUs />
+            </Suspense>
+          }
+        />
 
+        <Route
+          path="/careers"
+          element={
+            <Suspense fallback={<div>Loading Careers page...</div>}>
+              <Careers />
+            </Suspense>
+          }
+        />
 
-          {/* Home-page */}
-          <Route path='/' element={<Home/>}/> 
-        
-        </Routes>
-        <Footer/>
-      </Router>
-   </>
-  )
+        <Route
+          path="/contact"
+          element={
+            <Suspense fallback={<div>Loading Contact...</div>}>
+              <Contact />
+            </Suspense>
+          }
+        />
+
+        {/* Non-lazy loaded routes (No Suspense needed) */}
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="/careers" element={<Careers />} />
+      </Routes>
+
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

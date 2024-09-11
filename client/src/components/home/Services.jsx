@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CustomArrow from "../customs/CustomArrow";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
+import LeftCustomHeading from "../customs/LeftCustomHeading";
 
 const services = [
   {
@@ -36,7 +37,7 @@ const Services = () => {
           </p>
           <div className="flex items-center gap-4 ml-14 mb-14">
             <div className="w-4 h-4 mt-1 bg-[#db4a2b]"></div>
-            <h3 className="text-4xl text-white font-bold font-Roboto">
+            <h3 className="text-[2.1875rem] text-white font-bold font-Roboto">
               Services We Offer
             </h3>
           </div>

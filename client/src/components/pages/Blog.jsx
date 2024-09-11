@@ -2,7 +2,9 @@ import React from 'react'
 
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <div className='flex justify-center items-center'>
+      <p>Blog</p>
+    </div>
   )
 }
 

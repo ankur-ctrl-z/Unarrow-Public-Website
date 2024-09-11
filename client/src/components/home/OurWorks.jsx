@@ -1,8 +1,8 @@
 import React from "react";
 import { FaTelegramPlane } from "react-icons/fa";
-import onetouch from "../../assets/one touch.png";
-import sja from "../../assets/sja.png";
-import jow from "../../assets/journeyonwheel.png";
+import onetouch from "../../assets/workImage/one touch.png";
+import sja from "../../assets/workImage/sja.png";
+import jow from "../../assets/workImage/journeyonwheel.png";
 import CustomButton from "../customs/CustomButton";
 
 const OurWorks = () => {
@@ -26,7 +26,7 @@ const OurWorks = () => {
               {/* one-touch-image */}
               <div>
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
-                  <img
+                  <img loading='lazy'
                     src={onetouch}
                     className="w-full h-full bg-cover rounded-3xl"
                     alt=""
@@ -49,7 +49,7 @@ const OurWorks = () => {
             {/* sja-image */}
               <div>
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
-                  <img
+                  <img loading='lazy'
                     src={sja}
                     className="w-full h-full bg-cover rounded-3xl"
                     alt=""
@@ -73,7 +73,7 @@ const OurWorks = () => {
           {/* journeyonwheel-image */}
             <div className="mt-10">
               <div className="w-[74rem] h-[30rem] border rounded-xl">
-                <img
+                <img loading='lazy'
                   src={jow}
                   className="w-full h-full bg-cover rounded-3xl"
                   alt=""
