@@ -11,6 +11,10 @@ import Tanul from "../../assets/TeamMemberImage/Tanul.png";
 import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
+import OurWorks from '../home/OurWorks'
+// import CustomTheam from '../customs/CustomTheams'
+import CustomButton from "../customs/CustomButton";
+import { useNavigate } from "react-router";
 
 const AboutServices = [
   {
@@ -53,6 +57,11 @@ const AboutServices = [
 ];
 const AboutUs = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const navigate = useNavigate();
+
+  const handleClick=()=>{
+      navigate('/contact')
+  }
 
   return (
     <div className="w-full relative h-full bg-[#011415] py-32">
@@ -214,6 +223,13 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <OurWorks/>
+
+      <div className="flex flex-col w-full h-[20rem] -mb-32 items-center bg-[#6F5294] ">
+          <p className="font-Roboto text-white font-bold max-w-[50rem] text-center mt-10 mb-10 leading-[4.5rem] text-[4rem]">Ready To Elevate Your Brand Online ?</p>
+          <CustomButton label={'Let’s Talk'} onclick={handleClick}/>
       </div>
     </div>
   );
