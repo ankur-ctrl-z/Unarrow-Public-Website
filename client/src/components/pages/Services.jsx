@@ -183,7 +183,7 @@ const Services = () => {
       </div>
 
       {/* clients feedback */}
-      <ClientsFeedback />
+      <div className="-mb-32"><ClientsFeedback /></div>
     </div>
   );
 };

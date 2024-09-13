@@ -22,7 +22,7 @@ const Header = () => {
                 <p className='text-lg max-w-sm font-Roboto'>
                     The best Digital Solution Agency in the Market. We are here to build your Dream website on the go.
                 </p>
-                <div onClick={handleCall} className='flex w-[12rem] ml-10 cursor-pointer'>
+                <div onclick={handleCall} className='flex w-[12rem] ml-10 cursor-pointer'>
                     <CustomButton disabled={true} label={'Book a Call'} />
                     <CustomArrow icon={<FiArrowUpRight />} />
                 </div>
