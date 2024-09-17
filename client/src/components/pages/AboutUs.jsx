@@ -12,9 +12,9 @@ import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
 import OurWorks from '../home/OurWorks'
-// import CustomTheam from '../customs/CustomTheams'
 import CustomButton from "../customs/CustomButton";
 import { useNavigate } from "react-router";
+
 
 const AboutServices = [
   {

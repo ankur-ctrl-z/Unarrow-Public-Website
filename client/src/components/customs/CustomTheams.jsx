@@ -4,7 +4,7 @@ import CustomButton from "../customs/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
-const CustomTheams = ({ text }) => {
+const CustomTheams = ({ text,className }) => {
   const navigate = useNavigate();
   function handleCall() {
     navigate("/contact");

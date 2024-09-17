@@ -4,7 +4,8 @@ import onetouch from "../../assets/workImage/one touch.png";
 import sja from "../../assets/workImage/sja.png";
 import jow from "../../assets/workImage/journeyonwheel.png";
 import CustomButton from "../customs/CustomButton";
-
+import {Link} from 'react-router-dom'
+ 
 const OurWorks = () => {
   return (
     
@@ -24,7 +25,7 @@ const OurWorks = () => {
             <div className="flex gap-10">
 
               {/* one-touch-image */}
-              <div>
+              <Link to={'/projects/ontouchagency'}>
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
                   <img loading='lazy'
                     src={onetouch}
@@ -43,7 +44,7 @@ const OurWorks = () => {
                     <li>SEO</li>
                   </ul>
                 </div>
-              </div>
+              </Link>
 
 
             {/* sja-image */}
