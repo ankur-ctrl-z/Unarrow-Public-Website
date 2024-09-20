@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
+
 // Lazy-loaded components
 const Home = React.lazy(() => import("./components/pages/Home"));
 const Services = React.lazy(() => import("./components/pages/Services"));
@@ -11,6 +12,7 @@ const AboutUs = React.lazy(() => import("./components/pages/AboutUs"));
 const Careers = React.lazy(() => import("./components/pages/Careers"));
 const Contact = React.lazy(() => import("./components/pages/Contact"));
 
+const Onetouchagency = React.lazy(() => import("./components/pages/OneTouchProject"));
 // Non-lazy components
 import Blog from "./components/pages/Blog";
 
@@ -64,9 +66,18 @@ function App() {
           }
         />
 
+        <Route  path="/projects/ontouchagency" element={<Suspense fallback={<div>Loading Contact...</div>}>
+        <Onetouchagency />
+        </Suspense>} />
+
+
         {/* Non-lazy loaded routes (No Suspense needed) */}
+        
+
         <Route path="/blogs" element={<Blog />} />
         <Route path="/careers" element={<Careers />} />
+
+       
       </Routes>
 
       <Footer />

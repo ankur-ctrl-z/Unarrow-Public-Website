@@ -55,7 +55,7 @@ const Services = () => {
 
             {/* Importance section */}
             <div className="mt-5">
-              <LeftCustomHeading heading="Importance of Website For Your Online Presence"/>
+              <LeftCustomHeading heading="Importance of Website For Your Online Presence" />
 
               <ol className="text-white list-decimal ml-5 mt-2 space-y-2">
                 <li>
@@ -146,12 +146,10 @@ const Services = () => {
           Call Unarrow, a top-notch Website Designing Company in Mumbai.
         </div>
 
-      {/* horizontal-line */}
- <div className="h-[1.5px] w-[74rem] mt-5 bg-red-600"></div>
+        {/* horizontal-line */}
+        <div className="h-[1.5px] w-[74rem] mt-5 bg-red-600"></div>
 
-
-
-      {/* contact-details */}
+        {/* contact-details */}
         <div className="flex gap-5  mt-8 justify-center items-center text-xl">
           <div className="w-[21rem] py-3 flex justify-center bg-white rounded-2xl">
             {" "}
@@ -183,7 +181,9 @@ const Services = () => {
       </div>
 
       {/* clients feedback */}
-      <div className="-mb-32"><ClientsFeedback /></div>
+      <div className="-mb-32">
+        <ClientsFeedback />
+      </div>
     </div>
   );
 };
