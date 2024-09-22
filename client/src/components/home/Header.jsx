@@ -2,7 +2,7 @@ import React from 'react';
 import CustomButton from '../customs/CustomButton';
 import CustomArrow from '../customs/CustomArrow';
 import { FiArrowUpRight } from "react-icons/fi";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/headerCss.css'
 
 const Header = () => {
