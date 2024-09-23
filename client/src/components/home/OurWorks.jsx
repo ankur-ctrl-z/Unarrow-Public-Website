@@ -4,11 +4,10 @@ import onetouch from "../../assets/workImage/one touch.png";
 import sja from "../../assets/workImage/sja.png";
 import jow from "../../assets/workImage/journeyonwheel.png";
 import CustomButton from "../customs/CustomButton";
-import {Link} from 'react-router-dom'
- 
+import { Link } from "react-router-dom";
+
 const OurWorks = () => {
   return (
-    
     <div className="w-full relative h-full bg-[#011415] pb-14">
       <div className="w-11/12 mx-auto">
         <div>
@@ -23,11 +22,13 @@ const OurWorks = () => {
           {/* work-image */}
           <div className="flex flex-col justify-center items-center">
             <div className="flex gap-10">
-
               {/* one-touch-image */}
-              <Link to={'/projects/ontouchagency'}>
+
+             <div>
+              
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
-                  <img loading='lazy'
+                  <img
+                    loading="lazy"
                     src={onetouch}
                     className="w-full h-full bg-cover rounded-3xl"
                     alt=""
@@ -39,18 +40,35 @@ const OurWorks = () => {
                     Onetouch Agency
                   </h3>
                   <ul className="flex gap-3 text-gray-300">
-                    <li>Branding</li>
-                    <li>Web design & Development</li>
-                    <li>SEO</li>
+                    <li>
+                      <div className="flex gap-2">
+                        <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                        <p className="font-normal">Branding</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex gap-2">
+                        <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                        <p className="font-normal">Web design & Development</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex gap-2">
+                        <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                        <p className="font-normal">SEO</p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
-              </Link>
 
+                </div>
+             
 
-            {/* sja-image */}
+              {/* sja-image */}
               <div>
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
-                  <img loading='lazy'
+                  <img
+                    loading="lazy"
                     src={sja}
                     className="w-full h-full bg-cover rounded-3xl"
                     alt=""
@@ -62,19 +80,34 @@ const OurWorks = () => {
                     sjacare center
                   </h3>
                   <ul className="flex gap-3 text-gray-300">
-                    <li>Branding</li>
-                    <li>Web design & Development</li>
-                    <li>SEO</li>
+                    <li>
+                      <div className="flex gap-2">
+                        <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                        <p className="font-normal">Branding</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex gap-2">
+                        <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                        <p className="font-normal">Web design & Development</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex gap-2">
+                        <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                        <p className="font-normal">SEO</p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-
-          {/* journeyonwheel-image */}
+            {/* journeyonwheel-image */}
             <div className="mt-10">
               <div className="w-[74rem] h-[30rem] border rounded-xl">
-                <img loading='lazy'
+                <img
+                  loading="lazy"
                   src={jow}
                   className="w-full h-full bg-cover rounded-3xl"
                   alt=""
@@ -85,18 +118,38 @@ const OurWorks = () => {
                   Journeyonwheels
                 </h3>
                 <ul className="flex gap-3 text-gray-300">
-                  <li>Branding</li>
-                  <li>Web design & Development</li>
-                  <li>SEO</li>
+                  <li>
+                    <div className="flex gap-2">
+                      <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                      <p className="font-normal">Branding</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex gap-2">
+                      <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                      <p className="font-normal">Web design & Development</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex gap-2">
+                      <div className="h-2 w-2 mt-2 rounded-full bg-red-600"></div>
+                      <p className="font-normal">SEO</p>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
       </div>
 
-      <CustomButton label={'Show More'} className={'w-full rounded-none text-[1.45rem] mt-5 h-[4rem]'}/>
+      <Link to={"/ourworks"}>
+        {" "}
+        <CustomButton
+          label={"Show More"}
+          className={"w-full rounded-none text-[1.45rem] mt-5 h-[4rem]"}
+        />
+      </Link>
     </div>
   );
 };
