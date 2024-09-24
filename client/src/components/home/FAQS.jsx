@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CustomButton from "../customs/CustomButton";
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import faqs from '../../assets/homeImage/faqs.png'
 
 const Faqs = [
   {
@@ -133,7 +133,7 @@ const FAQS = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <p className="font-Roboto text-white text-[1.5625rem] leading-normal font-bold">
                 Ask A Different Question
               </p>
@@ -188,6 +188,10 @@ const FAQS = () => {
 
                 <CustomButton className={"mt-5 rounded-lg"} label={"SUBMIT"} />
               </form>
+            </div> */}
+
+            <div className="w-[30rem] h-[31.6876rem] -mt-[10rem]">
+              <img src={faqs} className="w-full h-full bg-cover" alt="" />
             </div>
           </div>
         </div>
