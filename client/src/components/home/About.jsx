@@ -9,7 +9,7 @@ import CustomOverlappinCard from '../customs/CustomOverlappingCards'
 const About = () => {
   const navigate = useNavigate();
   function handleCall() {
-    navigate("/contact");
+    navigate("/aboutus");
   }
   return (
     <div className="w-full relative h-full py-10 bg-[#011415]">
