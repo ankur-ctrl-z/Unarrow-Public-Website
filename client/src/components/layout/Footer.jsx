@@ -50,25 +50,25 @@ const Footer = () => {
               <div className="flex mt-4 gap-5 text-white text-3xl">
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://www.linkedin.com/company/unarrow-digital-solutions/"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://wa.me/919021790600"
                 >
                   <FaWhatsapp />
                 </a>
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://x.com/unarrowsolution"
                 >
                   <FaSquareXTwitter />
                 </a>
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://www.instagram.com/unarrowsolutions/"
                 >
                   <FaInstagram />
                 </a>
@@ -132,19 +132,19 @@ const Footer = () => {
               <h3 className="flex text-white font-semibold text-xl">CONTACT</h3>
               <div className="flex justify-center items-center gap-2 text-white text-lg">
                 <TfiEmail />
-                <a href="mailto:tanulyadav@unarrow.com">
-                  tanulyadav@unarrow.com
+                <a href="mailto:sales@unarrow.com">
+                  sales@unarrow.com
                 </a>
               </div>
 
               <div className="flex justify-start items-center gap-2 text-white text-lg">
                 <IoCall />
-                <a href="tel:+91 8433700215">+91 8433700215</a>
+                <a href="tel:+91 8433700215">+91 9021790600</a>
               </div>
 
               <div className="flex justify-start items-center gap-2 text-white text-lg">
                 <ImLocation />
-                <a href="">Mumbai ,Maharashtra</a>
+                <a href="">Mumbai, Maharashtra</a>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ const Footer = () => {
       {/* reservation of unarrow */}
       <div className="py-3 font-Roboto">
         <p className="text-white font-normal leading-normal text-lg text-center cursor-pointer ">
-          2024@Unarrow.com
+          ©2024 Unarrow Digital Solutions. All rights reserved.
         </p>
       </div>
     </div>
