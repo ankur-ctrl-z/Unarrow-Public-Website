@@ -139,7 +139,7 @@ const Footer = () => {
 
               <div className="flex justify-start items-center gap-2 text-white text-lg">
                 <IoCall />
-                <a href="tel:+91 8433700215">+91 9021790600</a>
+                <a href="tel:+91 9021790600">+91 9021790600</a>
               </div>
 
               <div className="flex justify-start items-center gap-2 text-white text-lg">
