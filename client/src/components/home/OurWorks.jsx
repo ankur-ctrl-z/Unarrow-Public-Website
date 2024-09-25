@@ -24,8 +24,7 @@ const OurWorks = () => {
             <div className="flex gap-10">
               {/* one-touch-image */}
 
-             <div>
-              
+              <a href="https://sjacarecenter.com/">
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
                   <img
                     loading="lazy"
@@ -60,12 +59,10 @@ const OurWorks = () => {
                     </li>
                   </ul>
                 </div>
-
-                </div>
-             
+              </a>
 
               {/* sja-image */}
-              <div>
+              <a href="https://onetouchagency.com/">
                 <div className="w-[35rem] h-[30rem] border rounded-3xl">
                   <img
                     loading="lazy"
@@ -100,7 +97,7 @@ const OurWorks = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* journeyonwheel-image */}

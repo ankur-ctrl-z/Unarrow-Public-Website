@@ -17,7 +17,7 @@ const CustomTheams = ({ text,className }) => {
       </div>
 
       <div onClick={handleCall} className="flex w-[12rem] mt-8 ml-32">
-        <CustomButton label={"Learn More"} />
+        <CustomButton label={"Book a call"} />
         <CustomArrow icon={<FiArrowUpRight />} />
       </div>
     </div>

@@ -10,13 +10,20 @@ const Services = React.lazy(() => import("./components/pages/Services"));
 const AboutUs = React.lazy(() => import("./components/pages/AboutUs"));
 const Careers = React.lazy(() => import("./components/pages/Careers"));
 const Contact = React.lazy(() => import("./components/pages/Contact"));
-const OurMoreWorks = React.lazy(() =>
-  import("./components/pages/OurMoreWorks")
-);
+const OurMoreWorks = React.lazy(() => import("./components/pages/OurMoreWorks"));
+const Onetouchagency = React.lazy(() =>import("./components/pages/OneTouchProject"));
 
-const Onetouchagency = React.lazy(() =>
-  import("./components/pages/OneTouchProject")
-);
+const WebsiteDevelopment = React.lazy(() =>import("./components/pages/serviceSubPages/WebsiteDevelopment"));
+const UIUX = React.lazy(() =>import("./components/pages/serviceSubPages/UIUXDesigning"));
+
+const SEO = React.lazy(() =>import("./components/pages/serviceSubPages/SEO"));
+
+const WebRedesign = React.lazy(() =>import("./components/pages/serviceSubPages/WebsiteRedesigning"));
+
+const PPC = React.lazy(() =>import("./components/pages/serviceSubPages/PPC"));
+
+const SMM = React.lazy(() =>import("./components/pages/serviceSubPages/SMM"));
+
 // Non-lazy components
 import Blog from "./components/pages/Blog";
 
@@ -87,6 +94,58 @@ function App() {
           element={
             <Suspense fallback={<div>Loading projects...</div>}>
               <Onetouchagency />
+            </Suspense>
+          }
+        />
+
+
+
+         {/* service sub navlinks */}
+          <Route
+          path= "/services/website-development"
+          element={
+            <Suspense fallback={<div>Loading projects...</div>}>
+              <WebsiteDevelopment />
+            </Suspense>
+          }
+        />
+             <Route
+          path="/services/ui-ux design"
+          element={
+            <Suspense fallback={<div>Loading projects...</div>}>
+              <UIUX />
+            </Suspense>
+          }
+        />
+             <Route
+          path="/services/seo"
+          element={
+            <Suspense fallback={<div>Loading projects...</div>}>
+              <SEO />
+            </Suspense>
+          }
+        />
+             <Route
+          path="/services/pay-per-click"
+          element={
+            <Suspense fallback={<div>Loading projects...</div>}>
+              <PPC/>
+            </Suspense>
+          }
+        />
+             <Route
+          path="/services/social-media-marketing"
+          element={
+            <Suspense fallback={<div>Loading projects...</div>}>
+              <SMM/>
+            </Suspense>
+          }
+        />
+             <Route
+          path="/services/website-redesigning"
+          element={
+            <Suspense fallback={<div>Loading projects...</div>}>
+              <WebRedesign/>
             </Suspense>
           }
         />

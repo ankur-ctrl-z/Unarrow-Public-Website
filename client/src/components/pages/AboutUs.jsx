@@ -131,43 +131,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="mt-20">
-          <CenterCustomHeading className={'text-[2.8125rem]'} heading={"We Offer Wide Range of Services"} />
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
-            {AboutServices.map((service) => {
-              return (
-                <div
-                  onMouseEnter={() => setHoveredCard(service.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  className={`w-[24rem]  mt-2 font-Roboto h-[21.375rem]  flex flex-col justify-center items-center  rounded-[2.5rem] shadow-inherit p-2 duration-100 transition-all ${
-                    hoveredCard === service.id ? "bg-[#db4a2b]" : "bg-black"
-                  }`}
-                >
-                  <h2 className="text-white max-w-[15rem] mt-5 text-center text-[2rem] leading-8 font-bold  mb-4">
-                    {service.Service}
-                  </h2>
-                  <p className="text-white max-w-[15rem] ">{service.desc}</p>
-
-                  <div className="flex gap-3 mt-5 mb-5 ml-20">
-                    <a className="text-white mt-2 text-xl underline" href="">
-                      Learn More
-                    </a>
-                    <CustomArrow
-                      icon={
-                        hoveredCard === service.id ? (
-                          <FaArrowRight size={24} />
-                        ) : (
-                          <FiArrowUpRight size={30} />
-                        )
-                      }
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+     
       </div>
 
       {/* happy custome section */}
