@@ -66,9 +66,9 @@ const Contact = () => {
                 <TfiEmail className="w-[1.8rem] h-[1.8rem] text-white flex-shrink-0" />
                 <a
                   className="font-Roboto font-normal leading-normal text-gray-400"
-                  href="mailto:tanul@unarrow.com"
+                  href="mailto:sales@unarrow.com"
                 >
-                  tanul@unarrow.com
+                  sales@unarrow.com
                 </a>
               </div>
 
@@ -76,9 +76,9 @@ const Contact = () => {
                 <IoCall className="w-[1.8rem] h-[1.8rem] text-white flex-shrink-0" />
                 <a
                   className="font-Roboto font-normal leading-normal text-gray-400"
-                  href="tel:+91 8433700215"
+                  href="tel:+91 9021790600"
                 >
-                  +91 8433700215
+                  +91 9021790600
                 </a>
               </div>
 
@@ -86,9 +86,9 @@ const Contact = () => {
                 <IoCall className="w-[1.8rem] h-[1.8rem] text-white flex-shrink-0" />
                 <a
                   className="font-Roboto font-normal leading-normal text-gray-400"
-                  href="tel:+91 8433700215"
+                  href="tel:+91 6394522829"
                 >
-                  +91 8433700215
+                  +91 6394522829
                 </a>
               </div>
             </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                   <input
                     className="bg-transparent mt-2 mb-1 focus:outline-none"
                     type="email"
-                    placeholder="tanul@unarrow.com"
+                    placeholder="email@address.com"
                     name="email"
                     required
                     value={formData.email}
@@ -150,7 +150,7 @@ const Contact = () => {
                     className="bg-transparent mt-2 mb-1 focus:outline-none"
                     type="text"
                     required
-                    placeholder="+91"
+                    placeholder="999 999 9999"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
