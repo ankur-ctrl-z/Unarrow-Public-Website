@@ -23,12 +23,12 @@ const ClientsFeedback = () => {
   };
 
   return (
-    <div className="w-full relative h-full bg-black py-14">
+    <div className="w-full relative h-full bg-black py-2 lg:py-14">
       <div className="w-11/12 mx-auto ">
         <div className="text-white font-Roboto font-bold">
-          <div className="flex items-center justify-center gap-4 ml-14 ">
-            <div className="w-4 h-4 mt-1 bg-[#db4a2b]"></div>
-            <h3 className="text-4xl text-white font-bold font-Roboto">
+          <div className="flex items-center justify-center  gap-4 lg:ml-14 ">
+            <div  className="w-2 h-2 lg:w-4 lg:h-4 mt-1 bg-[#db4a2b]"></div>
+            <h3 className="text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto">
               Client’s Review
             </h3>
           </div>

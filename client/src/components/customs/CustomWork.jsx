@@ -6,7 +6,7 @@ import { TiArrowRight } from "react-icons/ti";
 const CustomWork = ({ image, projectName, bgColor, path }) => {
   return (
     <div className="w-full relative h-full bg-[#011415] py-32">
-      <div className="w-[74rem] -mt-20 h-[30rem] hover:scale-105 duration-300 transition-all border rounded-[2.5rem]">
+      <div className="lg:w-[74rem] -mt-20 lg:h-[30rem] hover:scale-105 duration-300 transition-all border rounded-[2.5rem]">
         <img
           src={image}
           className="w-full h-full bg-cover rounded-[2.5rem]"
@@ -15,7 +15,7 @@ const CustomWork = ({ image, projectName, bgColor, path }) => {
       </div>
 
      
-        <div className="w-[74rem] flex justify-between h-[14rem] font-Roboto -mt-28 border rounded-[2.5rem]" style={{ backgroundColor: bgColor }}>
+        <div className="lg:w-[74rem] flex justify-between lg:h-[14rem] font-Roboto -mt-28 border rounded-[2.5rem]" style={{ backgroundColor: bgColor }}>
 
         <div className="mt-[7rem] ml-5">
           <p className="text-[2.18rem] font-bold leading-normal text-white">

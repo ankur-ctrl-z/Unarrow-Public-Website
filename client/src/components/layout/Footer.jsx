@@ -16,11 +16,11 @@ const Footer = () => {
       <div className="w-11/12 mx-auto p-5">
         <div className="flex flex-col">
           {/* first part */}
-          <div className="flex justify-between">
+          <div className="flex flex-col lg:flex-row justify-between">
             <h3 className="leading-[2.5rem] max-w-md font-Roboto text-white text-[2rem] font-bold ">
               Subscribe To Get The Latest Update
             </h3>
-            <div className="flex w-[32rem] border-[3px] h-[3.82rem] border-red-700 rounded-xl">
+            <div className="flex lg:w-[32rem] border-[3px] h-[3.82rem] border-red-700 rounded-xl">
               <input
                 className="bg-transparent text-gray-300 focus:outline-none px-5 text-lg"
                 type="email"
@@ -28,7 +28,7 @@ const Footer = () => {
               />
               <CustomButton
                 className={
-                  "rounded-lg ml-[7.44rem] border-l-2 h-[3.5rem] w-[12rem]"
+                  "rounded-lg -ml-20 lg:ml-[7.44rem] border-l-2 h-[3.5rem] w-[12rem]"
                 }
                 label={"SUBSCRIBE"}
               />
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* second part */}
-          <div className="flex justify-between gap-10 mt-20">
+          <div className="flex flex-col justify-between gap-10 mt-20">
             <div className="flex flex-col gap-3">
               <h3 className="text-[#DB4A2B] font-semibold text-2xl">
                 UNARROW.
