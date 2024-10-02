@@ -49,7 +49,7 @@ const Contact = () => {
     <>
       <div className="w-full relative h-full bg-[#011415] py-14 p-20 ">
         <div className="w-11/12 mx-auto">
-          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center">
+          <div className="flex flex-col flex-wrap justify-center items-center">
             <div className="flex flex-col gap-4 md:w-[50%] lg:w-[35%]">
               <div className="flex items-center -ml-9 gap-4">
                 <div className="w-4 h-4 mt-1 bg-[#db4a2b]"></div>
@@ -58,7 +58,7 @@ const Contact = () => {
                 </h3>
               </div>
 
-              <p className="w-[19.75rem] text-[1.25rem] font-normal font-Roboto leading-normal text-[#fff]">
+              <p className="lg:w-[19.75rem] text-[1.25rem] font-normal font-Roboto leading-normal text-[#fff]">
                 Our Friendly Teams Is Always Here to Hear You....
               </p>
 
@@ -97,7 +97,7 @@ const Contact = () => {
               className="text-white font-Roboto md:w-[50%] lg:w-[65%] mt-10"
               onSubmit={handleSubmit}
             >
-              <div className="flex gap-20">
+              <div className="flex flex-col lg:flex-row gap-20">
                 <label className="w-full">
                   NAME
                   <br />
@@ -110,7 +110,9 @@ const Contact = () => {
                     value={formData.firstname}
                     onChange={handleChange}
                   />
-                  <hr />
+                 <div className="w-full">
+                 <hr />
+                 </div>
                 </label>
 
                 <label className="w-full">
@@ -123,11 +125,13 @@ const Contact = () => {
                     value={formData.lastname}
                     onChange={handleChange}
                   />
-                  <hr />
+                  <div className="w-full">
+                 <hr />
+                 </div>
                 </label>
               </div>
 
-              <div className="flex w-full gap-20">
+              <div className="flex flex-col lg:flex-row w-full gap-20">
                 <label className="mt-6 w-full">
                   EMAIL ADDRESS
                   <br />
@@ -140,7 +144,9 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                   />
-                  <hr />
+                  <div className="w-full">
+                 <hr />
+                 </div>
                 </label>
 
                 <label className="mt-6 w-full">
@@ -155,7 +161,9 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                   />
-                  <hr />
+                  <div className="w-full">
+                 <hr />
+                 </div>
                 </label>
               </div>
 
@@ -171,7 +179,9 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
-                  <hr className="-mt-1" />
+                   <div className="w-full -mt-1">
+                 <hr />
+                 </div>
                 </label>
               </div>
 

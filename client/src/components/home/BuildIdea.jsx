@@ -13,10 +13,10 @@ const BuildIdea = () => {
   }
 
   return (
-    <div className="w-full relative h-full bg-[#011415] py-14">
-      <div className="w-11/12 mx-auto">
+    <div className="w-full relative h-full bg-[#011415] lg:py-14">
+      <div className="w-11/12 mx-auto p-2">
         {/* cards-section */}
-        <div className="flex justify-center gap-5 mb-10">
+        <div className="grid grid-cols-4 -ml-[15px] justify-center -mt-3 gap-5 mb-5">
           <CustomBuildIdea
             clasName={"bg-black rounded-xl border-none"}
             text={"WE"}
@@ -26,7 +26,7 @@ const BuildIdea = () => {
           <CustomBuildIdea clasName={'bg-red-600'}
             icon={
               <FaArrowRight
-                size={130}
+               
                 className="group-hover:scale-150 duration-500 transition-all"
               />
             }
@@ -36,7 +36,7 @@ const BuildIdea = () => {
       </div>
 
       {/* description-section */}
-      <CustomTheams
+      <CustomTheams 
         onClick={handleCall}
         text={
           <>
