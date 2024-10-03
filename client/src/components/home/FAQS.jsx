@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-import faqs from '../../assets/homeImage/faqs.png'
+import faqs from "../../assets/homeImage/faqs.png";
 
 const Faqs = [
   {
@@ -42,157 +42,70 @@ const FAQS = () => {
     setVisibleFaq(visibleFaq === id ? null : id);
   };
 
-  const [formData, setFormData] = useState({
-    firstname: "",
-    email: "",
-    questions: "",
-  });
-
-  const formDataHandler = (event) => {
-    event.preventDefault();
-    console.log(formData);
-    setFormData({
-      firstname: "",
-      email: "",
-      questions: "",
-    });
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
   return (
-    <div className="w-full h-full relative bg-[#011415]">
-      <div className="w-11/12 mx-auto py-14">
-        <div className="">
-          <div className="flex flex-col -ml-6 ">
-            <p className="text-white text-lg font-Roboto ml-[5.6rem] mb-1">
-              FAQ’s
+    <div className="w-full h-full relative bg-[#011415] px-5 md:px-10 lg:px-20">
+      <div className="w-full mx-auto py-14">
+        {/* Title Section */}
+        <div className="flex flex-col items-start text-center md:text-left mb-10 md:mb-14">
+          <p className="text-white text-lg font-Roboto mb-1">FAQ’s</p>
+          <div className="flex items-center gap-2 mb-6 lg:gap-4 lg:ml-14">
+            <div className="w-2 h-2 lg:w-4 lg:h-4 mt-1 bg-[#db4a2b]"></div>
+            <h3 className="md:text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto">
+              Frequently Asked Questions
+            </h3>
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="flex flex-col -mt-14 lg:flex-row justify-between items-start lg:items-center gap-10 lg:gap-20">
+          {/* FAQs Section */}
+          <div className="w-full lg:w-2/3">
+            <p className="italic md:text-xl lg:text-[1.4375rem] font-serif font-normal leading-normal text-gray-300 mb-6">
+              Have A Question? We Got You..
             </p>
-            <div className="flex items-center gap-4 ml-14 mb-14">
-              <div className="w-4 h-4 mt-1 bg-[#db4a2b]"></div>
-              <h3 className="text-4xl text-white font-bold font-Roboto">
-                Frequently Asked Questions
-              </h3>
+
+            {/* FAQ Items */}
+            <div className="flex flex-col gap-4 md:py-5">
+              {Faqs.map((f) => (
+                <div
+                  key={f.id}
+                  className="flex  md:flex-row md:items-start justify-between gap-4 border-b border-gray-600 pb-4"
+                >
+                  <div className="text-gray-200 text-sm md:text-2xl font-serif">
+                    {f.id}.
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-normal text-gray-200 text-sm md:text-2xl leading-normal text-start">
+                      {f.Question}
+                    </div>
+                    {visibleFaq === f.id && (
+                      <div className="text-gray-400 text-xs md:text-lg mt-2">
+                        {f.Answer}
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className="text-lg font-semibold cursor-pointer"
+                    onClick={() => toggleHandler(f.id)}
+                  >
+                    {visibleFaq === f.id ? (
+                      <FaMinus className="text-[#db4a2b]" />
+                    ) : (
+                      <FaPlus className="text-[#db4a2b]" />
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* bottom-section */}
-          <div className="flex justify-evenly">
-            <div>
-              <p className="italic text-[1.4375rem] font-serif font-normal leading-normal text-gray-300">
-                Have A Question? We Got You..
-              </p>
-
-              {/* FAQS-start from here */}
-              <div className="flex flex-col font-Roboto gap-1 py-5">
-                {Faqs.map((f) => {
-                  return (
-                    <div
-                      key={f.id}
-                      className="flex justify-between gap-10 mt-2 mb-2"
-                    >
-                      <div className="text-[23px] text-gray-200 font-normal font-serif">
-                        {f.id}.
-                      </div>
-
-                      <div className="flex-1">
-                        <hr/>
-                        <div className="font-normal text-gray-200 text-2xl leading-normal text-start">
-                          {f.Question}
-                        </div>
-                      </div>
-
-                      <div className="flex flex-col gap-2 text-xl font-semibold">
-                        {visibleFaq === f.id ? (
-                          <FaMinus
-                            className="mt-1 cursor-pointer text-[#db4a2b]"
-                            onClick={() => toggleHandler(f.id)}
-                          />
-                        ) : (
-                          <FaPlus
-                            className="mt-1 cursor-pointer text-[#db4a2b]"
-                            onClick={() => toggleHandler(f.id)}
-                          />
-                        )}
-
-                        {visibleFaq === f.id && (
-                          <div className="text-lg font-normal -ml-[37.4rem] w-[591px] text-gray-400 mt-2">
-                            {f.Answer}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* <div>
-              <p className="font-Roboto text-white text-[1.5625rem] leading-normal font-bold">
-                Ask A Different Question
-              </p>
-
-              <form
-                onSubmit={formDataHandler}
-                className="font-Roboto py-5 flex flex-col gap-2 "
-              >
-                <label className="text-white w-full">
-                  NAME
-                  <br />
-                  <input
-                    className="mt-2 bg-transparent mb-1 focus:outline-none"
-                    type="text"
-                    required
-                    placeholder="First Name"
-                    name="firstname"
-                    value={formData.firstname}
-                    onChange={handleChange}
-                  />
-                  <hr />
-                </label>
-
-                <label className="mt-6 text-white w-full">
-                  EMAIL ADDRESS
-                  <br />
-                  <input
-                    className="bg-transparent mb-1 mt-2 focus:outline-none"
-                    type="email"
-                    required
-                    placeholder="tanul@unarrow.com"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  <hr />
-                </label>
-
-                <label className="w-full mt-5 text-white">
-                  QUESTIONS
-                  <br />
-                  <textarea rows={1} 
-                    className="bg-transparent w-full mt-2 focus:outline-none"
-                    name="questions"
-                    required
-                    placeholder="Questions......"
-                    value={formData.questions}
-                    onChange={handleChange}
-                  ></textarea>
-                  <hr />
-                </label>
-
-                <CustomButton className={"mt-5 rounded-lg"} label={"SUBMIT"} />
-              </form>
-            </div> */}
-
-            <div className="w-[30rem] h-[31.6876rem] -mt-[10rem]">
-              <img src={faqs} className="w-full h-full bg-cover" alt="" />
-            </div>
+          {/* Image Section */}
+          <div className="w-full lg:w-1/3">
+            <img
+              src={faqs}
+              className="w-full h-full object-cover"
+              alt="FAQs illustration"
+            />
           </div>
         </div>
       </div>
