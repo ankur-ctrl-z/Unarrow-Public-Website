@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="flex flex-col">
           {/* first part */}
           <div className="flex flex-col lg:flex-row justify-between">
-            <h3 className="leading-[2.5rem] max-w-md font-Roboto text-white text-[2rem] font-bold ">
+            <h3 className="lg:leading-[2.5rem] mb-2 max-w-md font-Roboto text-white lg:text-[2rem] leading-normal font-bold ">
               Subscribe To Get The Latest Update
             </h3>
             <div className="flex lg:w-[32rem] border-[3px] h-[3.82rem] border-red-700 rounded-xl">
@@ -36,8 +36,8 @@ const Footer = () => {
           </div>
 
           {/* second part */}
-          <div className="flex flex-col justify-between gap-10 mt-20">
-            <div className="flex flex-col gap-3">
+          <div className="flex  flex-col md:flex-row justify-between gap-10 mt-10">
+            <div className="hidden md:block flex-col gap-3">
               <h3 className="text-[#DB4A2B] font-semibold text-2xl">
                 UNARROW.
               </h3>
@@ -75,12 +75,113 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="font-Roboto flex flex-col gap-2">
-              <h3 className="flex text-white font-semibold text-xl">
+            {/* for mobile view */}
+            <div className="flex sm:hidden w-full gap-4">
+              <div className="w-[40%]">
+                <h3 className="text-[#DB4A2B] mt-1 font-semibold text-lg">
+                  UNARROW.
+                </h3>
+                <div className="flex mt-2 gap-2 text-white text-xl">
+                  <a
+                    className="hover:text-[#DB4A2B] duration-300 transition-all"
+                    href=""
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    className="hover:text-[#DB4A2B] duration-300 transition-all"
+                    href=""
+                  >
+                    <FaWhatsapp />
+                  </a>
+                  <a
+                    className="hover:text-[#DB4A2B] duration-300 transition-all"
+                    href=""
+                  >
+                    <FaSquareXTwitter />
+                  </a>
+                  <a
+                    className="hover:text-[#DB4A2B] duration-300 transition-all"
+                    href=""
+                  >
+                    <FaInstagram />
+                  </a>
+                </div>
+              </div>
+
+              <p className="text-white text-[9px] mt-2 w-[60%] font-Roboto">
+                The best Digital Solution Agency in the Market.We are here to
+                build your Dream website on the go..
+              </p>
+            </div>
+
+
+         <div className="hidden md:block">
+         <div className="font-Roboto  flex flex-col gap-2">
+              <h3 className="flex text-white font-semibold text-sm lg:text-xl">
                 {" "}
                 ON OUR SITE
               </h3>
-              <nav className="flex flex-col gap-2 text-lg justify-start text-white font-normal">
+              <nav className="flex flex-col gap-2 text-sm lg:text-lg justify-start text-white font-normal">
+                <Link
+                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  to={"/"}
+                >
+                  Home
+                </Link>
+                <Link
+                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  to={"/service"}
+                >
+                  Services
+                </Link>
+                <Link
+                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  to={"/aboutus"}
+                >
+                  About Us
+                </Link>
+                <Link
+                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  to={"/works"}
+                >
+                  Works
+                </Link>
+              </nav>
+            </div>
+         </div>
+
+           <div className="hidden md:block">
+           <div className="font-Roboto flex flex-col gap-2">
+              <h3 className="flex text-white font-semibold text-sm lg:text-xl">
+                RESOURCES
+              </h3>
+              <nav className="flex flex-col gap-2 text-sm lg:text-lg justify-start text-white font-normal">
+                <Link
+                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  to={"/careers"}
+                >
+                  Careers
+                </Link>
+                <Link
+                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  to={"/blogs"}
+                >
+                  Blogs
+                </Link>
+              </nav>
+            </div>
+           </div>
+
+           {/* for mobile view */}
+
+           <div className="flex gap-10 sm:hidden">
+           <div className="font-Roboto flex flex-col gap-2">
+              <h3 className="flex text-white font-semibold text-sm lg:text-xl">
+                {" "}
+                ON OUR SITE
+              </h3>
+              <nav className="flex flex-col gap-2 text-sm lg:text-lg justify-start text-white font-normal">
                 <Link
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
                   to={"/"}
@@ -109,10 +210,10 @@ const Footer = () => {
             </div>
 
             <div className="font-Roboto flex flex-col gap-2">
-              <h3 className="flex text-white font-semibold text-xl">
+              <h3 className="flex text-white font-semibold text-sm lg:text-xl">
                 RESOURCES
               </h3>
-              <nav className="flex flex-col gap-2 text-lg justify-start text-white font-normal">
+              <nav className="flex flex-col gap-2 text-sm lg:text-lg justify-start text-white font-normal">
                 <Link
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
                   to={"/careers"}
@@ -127,22 +228,27 @@ const Footer = () => {
                 </Link>
               </nav>
             </div>
+           </div>
+
+
 
             <div className="flex flex-col gap-2 font-Roboto">
-              <h3 className="flex text-white font-semibold text-xl">CONTACT</h3>
-              <div className="flex justify-center items-center gap-2 text-white text-lg">
+              <h3 className="flex text-white font-semibold text-sm lg:text-xl">
+                CONTACT
+              </h3>
+              <div className="flex justify-center items-center mr-10 gap-2 text-white text-sm lg:text-lg">
                 <TfiEmail />
                 <a href="mailto:sales@unarrow.com">
                   sales@unarrow.com
                 </a>
               </div>
 
-              <div className="flex justify-start items-center gap-2 text-white text-lg">
+              <div className="flex justify-start items-center gap-2 text-white text-sm lg:text-lg">
                 <IoCall />
                 <a href="tel:+91 9021790600">+91 9021790600</a>
               </div>
 
-              <div className="flex justify-start items-center gap-2 text-white text-lg">
+              <div className="flex justify-start items-center gap-2 text-white text-sm lg:text-lg">
                 <ImLocation />
                 <a href="">Mumbai, Maharashtra</a>
               </div>
@@ -155,8 +261,13 @@ const Footer = () => {
       <hr />
       {/* reservation of unarrow */}
       <div className="py-3 font-Roboto">
+<<<<<<< HEAD
         <p className="text-white font-normal leading-normal text-lg text-center cursor-pointer ">
           ©2024 Unarrow Digital Solutions. All rights reserved.
+=======
+        <p className="text-white font-normal leading-normal md:text-lg text-center cursor-pointer ">
+          2024@Unarrow.com
+>>>>>>> upstream/main
         </p>
       </div>
     </div>

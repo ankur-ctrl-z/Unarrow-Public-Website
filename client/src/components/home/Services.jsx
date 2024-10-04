@@ -39,7 +39,7 @@ const Services = () => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     responsive: [
       {
         breakpoint: 1024,
@@ -76,7 +76,7 @@ const Services = () => {
             </h3>
           </div>
 
-          <div className="lg:mt-10">
+          <div className=" flex flex-col lg:mt-10">
             <Slider {...settings}>
               {services.map((s) => (
                 <Link
@@ -84,7 +84,7 @@ const Services = () => {
                   key={s.id}
                   onMouseEnter={() => setHoveredCard(s.id)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className="flex flex-col items-center border md:w-[26.25rem] md:h-[35rem] lg:mb-10 rounded-3xl hover:bg-[#db4a2b] hover:[transform: rotateY(10deg) rotateX(10deg) scale(1.05)] duration-300 transition-all shadow-[rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset] bg-[#000000] p-1"
+                  className="flex flex-col items-center border md:w-[10rem] md:h-[35rem] lg:w-[10rem] lg:mb-10 rounded-3xl hover:bg-[#db4a2b] hover:[transform: rotateY(10deg) rotateX(10deg) scale(1.05)] duration-300 transition-all shadow-[rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset] bg-[#000000] p-1"
                 >
                   <p className="text-[rgba(255,255,255,0.5)] -mt-2 font-Roboto text-[30px] lg:text-[3.75rem] font-normal leading-normal ml-[14rem] lg:ml-[19rem]">
                     {s.serviceNo}
@@ -92,7 +92,7 @@ const Services = () => {
                   <h2 className="text-white text-center ml-[4.5rem] mb-1 -mt-4 max-w-[120px] lg:max-w-sm font-Roboto text-[17px] lg:text-[2.1875rem] font-bold leading-normal p-3">
                     {s.service}
                   </h2>
-                  <p className="text-white text-[14px] font-Roboto max-w-[240px] text-start ml-7">
+                  <p className="text-white text-[14px] font-Roboto max-w-[240px] text-start ml-7 md:ml-36">
                     {s.desc}
                   </p>
                   <div className="lg:ml-[20rem] ml-[14rem] mb-1">
