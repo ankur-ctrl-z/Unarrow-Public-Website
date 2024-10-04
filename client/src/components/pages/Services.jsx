@@ -66,7 +66,7 @@ const Services = () => {
       <div className="w-11/12 mx-auto">
         <div className="mt-20 flex flex-col justify-center items-center">
           <CenterCustomHeading
-            className={"text-[2.8125rem]"}
+            className={"text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto"}
             heading={"We Offer Wide Range of Services"}
           />
 
@@ -76,14 +76,14 @@ const Services = () => {
                 <div
                   onMouseEnter={() => setHoveredCard(service.id)}
                   onMouseLeave={() => setHoveredCard(null)}  
-                  className={`w-[24rem]  mt-2 font-Roboto h-[21.375rem]  flex flex-col justify-center items-center  rounded-[2.5rem] shadow-inherit p-2 duration-100 transition-all ${
+                  className={`w-[18rem] md:w-[19rem] xl:w-[25rem] mt-2 font-Roboto h-[21.375rem]  flex flex-col justify-center items-center  rounded-[2.5rem] shadow-inherit p-2 duration-100 transition-all ${
                     hoveredCard === service.id ? "bg-[#db4a2b]" : "bg-black"
                   }`}
                 >
-                  <h2 className="text-white max-w-[15rem] mt-5 text-center text-[2rem] leading-8 font-bold  mb-4">
+                  <h2 className="text-white max-w-[15rem] mt-5 text-center text-[1.5rem] md:text-[1.8rem] lg:text-[1.95rem] leading-8 font-bold  mb-4">
                     {service.Service}
                   </h2>
-                  <p className="text-white max-w-[15rem] ">{service.desc}</p>
+                  <p className="text-white max-w-[15rem] text-sm md:text-md ">{service.desc}</p>
 
                   <Link to={service.path} className="flex gap-3 mt-5 mb-5 ml-20">
                     <a className="text-white mt-2 text-xl underline" href="">
