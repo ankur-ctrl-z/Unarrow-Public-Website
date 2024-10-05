@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className="headerBackgroundImage h-screen w-full bg-cover relative -mb-[12rem] lg:mb-0">
       <div className="w-11/12 mx-auto flex lg:gap-10 ">
-        <div className="flex flex-col w-[185px] lg:w-full gap-4 text-white lg:ml-32 py-10 lg:py-32">
+        <div className="flex flex-col w-[185px] md:w-full lg:w-[150rem] gap-4 text-white lg:ml-10 xl:ml-[5rem] py-10 lg:py-24">
           <h1 className="text-[24px] xl:max-w-xl leading-[2rem]  mt-20 font-bold lg:text-[3.75rem] lg:leading-[4rem] font-Roboto">
             Crafting Digital Paths, One Brand at a Time
           </h1>
@@ -33,7 +33,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className=" w-[40rem] h-[15rem] lg:w-[100rem] lg:h-[43.125rem] mt-16 lg:mt-16">
+        <div className="w-[40rem] h-[15rem] lg:w-[100rem] lg:h-[43.125rem] xl:w-[100rem] xl:h-[50rem] mt-16 lg:mt-7">
           <img src={gif} className="w-full h-full bg-contain" alt="" />
         </div>
       </div>
