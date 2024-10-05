@@ -1,32 +1,18 @@
 import React, { useState } from "react";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
 import CustomButton from "../customs/CustomButton";
-const serviceInfo = [
-  {
-    id: 1,
-    info: "Website Enquiry",
-  },
 
-  {
-    id: 2,
-    info: "SEO Enquiry",
-  },
-  {
-    id: 3,
-    info: "UI/UX Enquiry",
-  },
-  {
-    id: 4,
-    info: "SMM Enquiry",
-  },
-  {
-    id: 5,
-    info: "General Enquiry",
-  },
+const serviceInfo = [
+  { id: 1, info: "Website Enquiry" },
+  { id: 2, info: "SEO Enquiry" },
+  { id: 3, info: "UI/UX Enquiry" },
+  { id: 4, info: "SMM Enquiry" },
+  { id: 5, info: "General Enquiry" },
+  { id: 6, info: "Consulting Enquiry" }, // Added a sixth service to balance the layout
 ];
+
 const Contact = () => {
   const [isHover, setIsHover] = useState(null);
-
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -56,52 +42,52 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full relative h-full bg-black py-32 ">
-      <div className="w-11/12 mx-auto p-8">
-        <div className="flex flex-col justify-center items-center ">
-          <CenterCustomHeading heading={"GET IN TOUCH"} />
-          <p className="text-[2.5rem] text-white font-bold font-Roboto text-center mt-5 mb-5">
-            Reach Out To get A free Quote.
+    <div className="w-full relative h-full bg-black py-10 md:py-20 ">
+      <div className="w-11/12 mx-auto p-4 md:p-8">
+        <div className="flex flex-col justify-center items-center space-y-5">
+          {/* Heading */}
+          <CenterCustomHeading className={'mt-5 -mb-3 md:-mt-5 lg:mt-5'} heading={"GET IN TOUCH"} />
+          <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold font-Roboto text-center -mt-20 ">
+            Reach Out To Get A Free Quote.
           </p>
 
-          {/* parent div */}
-          <div className=" flex flex-col justify-center items-center">
-            {/* first div */}
-            <div className="w-[75.75rem] h-[5.5rem] bg-black z-40 flex flex-col justify-center border rounded-3xl">
-              <div className="flex justify-around">
-                {serviceInfo.map((serv) => {
-                  return (
-                    <div
-                      onMouseEnter={() => setIsHover(serv.id)}
-                      onMouseLeave={() => setIsHover(null)}
-                      className={`w-[12.18rem] h-[4rem] border rounded-full ${
-                        isHover === serv.id
-                          ? "bg-red-600 text-white"
-                          : "bg-black text-red-600 "
-                      }`}
-                    >
-                      <p className="text-center font-bold font-Roboto mt-5 text-[1.375rem ]">
-                        {serv.info}
-                      </p>
-                    </div>
-                  );
-                })}
+          {/* Parent Div */}
+          <div className="w-full flex flex-col items-center ">
+            {/* Service Options Container */}
+            <div className="w-[16.5rem] md:w-[40.1rem] lg:w-[41.1rem] absolute  xl:w-[62.5rem] bg-black border border-red-600 rounded-3xl py-2 px-4 md:px-8">
+              <div className="grid grid-cols-3 gap-1">
+                {serviceInfo.map((serv) => (
+                  <div
+                    key={serv.id}
+                    onMouseEnter={() => setIsHover(serv.id)}
+                    onMouseLeave={() => setIsHover(null)}
+                    className={`w-full h-8 md:h-9 lg:h-14 border rounded-full flex items-center justify-center transition-colors duration-300 ${
+                      isHover === serv.id
+                        ? "bg-red-600 text-white"
+                        : "bg-black text-red-600 border-red-600"
+                    }`}
+                  >
+                    <p className="text-[9px] md:text-lg lg:text-xl font-bold font-Roboto text-center">
+                      {serv.info}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* second div */}
-            <div className=" flex flex-col items-center justify-center w-[83.75rem] h-[46rem] -mt-10 -mb-32 bg-[#BCD4D2] border rounded-2xl">
-              {/* contact form */}
+            {/* Contact Form Container */}
+            <div className="w-[16.5rem] md:w-[40.1rem] mt-[4rem] lg:mt-[6rem] xl:mt-[6.5rem]  lg:w-3/4 bg-[#BCD4D2] border rounded-2xl p-6 md:p-10 lg:p-12">
               <form
-                className=" text-black font-Roboto md:w-[50%] lg:w-[55%] -mt-5"
+                className="flex flex-col space-y-6 md:space-y-8 lg:space-y-10 text-black font-Roboto"
                 onSubmit={formDataHandler}
               >
-                <div className="flex gap-20">
-                  <label className="w-full">
-                    NAME
+                {/* Name Fields */}
+                <div className="grid text-black grid-cols-1 md:grid-cols-2 gap-6">
+                  <label className="w-full text-sm md:text-md">
+                    FIRST NAME
                     <br />
                     <input
-                      className="mt-2 bg-transparent mb-1 focus:outline-none"
+                      className="w-full text-black bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="First Name"
@@ -109,12 +95,13 @@ const Contact = () => {
                       value={formData.firstname}
                       onChange={handleChange}
                     />
-                    <div className="w-full h-[1px] bg-black"></div>
                   </label>
 
-                  <label className="w-full">
+                  <label className="w-full -mt-4 sm:mt-0 text-sm md:text-md">
+                    LAST NAME
+                    <br />
                     <input
-                      className="mt-8 bg-transparent mb-1 focus:outline-none"
+                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="Last Name"
@@ -122,33 +109,33 @@ const Contact = () => {
                       value={formData.lastname}
                       onChange={handleChange}
                     />
-                   <div className="w-full h-[1px] bg-black"></div>
                   </label>
                 </div>
 
-                <div className="flex w-full gap-20">
-                  <label className="mt-6 w-full">
+                {/* Email Field */}
+                <div className="w-full -mt-4 text-sm md:text-md">
+                  <label className="w-full">
                     EMAIL ADDRESS
                     <br />
                     <input
-                      className="bg-transparent mt-2 mb-1 focus:outline-none"
+                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="email"
-                      placeholder="tanul@unarrow.com"
+                      placeholder="you@example.com"
                       name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
                     />
-                     <div className="w-full h-[1px] bg-black"></div>
                   </label>
                 </div>
 
-                <div className="flex gap-20">
-                  <label className="mt-6 w-full">
+                {/* Phone & Pincode Fields */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <label className="w-full -mt-4 text-sm md:text-md">
                     PHONE
                     <br />
                     <input
-                      className="bg-transparent mt-2 mb-1 focus:outline-none"
+                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="+91"
@@ -156,46 +143,42 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                     />
-                    <div className="w-full h-[1px] bg-black"></div>
                   </label>
 
-                  <label className="mt-6 w-full">
+                  <label className="w-full -mt-4 text-sm md:text-md">
                     PIN CODE
                     <br />
                     <input
-                      className="bg-transparent mt-2 mb-1 focus:outline-none"
+                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="Enter Your Pincode"
                       name="pincode"
-                      value={formData.phone}
+                      value={formData.pincode}
                       onChange={handleChange}
                     />
-                     <div className="w-full h-[1px] bg-black"></div>
                   </label>
                 </div>
 
-                <div className="mt-6">
-                  <label className="w-full">
+                {/* Message Field */}
+                <div className="w-full">
+                  <label className="w-full -mt-4 text-sm md:text-md">
                     MESSAGE
                     <br />
                     <textarea
-                      rows={1}
-                      className="bg-transparent w-full mt-2 mb-1 focus:outline-none"
+                      rows={3}
+                      className="w-full bg-transparent -mb-4 md:mt-2 focus:outline-none border-b border-b-black"
                       name="message"
                       required
-                      placeholder="Type your Message......"
+                      placeholder="Type your message..."
                       value={formData.message}
                       onChange={handleChange}
                     ></textarea>
-                   <div className="w-full h-[1px] bg-black mt-10"></div>
                   </label>
                 </div>
 
-                <CustomButton
-                  label={"SUBMIT"}
-                  className={"rounded-lg mt-20 md:w-full"}
-                />
+                {/* Submit Button */}
+                <CustomButton label={"SUBMIT"} className="rounded-lg md:w-full" />
               </form>
             </div>
           </div>
