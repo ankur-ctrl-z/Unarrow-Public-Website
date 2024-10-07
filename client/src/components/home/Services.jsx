@@ -71,7 +71,7 @@ const Services = () => {
 
   return (
     <div className="w-full relative h-full bg-[#011415] py-10">
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto ">
         <div className="lg:py-5">
           <p className="text-white text-[9px] lg:text-lg font-Roboto lg:ml-[5.6rem] lg:mb-1">
             Design, Identity, Visibility
@@ -83,7 +83,7 @@ const Services = () => {
             </h3>
           </div>
 
-          <div className="flex flex-col md:mt-10 m-2">
+          <div className="flex flex-col md:mt-10 p-5">
             <Slider {...settings}>
               {services.map((s) => (
                 <Link
@@ -91,25 +91,25 @@ const Services = () => {
                   key={s.id}
                   onMouseEnter={() => setHoveredCard(s.id)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className="border w-[rem] h-[23rem] p-7  md:h-[25rem] lg:h-[31rem] space-x-2 lg:mb-10 mr-5 rounded-3xl hover:bg-[#db4a2b] hover:rotate-0 duration-300 transition-all shadow-[rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset] bg-[#000000] md:p-6"
+                  className="border flex flex-col h-[23rem] p-5 md:h-[25rem] lg:h-[31rem] space-y-2 rounded-3xl hover:bg-[#db4a2b] hover:rotate-0 duration-300 transition-all shadow-[rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset] bg-[#000000] md:p-6"
                 >
                   {/* Service Number */}
-                  <p className="text-[rgba(255,255,255,0.5)] text-end -mt-2 font-Roboto text-[2.5rem] md:ml-[15rem] md:text-[3rem] lg:text-[3.75rem] font-normal leading-none">
+                  <p className="text-[rgba(255,255,255,0.5)] text-end font-Roboto text-[2rem] md:text-[3rem] lg:text-[3.75rem] font-normal leading-none">
                     {s.serviceNo}
                   </p>
-                  
+
                   {/* Service Title */}
-                  <h2 className="text-white text-center max-w-[15rem] text-[17px] md:text-[1.5rem] lg:text-[2.1875rem] font-bold leading-normal mb-4">
+                  <h2 className="text-gray-400 text-center max-w-[15rem] ml-3 text-[24px] md:text-[1.5rem] lg:text-[2.1875rem] font-bold leading-normal mb-2">
                     {s.service}
                   </h2>
-                  
+
                   {/* Service Description */}
-                  <p className="text-white text-[12px] md:text-[14px] lg:text-[16px] font-Roboto leading-relaxed mb-6">
+                  <p className="text-gray-500 text-[12px] md:text-[14px] lg:text-[16px] font-Roboto leading-relaxed">
                     {s.desc}
                   </p>
 
                   {/* Arrow Button */}
-                  <div className="flex justify-end">
+                  <div className="flex justi justify-end mt-5">
                     <CustomArrow
                       icon={
                         hoveredCard === s.id ? (

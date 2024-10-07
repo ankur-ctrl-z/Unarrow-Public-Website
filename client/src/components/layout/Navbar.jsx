@@ -35,7 +35,7 @@ const Navbar = () => {
               </a>
               <Link
                 to={"/"}
-                className="text-[#DB4A2B] mt-1 font-extrabold lg:text-[2.2rem]"
+                className="text-[#DB4A2B] text-2xl -mt-1 -ml-2 font-extrabold lg:text-[2.2rem]"
               >
                 UNARROW.
               </Link>

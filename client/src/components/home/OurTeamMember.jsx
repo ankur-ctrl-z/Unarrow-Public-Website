@@ -21,7 +21,7 @@ const OurTeamMember = () => {
           </div>
 
           {/* team-members-image */}
-          <div className="grid grid-cols-2 md:grid-cols-4 justify-center gap-4 md:gap-5 mt-4 ml-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 justify-center mr-2 gap-2 md:gap-5 mt-4 ">
             <CustomTeamMember image={Tanul} memberName={'Tanul. Y'} profession={'Web Designer'}/>
             <CustomTeamMember image={Abhishek} memberName={'Abhishek.'} profession={'Social Media Expert'}/>
             <CustomTeamMember image={Ankur} memberName={'Ankur.'} profession={'React Developer'}/>
