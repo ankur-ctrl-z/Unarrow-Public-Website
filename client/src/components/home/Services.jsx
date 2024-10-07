@@ -83,7 +83,7 @@ const Services = () => {
             </h3>
           </div>
 
-          <div className="flex flex-col md:mt-10 p-2">
+          <div className="flex flex-col md:mt-10 m-2">
             <Slider {...settings}>
               {services.map((s) => (
                 <Link
@@ -91,10 +91,10 @@ const Services = () => {
                   key={s.id}
                   onMouseEnter={() => setHoveredCard(s.id)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className="border md:h-[25rem] lg:h-[31rem] space-x-2 lg:mb-10 mr-5 rounded-3xl hover:bg-[#db4a2b] hover:rotate-0 duration-300 transition-all shadow-[rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset] bg-[#000000] p-6"
+                  className="border w-[rem] h-[23rem] p-7  md:h-[25rem] lg:h-[31rem] space-x-2 lg:mb-10 mr-5 rounded-3xl hover:bg-[#db4a2b] hover:rotate-0 duration-300 transition-all shadow-[rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset] bg-[#000000] md:p-6"
                 >
                   {/* Service Number */}
-                  <p className="text-[rgba(255,255,255,0.5)] -mt-2 font-Roboto text-[2.5rem] md:ml-[15rem] md:text-[3rem] lg:text-[3.75rem] font-normal leading-none">
+                  <p className="text-[rgba(255,255,255,0.5)] text-end -mt-2 font-Roboto text-[2.5rem] md:ml-[15rem] md:text-[3rem] lg:text-[3.75rem] font-normal leading-none">
                     {s.serviceNo}
                   </p>
                   

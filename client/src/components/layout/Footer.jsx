@@ -16,19 +16,19 @@ const Footer = () => {
       <div className="w-11/12 mx-auto p-5">
         <div className="flex flex-col">
           {/* first part */}
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col md:flex-row justify-between">
             <h3 className="lg:leading-[2.5rem] mb-2 max-w-md font-Roboto text-white lg:text-[2rem] leading-normal font-bold ">
               Subscribe To Get The Latest Update
             </h3>
-            <div className="flex lg:w-[32rem] border-[3px] h-[3.82rem] border-red-700 rounded-xl">
+            <div className="flex lg:w-[32rem] border-[3px] h-[3.3rem] lg:h-[3.5rem] border-red-700 rounded-xl">
               <input
-                className="bg-transparent text-gray-300 focus:outline-none px-5 text-lg"
+                className="bg-transparent text-gray-300 focus:outline-none px-2 md:px-5 text-sm sm:text-lg"
                 type="email"
                 placeholder="Enter Your Email "
               />
               <CustomButton
                 className={
-                  "rounded-lg -ml-20 lg:ml-[7.44rem] border-l-2 h-[3.5rem] w-[12rem]"
+                  "rounded-lg lg:ml-[7.44rem] lg:h-[3.2rem] border-l-2 h-[3rem]  w-[8rem] md:w-[12rem]"
                 }
                 label={"SUBSCRIBE"}
               />
