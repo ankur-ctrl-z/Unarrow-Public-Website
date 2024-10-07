@@ -10,7 +10,7 @@ const OurCustomWorks = ({
   return (
     <div>
       <div
-        className={`w-[33rem] h-[34rem] border-2 rounded-2xl ${className}`}
+        className={`w-[33rem] h-[34rem]  border-2 rounded-2xl ${className}`}
         {...props}
       >
         <img

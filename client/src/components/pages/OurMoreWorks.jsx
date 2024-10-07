@@ -14,7 +14,7 @@ const OurMoreWorks = () => {
         <h3 className="text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto">Our Work</h3>
         <FaTelegramPlane className="text-white" size={40} />
       </div>
-      <div className="flex flex-col justify-center items-center -mb-40">
+      <div className="flex flex-col justify-center items-center -mb-20">
         
           <div className="-mt-10">
             <CustomWork
@@ -42,7 +42,7 @@ const OurMoreWorks = () => {
           />
         </div>
 
-        <div className="-mt-32">
+        <div className="-mt-32 ">
           <CustomWork
             image={sja}
             projectName={"Divine Fitness"}

@@ -192,7 +192,7 @@ const AboutUs = () => {
 
       {/* <OurWorks/> */}
 
-      <div className="flex -mb-24 flex-col w-full h-[11rem] lg:h-[20rem] lg:-mb-32 items-center bg-[#6F5294] ">
+      <div className="flex -mb-7 flex-col w-full h-[11rem] lg:h-[20rem] lg:-mb-32 items-center bg-[#6F5294] ">
         <p className="font-Roboto text-2xl text-white font-bold lg:max-w-[50rem] text-center mt-5 mb-5 lg:mt-10 lg:mb-10 lg:leading-[4.5rem] lg:text-[4rem]">
           Ready To Elevate Your Brand Online ?
         </p>

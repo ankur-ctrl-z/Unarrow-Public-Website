@@ -1,15 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-const CustomTeamMember = ({image, memberName, profession}) => {
+const CustomTeamMember = ({ image, memberName, profession }) => {
   return (
-    <div className='-ml-2 w-[140px] h-[150px] lg:w-[20.875rem] lg:h-[24.125rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl' >
-        <img src={image} loading='lazy' className='w-full h-full   bg-cover rounded-3xl' alt="" />
-        <div className="flex teammember lg:w-[20rem] h-[6rem] absolute -mt-14 lg:-mt-24 ml-1 flex-col gap-1">
-            <div className="text-white font-Roboto text-xs lg:text-[1.125rem] lg:ml-10 lg:mt-3 font-bold leading-normal">{memberName}</div>
-            <div className="text-gray-400 font-Roboto text-xs lg:text-[1.125rem] lg:ml-10  font-normal leading-normal">{profession}</div>
+    <div className="w-full h-auto md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] -ml-4 lg:ml-0 lg:h-[20rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
+      {/* Image container now takes full width and height */}
+      <img
+        src={image}
+        loading="lazy"
+        className="w-full h-full object-cover rounded-3xl"
+        alt={memberName}
+      />
+      {/* Updated text container styles to ensure proper positioning and alignment */}
+      <div className="absolute bottom-0 left-0 w-full bg-opacity-60 bg-black py-4 px-3 lg:px-6 rounded-b-3xl">
+        <div className="text-white font-Roboto text-sm lg:text-xl font-bold leading-snug">
+          {memberName}
         </div>
+        <div className="text-gray-400 font-Roboto text-xs lg:text-lg font-normal leading-snug">
+          {profession}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default CustomTeamMember
+export default CustomTeamMember;
