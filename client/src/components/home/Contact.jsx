@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
 import { IoCall } from "react-icons/io5";
 import CustomButton from "../customs/CustomButton";
-
 import CardSlider from "./CardSlider";
 
 const Contact = () => {
@@ -14,6 +13,7 @@ const Contact = () => {
     message: "",
   });
 
+  // Handle form submission
   const formDataHandler = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -35,29 +35,6 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
- 
-    const data = {
-     firstName : formData.firstname,
-     LastName : formData.lastname,
-     email : formData.email,
-     phone : formData.phone,
-     message : formData.message,
-   };
- 
-   try {
-     const response = await axios.post('/submit', data)
-     if (response.status === 201) {
-       console.log('Message saved successfully')
-     } else {
-       console.log('Failed to save message')
-     }
-   } catch (error) {
-     console.error('Error:', error)
-   }
- };
-
   return (
     <>
       <div className="w-full bg-[#011415] py-14 px-4 sm:px-8 lg:px-28">
@@ -78,48 +55,44 @@ const Contact = () => {
                 Our Friendly Team Is Always Here to Hear You...
               </p>
 
-              <div className="flex flex-col md:flex-row lg:flex-col border-none rounded-xl w-full lg:w-full">
-                <div className="flex border m-1 md:border-none border-white rounded-xl  flex-col lg:w-full gap-2">
-                  <div className="flex md:mr-[16rem] items-center justify-center md:justify-center gap-3 mt-4 lg:mt-2 lg:ml-0">
-                    <TfiEmail className="w-6 h-6 lg:w-[1.8rem] lg:h-[1.8rem] text-white" />
+              {/* Contact Information */}
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <TfiEmail className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                  <a
+                    href="mailto:tanul@unarrow.com"
+                    className="text-sm sm:text-base lg:text-lg text-gray-400"
+                  >
+                    tanul@unarrow.com
+                  </a>
+                </div>
+                <div className="flex flex-col lg:flex-row gap-4">
+                  <div className="flex items-center gap-3">
+                    <IoCall className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                     <a
-                      className="font-Roboto font-normal text-xs md:text-md lg:text-lg leading-normal text-gray-400"
-                      href="mailto:tanul@unarrow.com"
+                      href="tel:+91 8433700215"
+                      className="text-sm sm:text-base lg:text-[17px] text-gray-400"
                     >
-                      tanul@unarrow.com
+                      +91 8433700215
                     </a>
                   </div>
-
-                  <div className="flex ml-3 lg:mt-5 md:flex-col gap-5 mb-2">
-                    <div className="flex items-center gap-3">
-                      <IoCall className="w-4 h-4 lg:w-[1.8rem] lg:h-[1.8rem] text-white" />
-                      <a
-                        className="font-Roboto text-xs md:text-lg leading-normal text-gray-400"
-                        href="tel:+91 8433700215"
-                      >
-                        +91 8433700215
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <IoCall className="w-4 h-4 lg:w-[1.8rem] lg:h-[1.8rem] text-white" />
-                      <a
-                        className="font-Roboto text-xs md:text-lg leading-normal text-gray-400"
-                        href="tel:+91 8433700215"
-                      >
-                        +91 8433700215
-                      </a>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <IoCall className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                    <a
+                      href="tel:+91 8433700215"
+                      className="text-sm sm:text-base lg:text-[17px] text-gray-400"
+                    >
+                      +91 8433700215
+                    </a>
                   </div>
                 </div>
->>>>>>> upstream/main
               </div>
             </div>
 
             {/* Right Section - Form */}
             <form
-              className="text-white border md:border-none rounded-xl p-3 font-Roboto text-sm lg:text-lg w-full lg:w-[65%] mt-5 lg:mt-0"
+              className="w-full md:w-1/2 border border-gray-600 rounded-lg p-4 text-white"
               onSubmit={formDataHandler}
->>>>>>> upstream/main
             >
               {/* Form Fields */}
               <div className="flex flex-col gap-6">
@@ -140,8 +113,7 @@ const Contact = () => {
                       />
                     </label>
                   </div>
-
-                  <div className="w-full lg:w-1/2">
+                  <div className="w-full">
                     <label>
                       LAST NAME
                       <br />
@@ -207,7 +179,6 @@ const Contact = () => {
                     ></textarea>
                   </label>
                 </div>
->>>>>>> upstream/main
               </div>
 
               {/* Submit Button */}
