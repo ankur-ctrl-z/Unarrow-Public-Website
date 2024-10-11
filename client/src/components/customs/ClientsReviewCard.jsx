@@ -46,16 +46,16 @@ const ClientsReviewCard = ({ img, feedback, clientName, clientProfession }) => {
 
 
       {/* for only mobile view */}
-      <div className="md:hidden relative h-full rounded-xl py-12 -mb-20">
+      <div className="md:hidden relative h-full rounded-xl mb-[30rem] ">
         <div className="w-11/12 mx-auto">
-          <div className="flex h-[32rem] bg-black rounded-xl mt-6">
+          <div className="flex h-[28rem] bg-black rounded-xl mt-6">
             {/* left-part */}
-            <div className="flex justify-center items-center  mt-5">
+            <div className="flex justify-center items-center mt-[5.3rem]">
               <div className="">
                 <div className="w-[5rem] h-[14rem] ml-[7.5rem] -mt-[16rem] lg:w-[10.975rem] lg:h-[24.5rem] inset-0  bg-[#364271] rounded-xl"></div>
                 <div
                   loading="lazy"
-                  className="w-[10rem] h-[12rem] ml-[5.7rem] lg:w-[18.437rem] lg:h-[19rem] flex flex-col inset-0 mt-[6.1rem]  absolute justify-center items-center bg-gray-300 rounded-lg"
+                  className="w-[10rem] h-[12rem] ml-[5.7rem] lg:w-[18.437rem] lg:h-[19rem] flex flex-col inset-0 mt-[1.67rem] absolute justify-center items-center bg-gray-300 rounded-lg"
                 >
                   <img
                     src={img}

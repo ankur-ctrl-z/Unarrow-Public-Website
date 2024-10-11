@@ -35,7 +35,7 @@ const Navbar = () => {
               </a>
               <Link
                 to={"/"}
-                className="text-[#DB4A2B] text-2xl -mt-1 -ml-2 font-extrabold lg:text-[2.2rem]"
+                className="text-[#DB4A2B] text-2xl -mt-1 md:mt-2 -ml-2 font-extrabold lg:text-[2.2rem]"
               >
                 UNARROW.
               </Link>
@@ -62,8 +62,8 @@ const Navbar = () => {
               </div>
 
               <div className="hidden md:block">
-                <ul className="flex flex-row lg:gap-5 xl:gap-10 justify-center text-white font-semibold">
-                  <li className="font-semibold text-sm  lg:text-lg xl:text-xl p-0 md:p-2">
+                <ul className="flex flex-row lg:gap-5 xl:gap-6 justify-center text-white font-semibold">
+                  <li className="font-semibold text-sm lg:text-lg xl:text-[22px] p-0 md:p-2">
                   <Link
                     className="hover:text-[#DB4A2B] mt-[5px] mr-1 duration-300 transition-all"
                     to={"/"}
@@ -72,7 +72,7 @@ const Navbar = () => {
                   </Link>
                   </li>
              
-                  <li className="font-semibold text-sm lg:text-lg xl:text-xl p-0 md:p-2">
+                  <li className="font-semibold text-sm lg:text-lg xl:text-[22px] p-0 md:p-2">
                     <Link
                       className="hover:text-[#DB4A2B] duration-300 transition-all"
                       to={"/services"}
@@ -81,7 +81,7 @@ const Navbar = () => {
                     </Link>
                   </li>
 
-                  <li className="font-semibold text-sm  lg:text-lg xl:text-xl p-0 md:p-2">
+                  <li className="font-semibold text-sm  lg:text-lg xl:text-[22px] p-0 md:p-2">
                     <Link
                       className="hover:text-[#DB4A2B] duration-300 transition-all"
                       to={"/aboutus"}
@@ -91,7 +91,7 @@ const Navbar = () => {
                   </li>
 
                   <>
-                    <li className="font-semibold text-sm lg:text-lg xl:text-xl p-0 md:p-2">
+                    <li className="font-semibold text-sm lg:text-lg xl:text-[22px] p-0 md:p-2">
                       <Link
                         className="hover:text-[#DB4A2B] duration-300 transition-all"
                         to={"careers"}

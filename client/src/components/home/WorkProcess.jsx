@@ -44,7 +44,7 @@ const WorkProcess = () => {
         </header>
 
         {/* work process */}
-        <div className="flex flex-col justify-center items-center lg:gap-10 -mt-10">
+        <div className="flex flex-col items-center lg:gap-10 -mt-10">
           {workProcessData.map((work) => (
             <article
               key={work.id}

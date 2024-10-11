@@ -230,13 +230,11 @@ const Footer = () => {
             </div>
            </div>
 
-
-
             <div className="flex flex-col gap-2 font-Roboto">
               <h3 className="flex text-white font-semibold text-sm lg:text-xl">
                 CONTACT
               </h3>
-              <div className="flex justify-center items-center mr-10 gap-2 text-white text-sm lg:text-lg">
+              <div className="flex justify-center -ml-24 md:ml-0 items-center  gap-2 text-white text-sm lg:text-lg">
                 <TfiEmail />
                 <a href="mailto:tanulyadav@unarrow.com">
                   tanulyadav@unarrow.com

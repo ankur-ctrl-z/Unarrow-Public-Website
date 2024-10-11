@@ -13,9 +13,11 @@ const About = () => {
   }
   return (
     <>
+
+    {/* for small device */}
       <div className="md:hidden w-full relative h-full py-10 bg-[#011415]">
         <div className="w-11/12 mx-auto p-2">
-          <div className="flex flex-col -ml-2">
+          <div className="flex flex-col -ml-2 mb-3">
             <p className="text-white text-[9px] lg:text-lg font-Roboto lg:ml-[5.6rem] lg:mb-1">
               Designing Tomorrow Today
             </p>
@@ -27,8 +29,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center">
-            <div className="h-[100px] flex justify-center items-center -mt-16 mr-[12rem] mb-20 z-10">
+          <div className="flex flex-col justify-center items-center">
+            <div className="h-[100px] flex justify-center items-center -mt-16 mr-[15rem] mb-20 z-10">
               <CustomOverlappinCard image={aboutImage} />
             </div>
 
@@ -40,12 +42,13 @@ const About = () => {
               landscape with tailor-made solutions that drive growth and
               efficiency.
             </p>
+           
 
-            <div onClick={handleCall} className="flex w-[12rem] lg:ml-16">
+            <div onClick={handleCall} className="flex mt-2 justify-start w-[12rem] lg:ml-16">
               <CustomButton label={"Learn More"} />
               <CustomArrow icon={<FiArrowUpRight />} />
             </div>
-          </div>
+            </div>
         </div>
       </div>
 

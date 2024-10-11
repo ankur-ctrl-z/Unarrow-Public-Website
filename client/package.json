@@ -12,11 +12,13 @@
   "dependencies": {
     "browser-router": "^0.2.0",
     "react": "^18.3.1",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router": "^6.26.1",
     "react-router-dom": "^6.26.1",
     "react-slick": "^0.30.2",
+    "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
