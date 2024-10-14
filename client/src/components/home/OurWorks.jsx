@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaTelegramPlane } from "react-icons/fa";
-import onetouch from "../../assets/workImage/one touch.png";
-import sja from "../../assets/workImage/sja.png";
-import jow from "../../assets/workImage/journeyonwheel.png";
+import onetouch from "../../assets/workImage/onetouch.jpg";
+import sja from "../../assets/workImage/sja care center.jpg";
+import jow from "../../assets/workImage/journey on wheels.jpg";
 import CustomButton from "../customs/CustomButton";
 import { Link } from "react-router-dom";
 
@@ -186,57 +186,11 @@ const OurWorks = () => {
               <div className="flex gap-5">
                 {/* One Touch Image */}
                 <div className="p-2">
-                  <a href="https://sjacarecenter.com/">
-                    <div className="lg:w-[28rem] lg:h-[28rem] xl:w-[34rem] border rounded-3xl">
-                      <img
-                        loading="lazy"
-                        src={onetouch}
-                        className="w-full h-full bg-cover rounded-3xl"
-                        alt="SJA Care Center"
-                      />
-                    </div>
-                  </a>
-
-                  <div className="flex flex-col gap-1 font-Roboto mt-1">
-                    <h3 className="lg:text-[2.18rem] font-bold leading-normal text-white">
-                     SJA Care Center
-                    </h3>
-                    <ul className="flex gap-3 text-gray-300">
-                      <li>
-                        <div className="flex gap-2">
-                          <div className="h-2 w-2 lg:h-4 lg:w-4  mt-[2px] rounded-full bg-red-600"></div>
-                          <p className="font-normal text-[9px] lg:text-[13px]">
-                            Branding
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="flex gap-2">
-                          <div className="h-2 w-2 lg:h-4 lg:w-4 mt-[2px] rounded-full bg-red-600"></div>
-                          <p className="font-normal text-[9px] lg:text-[13px]">
-                            Web design & Development
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="flex gap-2">
-                          <div className="h-2 w-2 mt-[2px] lg:h-4 lg:w-4  rounded-full bg-red-600"></div>
-                          <p className="font-normal text-[9px] lg:text-[13px]">
-                            SEO
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* SJA Image */}
-                <div className="p-2">
                   <a href="https://onetouchagency.com/">
                     <div className="h-[17.5rem] lg:w-[28rem] lg:h-[28rem] xl:w-[34rem] border rounded-3xl">
                       <img
                         loading="lazy"
-                        src={sja}
+                        src={onetouch}
                         className="w-full h-full bg-cover rounded-3xl"
                         alt="one touch agency"
                       />
@@ -275,6 +229,52 @@ const OurWorks = () => {
                     </ul>
                   </div>
                 </div>
+
+              {/* sja care center */}
+                <div className="p-2">
+                  <a href="https://sjacarecenter.com/">
+                    <div className="lg:w-[28rem] lg:h-[28rem] xl:w-[34rem] border rounded-3xl">
+                      <img
+                        loading="lazy"
+                        src={sja}
+                        className="w-full h-full bg-cover rounded-3xl"
+                        alt="SJA Care Center"
+                      />
+                    </div>
+                  </a>
+
+                  <div className="flex flex-col gap-1 font-Roboto mt-1">
+                    <h3 className="lg:text-[2.18rem] font-bold leading-normal text-white">
+                     SJA Care Center
+                    </h3>
+                    <ul className="flex gap-3 text-gray-300">
+                      <li>
+                        <div className="flex gap-2">
+                          <div className="h-2 w-2 lg:h-4 lg:w-4  mt-[2px] rounded-full bg-red-600"></div>
+                          <p className="font-normal text-[9px] lg:text-[13px]">
+                            Branding
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex gap-2">
+                          <div className="h-2 w-2 lg:h-4 lg:w-4 mt-[2px] rounded-full bg-red-600"></div>
+                          <p className="font-normal text-[9px] lg:text-[13px]">
+                            Web design & Development
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="flex gap-2">
+                          <div className="h-2 w-2 mt-[2px] lg:h-4 lg:w-4  rounded-full bg-red-600"></div>
+                          <p className="font-normal text-[9px] lg:text-[13px]">
+                            SEO
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>             
               </div>
 
               {/* Journey on Wheel Image */}
