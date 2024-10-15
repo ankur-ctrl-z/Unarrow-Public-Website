@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
 import CustomButton from "../customs/CustomButton";
+import axios from 'axios'
+import toast from "react-hot-toast";
 
 const serviceInfo = [
   { id: 1, info: "Website Enquiry" },
@@ -12,25 +14,60 @@ const serviceInfo = [
 ];
 
 const Contact = () => {
+
+  const [errMessage, setErrMessage] =useState('');
   const [isHover, setIsHover] = useState(null);
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
     email: "",
     phone: "",
+    pinCode:"",
     message: "",
   });
 
-  const formDataHandler = (event) => {
+  const formDataHandler = async(event) => {
     event.preventDefault();
-    console.log(formData);
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+
+    
+
+    const {firstname, lastname, email, phone, pinCode, message} = formData;
+
+    if(!firstname|| !lastname || !email || !phone || !pinCode || !message){
+      toast.error('All fiels are required!')
+      return;
+    }
+
+   
+    try {
+      const response = await axios.post('http://localhost:4000/api/book-call',{
+        firstname, lastname, email, phone, pinCode, message
+      })
+      toast.success(response.data.message);
+      setFormData( 
+        {
+        firstname:"",
+        lastname: "",
+        email: "",
+        phone: "",
+        pinCode:"",
+        message: "",
+        }
+      )
+
+    } catch (error) {
+      if (error.response && error.response.status === 409) {
+        // toast.error(error.response.data.message);
+        setErrMessage(error.response.data.message)
+        return;
+      }
+      // internal server error
+      else if (error.response && error.response.status === 500) {
+        // toast.error(error.response.data.message);
+        setErrMessage(error.response.data.message);
+        return;
+      }
+    }
   };
 
   const handleChange = (event) => {
@@ -127,6 +164,7 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </label>
+                  <p className="text-red-400 text-lg">{errMessage}</p>
                 </div>
 
                 {/* Phone & Pincode Fields */}
@@ -153,8 +191,8 @@ const Contact = () => {
                       type="text"
                       required
                       placeholder="Enter Your Pincode"
-                      name="pincode"
-                      value={formData.pincode}
+                      name="pinCode"
+                      value={formData.pinCode}
                       onChange={handleChange}
                     />
                   </label>
