@@ -13,10 +13,10 @@ const BuildIdea = () => {
   }
 
   return (
-    <div className="w-full relative h-full bg-[#011415] lg:py-14">
+    <div className="w-full relative h-full bg-[#011415] lg:py-14 p-1">
       <div className="w-11/12 mx-auto p-2">
         {/* cards-section */}
-        <div className="grid grid-cols-4 -ml-[15px] justify-center -mt-3 gap-5 mb-5">
+        <div className="grid grid-cols-4 -ml-[15px] justify-center -mt-3 gap-6 mb-5">
           <CustomBuildIdea
             clasName={"bg-black rounded-xl border-none"}
             text={"WE"}

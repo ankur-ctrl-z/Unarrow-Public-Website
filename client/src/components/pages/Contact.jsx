@@ -54,20 +54,20 @@ const Contact = () => {
           {/* Parent Div */}
           <div className="w-full flex flex-col items-center ">
             {/* Service Options Container */}
-            <div className="w-[16.5rem] md:w-[40.1rem] lg:w-[41.1rem] absolute  xl:w-[62.5rem] bg-black border border-red-600 rounded-3xl py-2 px-4 md:px-8">
-              <div className="grid grid-cols-3 gap-1">
+            <div className="w-[16.5rem] md:w-[40.1rem] lg:w-[41.1rem] absolute xl:w-[62.5rem] bg-black border border-white rounded-3xl py-2 px-3">
+              <div className="grid grid-cols-3 lg:grid-cols-6 gap-1">
                 {serviceInfo.map((serv) => (
                   <div
                     key={serv.id}
                     onMouseEnter={() => setIsHover(serv.id)}
                     onMouseLeave={() => setIsHover(null)}
-                    className={`w-full h-8 md:h-9 lg:h-14 border rounded-full flex items-center justify-center transition-colors duration-300 ${
+                    className={`w-full px-[3px] h-7 md:h-9 lg:h-[48px] border rounded-full flex items-center justify-center transition-colors duration-300 ${
                       isHover === serv.id
-                        ? "bg-red-600 text-white"
-                        : "bg-black text-red-600 border-red-600"
+                        ? "bg-red-600 text-white shadow-lg"
+                        : "bg-black text-red-600 border-white"
                     }`}
                   >
-                    <p className="text-[9px] md:text-lg lg:text-xl font-bold font-Roboto text-center">
+                    <p className="text-[8px] md:text-[14px] font-semibold font-Roboto text-center">
                       {serv.info}
                     </p>
                   </div>
@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form Container */}
-            <div className="w-[16.5rem] md:w-[40.1rem] mt-[4rem] lg:mt-[6rem] xl:mt-[6.5rem]  lg:w-3/4 bg-[#BCD4D2] border rounded-2xl p-6 md:p-10 lg:p-12">
+            <div className="w-[16.5rem] md:w-[40.1rem] mt-[3.6rem] lg:mt-[2rem] lg:w-3/4 bg-[#BCD4D2] border rounded-2xl p-6 md:p-10 lg:p-12">
               <form
                 className="flex flex-col space-y-6 md:space-y-8 lg:space-y-10 text-black font-Roboto"
                 onSubmit={formDataHandler}

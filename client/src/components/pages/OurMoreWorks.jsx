@@ -1,8 +1,10 @@
 import React from "react";
 import CustomWork from "../customs/CustomWork";
-import onetouch from "../../assets/workImage/one touch.png";
-import sja from "../../assets/workImage/sja.png";
-import jow from "../../assets/workImage/journeyonwheel.png";
+import onetouch from "../../assets/workImage/onetouch.jpg";
+import sja from "../../assets/workImage/sja care center.jpg";
+import jow from "../../assets/workImage/journey on wheels.jpg";
+import divineFitness from '../../assets/workImage/divinefitness.jpg'
+
 import { FaTelegramPlane } from "react-icons/fa";
 
 
@@ -44,7 +46,7 @@ const OurMoreWorks = () => {
 
         <div className="-mt-32 ">
           <CustomWork
-            image={sja}
+            image={divineFitness}
             projectName={"Divine Fitness"}
             bgColor={"#891a43"}
           />

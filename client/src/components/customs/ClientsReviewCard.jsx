@@ -46,16 +46,16 @@ const ClientsReviewCard = ({ img, feedback, clientName, clientProfession }) => {
 
 
       {/* for only mobile view */}
-      <div className=" md:hidden w-full relative h-full py-12 -mb-12">
+      <div className="md:hidden relative h-full rounded-xl mb-[30rem] ">
         <div className="w-11/12 mx-auto">
-          <div className="flex">
+          <div className="flex h-[28rem] bg-black rounded-xl mt-6">
             {/* left-part */}
-            <div className="flex">
+            <div className="flex justify-center items-center mt-[5.3rem]">
               <div className="">
-                <div className="w-[20rem] lg:w-[10.975rem] lg:h-[24.5rem] inset-0  bg-[#364271] rounded-xl"></div>
+                <div className="w-[5rem] h-[14rem] ml-[7.5rem] -mt-[16rem] lg:w-[10.975rem] lg:h-[24.5rem] inset-0  bg-[#364271] rounded-xl"></div>
                 <div
                   loading="lazy"
-                  className="w-[10rem] h-[12rem] lg:w-[18.437rem] lg:h-[19rem] flex flex-col inset-0 mt-[6rem] ml-[9.2rem] absolute justify-center items-center bg-gray-300 rounded-lg"
+                  className="w-[10rem] h-[12rem] ml-[5.7rem] lg:w-[18.437rem] lg:h-[19rem] flex flex-col inset-0 mt-[1.67rem] absolute justify-center items-center bg-gray-300 rounded-lg"
                 >
                   <img
                     src={img}
@@ -74,13 +74,11 @@ const ClientsReviewCard = ({ img, feedback, clientName, clientProfession }) => {
             </div>
 
             {/* right-part */}
-            <div className="mt-[15.5rem] ml-20 ">
-              <BiSolidQuoteAltLeft className="text-gray-400 -ml-5 text-4xl " />
-
-              <p className="text-xs tex-center text-center w-[15rem] text-white font-Roboto font-normal">
+            <div className="mt-[15.5rem] rounded-b-xl -ml-[10rem]">
+              <BiSolidQuoteAltLeft className="text-gray-400 -ml-5 text-4xl" />
+              <p className="text-xs text-white text-center w-[14rem] font-Roboto font-normal">
                 {feedback}
               </p>
-
               <BiSolidQuoteAltRight className="text-gray-400 text-4xl -mt-2 ml-[13rem]" />
             </div>
           </div>

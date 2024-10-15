@@ -1,66 +1,27 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import CenterCustomHeading from "../customs/CenterCustomHeading";
 import about2 from "../../assets/aboutUsImage/about2.png";
-import CustomArrow from "../customs/CustomArrow";
-import { FiArrowUpRight } from "react-icons/fi";
-import { FaArrowRight } from "react-icons/fa6";
 import Tanul from "../../assets/TeamMemberImage/Tanul.png";
 import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
-import OurWorks from "../home/OurWorks";
 import CustomButton from "../customs/CustomButton";
 import { useNavigate } from "react-router";
+import CountUp from "react-countup"; // Import CountUp
 
-const AboutServices = [
-  {
-    id: 1,
-    Service: "Website Development",
-    desc:
-      "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",
-  },
-
-  {
-    id: 2,
-    Service: "UI/UX Designing",
-    desc:
-      "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",
-  },
-  {
-    id: 3,
-    Service: "SEO",
-    desc:
-      "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",
-  },
-  {
-    id: 4,
-    Service: "Social Media Marketing",
-    desc:
-      "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",
-  },
-  {
-    id: 5,
-    Service: "Pay Per Click (PPC)",
-    desc:
-      "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",
-  },
-  {
-    id: 6,
-    Service: "Website Redesigning",
-    desc:
-      "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",
-  },
-];
 const AboutUs = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [startCount, setStartCount] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/contact");
   };
+
+// Trigger the count-up animation when the page loads
+  useEffect(() => {
+    setStartCount(true);
+  }, []);
 
   return (
     <div className="w-full relative h-full bg-[#011415] py-24 md:py-8 lg:py-24 xl:py-28">
@@ -75,7 +36,7 @@ const AboutUs = () => {
           <div className="flex gap-10">
             {/* left-section */}
             <div className="w-1/2 -ml-20 mt-4">
-              <div className="w-[18rem] h-[13rem] md:w-[22rem] md:h-[20rem] lg:w-[20rem] lg:h-[26rem] lg:ml-[5rem] xl:w-[40rem] xl:h-[34rem] absolute  border-2 border-white rounded-xl">
+              <div className="w-[18rem] h-[13rem] md:w-[22rem] md:h-[20rem] lg:w-[20rem] lg:h-[26rem] lg:ml-[5rem] xl:w-[40rem] xl:h-[34rem] absolute border-2 border-white rounded-xl">
                 <img
                   src={about2}
                   className="w-full h-full bg-cover rounded-xl"
@@ -131,13 +92,17 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* happy custome section */}
+      {/* happy customer section */}
       <div className="w-full bg-[#2c3b3c] h-[12rem] md:h-[9rem]">
         <div className="flex flex-col-reverse md:flex-row items-center md:justify-around">
           <div className="flex flex-col">
             <div className="flex items-center mt-3 gap-5 font-Roboto">
+              {/* Use CountUp for the animated number */}
               <p className="font-bold text-xl lg:text-[2rem] xl:text-[3rem] text-white">
-                100 +
+                {startCount && (
+                  <CountUp start={0} end={100} duration={5}  />
+                )}{" "}
+                +
               </p>
               <p className=" text-xl lg:text-[2.0625rem] text-white font-normal">
                 Project Completed
@@ -145,8 +110,12 @@ const AboutUs = () => {
             </div>
 
             <div className="flex items-center lg:mt-6 gap-8 font-Roboto">
+              {/* Use CountUp for the animated number */}
               <p className="font-bold text-xl lg:text-[2rem] xl:text-[3rem] text-white">
-                95 +
+                {startCount && (
+                  <CountUp start={0} end={95} duration={5} />
+                )}{" "}
+                +
               </p>
               <p className="text-xl lg:text-[2.0625rem] text-white font-normal">
                 Happy Customer
@@ -163,7 +132,6 @@ const AboutUs = () => {
               />
             </div>
             <div className="w-[5.2rem] h-[5.2rem] -ml-5 lg:w-[6.4375rem] lg:h-[6.4375rem] rounded-full border">
-              {" "}
               <img
                 className="w-full h-full bg-cover rounded-full"
                 src={Abhishek}
@@ -171,7 +139,6 @@ const AboutUs = () => {
               />
             </div>
             <div className="w-[5.2rem] h-[5.2rem] -ml-5 lg:w-[6.4375rem] lg:h-[6.4375rem] rounded-full border">
-              {" "}
               <img
                 className="w-full h-full bg-cover rounded-full"
                 src={Ankur}
@@ -179,7 +146,6 @@ const AboutUs = () => {
               />
             </div>
             <div className="w-[5.2rem] h-[5.2rem] -ml-5 lg:w-[6.4375rem] lg:h-[6.4375rem] rounded-full border">
-              {" "}
               <img
                 className="w-full h-full bg-cover rounded-full"
                 src={Prateek}
@@ -190,11 +156,10 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* <OurWorks/> */}
-
-      <div className="flex -mb-7 flex-col w-full h-[11rem] lg:h-[20rem] lg:-mb-32 items-center bg-[#6F5294] ">
+      {/* Call to action section */}
+      <div className="flex -mb-24 sm:-mb-7 flex-col w-full h-[11rem] lg:h-[20rem] lg:-mb-32 items-center bg-[#6F5294] ">
         <p className="font-Roboto text-2xl text-white font-bold lg:max-w-[50rem] text-center mt-5 mb-5 lg:mt-10 lg:mb-10 lg:leading-[4.5rem] lg:text-[4rem]">
-          Ready To Elevate Your Brand Online ?
+          Ready To Elevate Your Brand Online?
         </p>
         <CustomButton label={"Let’s Talk"} onclick={handleClick} />
       </div>
