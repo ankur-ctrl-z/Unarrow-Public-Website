@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
 import CustomButton from "../customs/CustomButton";
-import axios from 'axios'
+import axios from 'axios';
 import toast from "react-hot-toast";
 
 const serviceInfo = [
@@ -10,60 +10,75 @@ const serviceInfo = [
   { id: 3, info: "UI/UX Enquiry" },
   { id: 4, info: "SMM Enquiry" },
   { id: 5, info: "General Enquiry" },
-  { id: 6, info: "Consulting Enquiry" }, // Added a sixth service to balance the layout
+  { id: 6, info: "Consulting Enquiry" }, 
 ];
 
 const Contact = () => {
+  // backend base url
+  const base_url = import.meta.env.VITE_BASE_URL;
 
-  const [errMessage, setErrMessage] =useState('');
+  const [errMessage, setErrMessage] = useState('');
   const [isHover, setIsHover] = useState(null);
+
+  // State to hold selected inquiry ID
+  const [selectedInquiryId, setSelectedInquiryId] = useState(null); 
+
+  // extracting query-> info from serviceInfo
+  const getInquiryDescription = (id) => {
+    const inquiry = serviceInfo.find((service) => service.id === id);
+    return inquiry ? inquiry.info : "";
+  };
+
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
-    pinCode:"",
+    pinCode: "",
     message: "",
+    inquiryId: null,
   });
 
-  const formDataHandler = async(event) => {
+  const formDataHandler = async (event) => {
     event.preventDefault();
 
-    
+    const { firstName, lastName, email, phone, pinCode, message } = formData;
 
-    const {firstname, lastname, email, phone, pinCode, message} = formData;
-
-    if(!firstname|| !lastname || !email || !phone || !pinCode || !message){
-      toast.error('All fiels are required!')
+    if (!firstName || !lastName || !email || !phone || !pinCode || !message) {
+      toast.error('All fields are required!');
       return;
     }
 
-   
+    // Get description based on selected inquiry ID
+    const serviceInquiry = getInquiryDescription(selectedInquiryId); 
+
     try {
-      const response = await axios.post('http://localhost:4000/api/book-call',{
-        firstname, lastname, email, phone, pinCode, message
-      })
+      const response = await axios.post(`${base_url}/api/book-call`, {
+        firstName,
+        lastName,
+        email,
+        phone,
+        pinCode,
+        message,
+        serviceInquiry,
+      });
       toast.success(response.data.message);
-      setFormData( 
-        {
-        firstname:"",
-        lastname: "",
+      setErrMessage('');
+      setFormData({
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
-        pinCode:"",
+        pinCode: "",
         message: "",
-        }
-      )
-
+        inquiryId: null,
+      });
+      setSelectedInquiryId(null); // Reset selected inquiry ID
     } catch (error) {
       if (error.response && error.response.status === 409) {
-        // toast.error(error.response.data.message);
-        setErrMessage(error.response.data.message)
+        setErrMessage(error.response.data.message);
         return;
-      }
-      // internal server error
-      else if (error.response && error.response.status === 500) {
-        // toast.error(error.response.data.message);
+      } else if (error.response && error.response.status === 500) {
         setErrMessage(error.response.data.message);
         return;
       }
@@ -78,13 +93,19 @@ const Contact = () => {
     }));
   };
 
+
+  // Set selected inquiry ID directly
+  const handleInquiryClick = (id) => {
+    setSelectedInquiryId(id); 
+  };
+
   return (
-    <div className="w-full relative h-full bg-black py-10 md:py-20 ">
+    <div className="w-full relative h-full bg-black py-10 md:py-20">
       <div className="w-11/12 mx-auto p-4 md:p-8">
         <div className="flex flex-col justify-center items-center space-y-5">
           {/* Heading */}
           <CenterCustomHeading className={'mt-5 -mb-3 md:-mt-5 lg:mt-5'} heading={"GET IN TOUCH"} />
-          <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold font-Roboto text-center -mt-20 ">
+          <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold font-Roboto text-center -mt-20">
             Reach Out To Get A Free Quote.
           </p>
 
@@ -98,11 +119,13 @@ const Contact = () => {
                     key={serv.id}
                     onMouseEnter={() => setIsHover(serv.id)}
                     onMouseLeave={() => setIsHover(null)}
+                    onClick={() => handleInquiryClick(serv.id)} // Set the selected inquiry ID here
                     className={`w-full px-[3px] h-7 md:h-9 lg:h-[48px] border rounded-full flex items-center justify-center transition-colors duration-300 ${
                       isHover === serv.id
                         ? "bg-red-600 text-white shadow-lg"
                         : "bg-black text-red-600 border-white"
-                    }`}
+                    }  
+                    ${selectedInquiryId === serv.id ? "bg-red-600 text-white" : "bg-black text-red-600"}`}
                   >
                     <p className="text-[8px] md:text-[14px] font-semibold font-Roboto text-center">
                       {serv.info}
@@ -124,12 +147,12 @@ const Contact = () => {
                     FIRST NAME
                     <br />
                     <input
-                      className="w-full text-black bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
+                      className="w-full px-1 bg-transparent focus:bg-transparent active:bg-transparent focus:outline-none border-b border-b-black text-black"
                       type="text"
                       required
                       placeholder="First Name"
-                      name="firstname"
-                      value={formData.firstname}
+                      name="firstName"
+                      value={formData.firstName}
                       onChange={handleChange}
                     />
                   </label>
@@ -138,12 +161,12 @@ const Contact = () => {
                     LAST NAME
                     <br />
                     <input
-                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
+                      className="w-full px-1 bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="Last Name"
-                      name="lastname"
-                      value={formData.lastname}
+                      name="lastName"
+                      value={formData.lastName}
                       onChange={handleChange}
                     />
                   </label>
@@ -155,7 +178,7 @@ const Contact = () => {
                     EMAIL ADDRESS
                     <br />
                     <input
-                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
+                      className="w-full px-1 bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="email"
                       placeholder="you@example.com"
                       name="email"
@@ -164,7 +187,7 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </label>
-                  <p className="text-red-400 text-lg">{errMessage}</p>
+                  <p className="text-red-400 text-sm lg:text-[16px]">{errMessage}</p>
                 </div>
 
                 {/* Phone & Pincode Fields */}
@@ -173,7 +196,7 @@ const Contact = () => {
                     PHONE
                     <br />
                     <input
-                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
+                      className="w-full px-1 bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="+91"
@@ -187,7 +210,7 @@ const Contact = () => {
                     PIN CODE
                     <br />
                     <input
-                      className="w-full bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
+                      className="w-full px-1 bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
                       type="text"
                       required
                       placeholder="Enter Your Pincode"
@@ -211,12 +234,18 @@ const Contact = () => {
                       placeholder="Type your message..."
                       value={formData.message}
                       onChange={handleChange}
-                    ></textarea>
+                    />
                   </label>
                 </div>
 
                 {/* Submit Button */}
-                <CustomButton label={"SUBMIT"} className="rounded-lg md:w-full" />
+                <div className="flex justify-center">
+                  <CustomButton
+                    type="submit"
+                    className="w-full text-lg md:text-2xl lg:text-3xl rounded-md border border-black shadow-md shadow-black transition duration-300 hover:scale-105 transform"
+                     label="Book a call"
+                  />
+                </div>
               </form>
             </div>
           </div>
