@@ -3,27 +3,60 @@ import { TfiEmail } from "react-icons/tfi";
 import { IoCall } from "react-icons/io5";
 import CustomButton from "../customs/CustomButton";
 import CardSlider from "./CardSlider";
+import axios from "axios";
+import toast from "react-hot-toast";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
   });
 
+  // error message showing 
+  const [errMessage, setErrMessage] = useState('')
+
   // Handle form submission
-  const formDataHandler = (event) => {
+  const formDataHandler = async(event) => {
     event.preventDefault();
-    console.log(formData);
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+
+    const { firstName, lastName, email, phone, message } = formData;
+
+    if (!firstName || !lastName || !email || !phone || !message) {
+      toast.error("All feilds are required!");
+    }
+  
+
+    try {
+      const response = await axios.post("http://localhost:4000/api/submit-form", {
+        firstName, lastName, email, phone, message
+      });
+      toast.success(response.data.message);
+      setErrMessage('')
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      return;
+    } catch (error) {
+      if (error.response && error.response.status === 409) {
+        // toast.error(error.response.data.message);
+        setErrMessage(error.response.data.message)
+        return;
+      }
+      // internal server error
+      else if (error.response && error.response.status === 500) {
+        // toast.error(error.response.data.message);
+        setErrMessage(error.response.data.message);
+        return;
+      }
+    }
   };
 
   // Update form state
@@ -108,8 +141,8 @@ const Contact = () => {
                         type="text"
                         required
                         placeholder="First Name"
-                        name="firstname"
-                        value={formData.firstname}
+                        name="firstName"
+                        value={formData.firstName}
                         onChange={handleChange}
                       />
                     </label>
@@ -123,8 +156,8 @@ const Contact = () => {
                         type="text"
                         required
                         placeholder="Last Name"
-                        name="lastname"
-                        value={formData.lastname}
+                        name="lastName"
+                        value={formData.lastName}
                         onChange={handleChange}
                       />
                     </label>
@@ -147,6 +180,7 @@ const Contact = () => {
                         onChange={handleChange}
                       />
                     </label>
+                    <p className="text-red-400 text-sm">{errMessage}</p>
                   </div>
                   <div className="w-full">
                     <label>
@@ -190,8 +224,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-
 
       {/* for small devices */}
       <div className="md:hidden w-full bg-[#011415] py-10 px-4 sm:px-8 lg:px-28">
@@ -263,8 +295,8 @@ const Contact = () => {
                             type="text"
                             required
                             placeholder="First Name"
-                            name="firstname"
-                            value={formData.firstname}
+                            name="firstName"
+                            value={formData.firstName}
                             onChange={handleChange}
                           />
                         </label>
@@ -278,8 +310,8 @@ const Contact = () => {
                             type="text"
                             required
                             placeholder="Last Name"
-                            name="lastname"
-                            value={formData.lastname}
+                            name="lastName"
+                            value={formData.lastName}
                             onChange={handleChange}
                           />
                         </label>
@@ -302,6 +334,7 @@ const Contact = () => {
                             onChange={handleChange}
                           />
                         </label>
+                        <p className="text-red-400 text-sm">{errMessage}</p>
                       </div>
                       <div className="w-full">
                         <label>
@@ -339,7 +372,10 @@ const Contact = () => {
 
                   {/* Submit Button */}
                   <div className="mt-8 ">
-                    <CustomButton label="SUBMIT" className="w-full rounded-xl lg:w-1/3" />
+                    <CustomButton
+                      label="SUBMIT"
+                      className="w-full rounded-xl lg:w-1/3"
+                    />
                   </div>
                 </form>
               </div>
