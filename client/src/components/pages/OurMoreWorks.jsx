@@ -1,8 +1,8 @@
 import React from "react";
 import CustomWork from "../customs/CustomWork";
-import onetouch from "../../assets/workImage/onetouch.jpg";
+import onetouch from "../../assets/workImage/onetouch.png";
 import sja from "../../assets/workImage/sja care center.jpg";
-import jow from "../../assets/workImage/journey on wheels.jpg";
+import jow from "../../assets/workImage/JOW.png";
 import divineFitness from '../../assets/workImage/divinefitness.jpg'
 
 import { FaTelegramPlane } from "react-icons/fa";

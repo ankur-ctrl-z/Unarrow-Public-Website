@@ -52,6 +52,7 @@ const Contact = () => {
     // Get description based on selected inquiry ID
     const serviceInquiry = getInquiryDescription(selectedInquiryId); 
 
+   
     try {
       const response = await axios.post(`${base_url}/api/book-call`, {
         firstName,
@@ -136,14 +137,14 @@ const Contact = () => {
             </div>
 
             {/* Contact Form Container */}
-            <div className="w-[16.5rem] md:w-[40.1rem] mt-[3.6rem] lg:mt-[2rem] lg:w-3/4 bg-[#BCD4D2] border rounded-2xl p-6 md:p-10 lg:p-12">
+            <div className="w-full lg:w-[85%] mt-[3.6rem] lg:mt-[2rem]  bg-[#BCD4D2] border rounded-2xl p-6 md:p-10 lg:p-12">
               <form
                 className="flex flex-col space-y-6 md:space-y-8 lg:space-y-10 text-black font-Roboto"
                 onSubmit={formDataHandler}
               >
                 {/* Name Fields */}
                 <div className="grid text-black grid-cols-1 md:grid-cols-2 gap-6">
-                  <label className="w-full text-sm md:text-md">
+                  <label className="w-full mt-2 text-sm md:text-md">
                     FIRST NAME
                     <br />
                     <input
@@ -157,7 +158,7 @@ const Contact = () => {
                     />
                   </label>
 
-                  <label className="w-full -mt-4 sm:mt-0 text-sm md:text-md">
+                  <label className="w-full -mt-5 sm:mt-0 text-sm md:text-md">
                     LAST NAME
                     <br />
                     <input
@@ -242,8 +243,8 @@ const Contact = () => {
                 <div className="flex justify-center">
                   <CustomButton
                     type="submit"
-                    className="w-full text-lg md:text-2xl lg:text-3xl rounded-md border border-black shadow-md shadow-black transition duration-300 hover:scale-105 transform"
-                     label="Book a call"
+                    className="w-full text-lg lg:text-xl rounded-md border border-black shadow-md shadow-black transition duration-300 hover:scale-105 transform"
+                    label="Book a call"
                   />
                 </div>
               </form>

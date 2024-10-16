@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaTelegramPlane } from "react-icons/fa";
-import onetouch from "../../assets/workImage/onetouch.jpg";
+import onetouch from "../../assets/workImage/onetouch.png";
 import sja from "../../assets/workImage/sja care center.jpg";
-import jow from "../../assets/workImage/journey on wheels.jpg";
+import jow from "../../assets/workImage/JOW.png";
 import CustomButton from "../customs/CustomButton";
 import { Link } from "react-router-dom";
 

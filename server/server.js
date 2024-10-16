@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from 'dotenv'
-// import cookieParser from "cookie-parser";
 import cors from 'cors';
-const app  = express();
+
+const app = express();
 import contactRouter from './route/contactRouter.js'
 import bockCallRouter from './route/bookCallRouter.js'
 import DBconnection from "./config/DBconnection.js";
