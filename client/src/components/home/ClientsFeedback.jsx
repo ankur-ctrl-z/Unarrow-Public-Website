@@ -33,11 +33,22 @@ const ClientsFeedback = () => {
             </h3>
           </div>
         </div>
-        <Slider className="-mb-[32rem] md:mt-1 md:mb-12 lg:mb-8" {...settings}>
+
+         <Slider className="-mb-[32rem] md:mt-1 md:mb-12 lg:mb-8" {...settings}>
           <ClientsReviewCard img={img1} clientProfession={'UI/UX Designer'} clientName={'Tanul Y.'} feedback={'Exceptional digital agency with innovative strategies, responsive communication, and top-notch creativity. They delivered beyond expectations, driving impressive results. Highly recommend for anyone seeking to elevate their online presence and achieve business growth'} />
           <ClientsReviewCard img={Ankur} clientName={"Ankur Sharma"} clientProfession={'React Developer'} feedback={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non.'} />
           <ClientsReviewCard img={Abhishek} clientName={'Abhishek'} clientProfession={'Social Media Expert'}  feedback={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non.'}/>
         </Slider>
+{/* 
+        <div className="container">
+          <div className="wrapper">
+          <ClientsReviewCard img={img1} clientProfession={'UI/UX Designer'} clientName={'Tanul Y.'} feedback={'Exceptional digital agency with innovative strategies, responsive communication, and top-notch creativity. They delivered beyond expectations, driving impressive results. Highly recommend for anyone seeking to elevate their online presence and achieve business growth'} />
+          <ClientsReviewCard img={Ankur} clientName={"Ankur Sharma"} clientProfession={'React Developer'} feedback={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non.'} />
+          <ClientsReviewCard img={Abhishek} clientName={'Abhishek'} clientProfession={'Social Media Expert'}  feedback={'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non.'}/>
+          </div>
+        </div> */}
+
+
       </div>
     </div>
   );

@@ -18,13 +18,14 @@ const BuildIdea = () => {
         {/* cards-section */}
         <div className="grid grid-cols-4 -ml-[15px] justify-center -mt-3 gap-6 mb-5">
           <CustomBuildIdea
-            clasName={"bg-black rounded-xl border-none"}
+            clasName={"bg-black"}
             text={"WE"}
           />
+
           <CustomBuildIdea image={img1} text={"BUILD"} />
 
           <CustomBuildIdea
-            clasName={"bg-red-600 "}
+            clasName={"bg-red-600"}
             icon={
               <FaArrowRight className="group-hover:scale-150 text-[8rem] duration-500 transition-all" />
             }

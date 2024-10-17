@@ -23,7 +23,7 @@ const CustomTeamMember = ({ image, memberName, profession }) => {
 
       {/* Social Icons, hidden initially and shown on hover */}
       <div className="absolute bottom-4 right-4 flex flex-col space-y-2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-        <a href="#" className="text-white text-2xl hover:opacity-100 rounded-full border p-2 ">
+        <a href="#" className="text-white text-2xl  rounded-full border p-2 ">
           <FaFacebookF className="hover:text-blue-500" />
         </a>
         <a href="#" className="text-white text-2xl rounded-full border p-2 ">
