@@ -64,7 +64,7 @@ const Services = () => {
   return (
     <div className="w-full relative h-full bg-[#011415] py-12">
       <div className="w-11/12 mx-auto">
-        <div className="mt-10 sm:mt-20 flex flex-col justify-center items-center">
+        <div className="mt-14 sm:mt-20 flex flex-col justify-center items-center">
           <CenterCustomHeading
             className={"text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto"}
             heading={"We Offer Wide Range of Services"}
@@ -73,7 +73,7 @@ const Services = () => {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-5 sm:mt-10">
             {AboutServices.map((service) => {
               return (
-                <div
+                <Link to={service.path}
                   onMouseEnter={() => setHoveredCard(service.id)}
                   onMouseLeave={() => setHoveredCard(null)}  
                   className={`w-[18rem] md:w-[19rem] xl:w-[25rem] mt-2 font-Roboto h-[21.375rem]  flex flex-col justify-center items-center  rounded-[2.5rem] shadow-inherit p-2 duration-100 transition-all ${
@@ -85,7 +85,7 @@ const Services = () => {
                   </h2>
                   <p className="text-white max-w-[15rem] text-sm md:text-md ">{service.desc}</p>
 
-                  <Link to={service.path} className="flex gap-3 mt-5 mb-5 ml-20">
+                  <div  className="flex gap-3 mt-5 mb-5 ml-20">
                     <a className="text-white mt-2 text-xl underline" href="">
                       Learn More
                     </a>
@@ -98,8 +98,8 @@ const Services = () => {
                         )
                       }
                     />
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               );
             })}
           </div>

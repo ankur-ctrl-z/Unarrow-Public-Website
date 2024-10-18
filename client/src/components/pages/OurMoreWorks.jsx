@@ -10,7 +10,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const OurMoreWorks = () => {
   return (
-    <div className="w-full relative h-full bg-[#011415] py-20">
+    <div className="w-full relative h-full bg-[#011415] py-24">
       <div className="flex -mt-5 items-center justify-center gap-4 lg:ml-14 py-5 mb-4 xl:py-14">
         <div className="w-2 h-2 lg:w-4 lg:h-4 mt-1 bg-[#db4a2b]" />
         <h3 className="text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto">Our Work</h3>

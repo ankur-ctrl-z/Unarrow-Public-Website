@@ -1,8 +1,9 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Toaster } from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast';
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import ScrollToTop from '../ScrollToTop'  // Import ScrollToTop'
 
 // Lazy-loaded components
 const Home = React.lazy(() => import("./components/pages/Home"));
@@ -11,35 +12,31 @@ const AboutUs = React.lazy(() => import("./components/pages/AboutUs"));
 const Careers = React.lazy(() => import("./components/pages/Careers"));
 const Contact = React.lazy(() => import("./components/pages/Contact"));
 const OurMoreWorks = React.lazy(() => import("./components/pages/OurMoreWorks"));
-const Onetouchagency = React.lazy(() =>import("./components/pages/OneTouchProject"));
+const Onetouchagency = React.lazy(() => import("./components/pages/OneTouchProject"));
 
-const WebsiteDevelopment = React.lazy(() =>import("./components/pages/serviceSubPages/WebsiteDevelopment"));
-const UIUX = React.lazy(() =>import("./components/pages/serviceSubPages/UIUXDesigning"));
-
-const SEO = React.lazy(() =>import("./components/pages/serviceSubPages/SEO"));
-
-const WebRedesign = React.lazy(() =>import("./components/pages/serviceSubPages/WebsiteRedesigning"));
-
-const PPC = React.lazy(() =>import("./components/pages/serviceSubPages/PPC"));
-
-const SMM = React.lazy(() =>import("./components/pages/serviceSubPages/SMM"));
+const WebsiteDevelopment = React.lazy(() => import("./components/pages/serviceSubPages/WebsiteDevelopment"));
+const UIUX = React.lazy(() => import("./components/pages/serviceSubPages/UIUXDesigning"));
+const SEO = React.lazy(() => import("./components/pages/serviceSubPages/SEO"));
+const WebRedesign = React.lazy(() => import("./components/pages/serviceSubPages/WebsiteRedesigning"));
+const PPC = React.lazy(() => import("./components/pages/serviceSubPages/PPC"));
+const SMM = React.lazy(() => import("./components/pages/serviceSubPages/SMM"));
 
 // Non-lazy components
-import Blog from "./components/pages/Blog";
+// import Blog from "./components/pages/Blog";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* Scroll to top on route change */}
+      <ScrollToTop />
 
+      <Navbar />
       <Routes>
         {/* Lazy loaded routes wrapped in Suspense */}
-
-        {/* navbar-> nav-links */}
         <Route
           path="/"
           element={
-            <Suspense fallback={<div>Loading Home...</div>}>
+            <Suspense fallback={<></>}>
               <Home />
             </Suspense>
           }
@@ -47,7 +44,7 @@ function App() {
         <Route
           path="/services"
           element={
-            <Suspense fallback={<div>Loading Services...</div>}>
+            <Suspense fallback={<></>}>
               <Services />
             </Suspense>
           }
@@ -55,7 +52,7 @@ function App() {
         <Route
           path="/aboutus"
           element={
-            <Suspense fallback={<div>Loading About Us...</div>}>
+            <Suspense fallback={<></>}>
               <AboutUs />
             </Suspense>
           }
@@ -63,7 +60,7 @@ function App() {
         <Route
           path="/careers"
           element={
-            <Suspense fallback={<div>Loading Careers page...</div>}>
+            <Suspense fallback={<></>}>
               <Careers />
             </Suspense>
           }
@@ -71,93 +68,85 @@ function App() {
         <Route
           path="/contact"
           element={
-            <Suspense fallback={<div>Loading Contact...</div>}>
+            <Suspense fallback={<></>}>
               <Contact />
             </Suspense>
           }
         />
 
-
-        {/* more work routes */}
         <Route
           path="/ourworks"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
+            <Suspense fallback={<></>}>
               <OurMoreWorks />
             </Suspense>
           }
         />
-
-        {/* our works->links */}
         <Route
           path="/ourworks/projects/ontouchagency"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
+            <Suspense fallback={<></>}>
               <Onetouchagency />
             </Suspense>
           }
         />
 
-
-
-         {/* service sub navlinks */}
-          <Route
-          path= "/services/website-development"
+        <Route
+          path="/services/website-development"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
+            <Suspense fallback={<></>}>
               <WebsiteDevelopment />
             </Suspense>
           }
         />
-             <Route
+        <Route
           path="/services/ui-ux design"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
+            <Suspense fallback={<></>}>
               <UIUX />
             </Suspense>
           }
         />
-             <Route
+        <Route
           path="/services/seo"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
+            <Suspense fallback={<></>}>
               <SEO />
             </Suspense>
           }
         />
-             <Route
+        <Route
           path="/services/pay-per-click"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
-              <PPC/>
+            <Suspense fallback={<></>}>
+              <PPC />
             </Suspense>
           }
         />
-             <Route
+        <Route
           path="/services/social-media-marketing"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
-              <SMM/>
+            <Suspense fallback={<></>}>
+              <SMM />
             </Suspense>
           }
         />
-             <Route
+        <Route
           path="/services/website-redesigning"
           element={
-            <Suspense fallback={<div>Loading projects...</div>}>
-              <WebRedesign/>
+            <Suspense fallback={<></>}>
+              <WebRedesign />
             </Suspense>
           }
         />
 
         {/* Non-lazy loaded routes (No Suspense needed) */}
-        <Route path="/blogs" element={<Blog />} />
+        {/* <Route path="/blogs" element={<Blog />} /> */}
         <Route path="/careers" element={<Careers />} />
-      
       </Routes>
-      <Toaster/>
+
+      <Toaster />
       <Footer />
-     
     </Router>
   );
 }

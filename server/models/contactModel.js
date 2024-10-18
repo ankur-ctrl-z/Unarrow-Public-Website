@@ -1,35 +1,37 @@
 import mongoose from "mongoose";
 
-//  this is the user schema
+// This is the user schema
 const ContactSchema = new mongoose.Schema({
-    firstName:{
-        type:String,
-        required: true
+    firstName: {
+        type: String,
+        required: [true, 'First name is required'],
+        match: [/^[A-Za-z]+$/, 'First name can only contain letters']
     },
-
-   lastName:{
-        type:String,
-        required: true
+    lastName: {
+        type: String,
+        required: [true, 'Last name is required'],
+        match: [/^[A-Za-z]+$/, 'Last name can only contain letters']
     },
-
-    email:{
-        type:String,
-        required: true
+    email: {
+        type: String,
+        required: [true, 'Email is required'],
+        trim: true,
+        unique: true,
+        match: [/\S+@\S+\.\S+/, 'Please enter a valid email address']
     },
-
-    phone:{
-        type:String,
-        required: true,
+    phone: {
+        type: String,
+        required: [true, 'Phone number is required'],
+        minLength: [10, 'Phone number must be at least 10 digits'],
+        maxLength: [15, 'Phone number cant exceed 15 digits'],
+        match: [/^\d+$/, 'Phone number must contain only digits']
     },
-    
-    message:{
-        type:String,
-        required:true
-    },
+    message: {
+        type: String,
+        required: [true, 'Message is required']
+    }
+}, { timestamps: true });
 
- 
-},{timestamps:true});
-
-//this is the user model
-const Contact  = mongoose.model("Contact", ContactSchema);
+// This is the user model
+const Contact = mongoose.model("Contact", ContactSchema);
 export default Contact;

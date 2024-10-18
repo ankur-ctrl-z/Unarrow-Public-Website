@@ -4,7 +4,7 @@ import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
 import CustomTeamMember from "../customs/CustomTeamMember";
-
+import './team.css'
 
 const OurTeamMember = () => {
   return (

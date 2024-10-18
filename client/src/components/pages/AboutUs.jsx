@@ -63,25 +63,25 @@ const AboutUs = () => {
               {/* social-icons */}
               <div className="flex -ml-10 mt-6 gap-5 text-white text-3xl lg:text-4xl">
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="hover:text-blue-600 duration-300 transition-all"
                   href=""
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="hover:text-green-600 duration-300 transition-all"
                   href=""
                 >
                   <FaWhatsapp />
                 </a>
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="duration-300 transition-all"
                   href=""
                 >
                   <FaSquareXTwitter />
                 </a>
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="hover:text-orange-700 duration-300 transition-all"
                   href=""
                 >
                   <FaInstagram />

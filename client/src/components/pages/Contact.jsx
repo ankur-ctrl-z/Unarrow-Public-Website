@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
 import CustomButton from "../customs/CustomButton";
-import axios from 'axios';
+import axios from "axios";
 import toast from "react-hot-toast";
 
 const serviceInfo = [
@@ -10,18 +10,20 @@ const serviceInfo = [
   { id: 3, info: "UI/UX Enquiry" },
   { id: 4, info: "SMM Enquiry" },
   { id: 5, info: "General Enquiry" },
-  { id: 6, info: "Consulting Enquiry" }, 
+  { id: 6, info: "Consulting Enquiry" },
 ];
 
 const Contact = () => {
   // backend base url
   const base_url = import.meta.env.VITE_BASE_URL;
+  console.log("base_url", base_url);
 
-  const [errMessage, setErrMessage] = useState('');
+  const [phoneError, setPhoneError] = useState("");
+  const [emailErorr, setEmailError] = useState("");
   const [isHover, setIsHover] = useState(null);
 
   // State to hold selected inquiry ID
-  const [selectedInquiryId, setSelectedInquiryId] = useState(null); 
+  const [selectedInquiryId, setSelectedInquiryId] = useState(null);
 
   // extracting query-> info from serviceInfo
   const getInquiryDescription = (id) => {
@@ -44,15 +46,39 @@ const Contact = () => {
 
     const { firstName, lastName, email, phone, pinCode, message } = formData;
 
-    if (!firstName || !lastName || !email || !phone || !pinCode || !message) {
-      toast.error('All fields are required!');
+    // Get description based on selected inquiry ID
+    const serviceInquiry = getInquiryDescription(selectedInquiryId);
+
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !phone ||
+      !pinCode ||
+      !message ||
+      !serviceInquiry
+    ) {
+      toast.error("All fields are required!");
       return;
     }
 
-    // Get description based on selected inquiry ID
-    const serviceInquiry = getInquiryDescription(selectedInquiryId); 
+    // Validate phone number (must be exactly 10 digits)
+    if (phone.length < 10 || !/^\d+$/.test(phone)) {
+      setPhoneError("Phone number must be 10 digits");
+      return;
+    } else {
+      setPhoneError("");
+    }
 
-   
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEmailError("Invalid email address");
+      return;
+    } else {
+      setEmailError("");
+    }
+
     try {
       const response = await axios.post(`${base_url}/api/book-call`, {
         firstName,
@@ -64,7 +90,6 @@ const Contact = () => {
         serviceInquiry,
       });
       toast.success(response.data.message);
-      setErrMessage('');
       setFormData({
         firstName: "",
         lastName: "",
@@ -76,12 +101,21 @@ const Contact = () => {
       });
       setSelectedInquiryId(null); // Reset selected inquiry ID
     } catch (error) {
-      if (error.response && error.response.status === 409) {
-        setErrMessage(error.response.data.message);
-        return;
-      } else if (error.response && error.response.status === 500) {
-        setErrMessage(error.response.data.message);
-        return;
+      if (error.response) {
+        // Conflict error
+        if (error.response.status === 409) {
+          toast.error(error.response.data.message);
+          return;
+        }
+
+        // Internal server error
+        if (error.response.status === 500) {
+          toast.error("Internal server error. Please try again later.");
+          return;
+        }
+      } else {
+        // If no response is received or a network error occurs
+        toast.error("Something went wrong. Please try again.");
       }
     }
   };
@@ -94,10 +128,9 @@ const Contact = () => {
     }));
   };
 
-
   // Set selected inquiry ID directly
   const handleInquiryClick = (id) => {
-    setSelectedInquiryId(id); 
+    setSelectedInquiryId(id);
   };
 
   return (
@@ -105,7 +138,10 @@ const Contact = () => {
       <div className="w-11/12 mx-auto p-4 md:p-8">
         <div className="flex flex-col justify-center items-center space-y-5">
           {/* Heading */}
-          <CenterCustomHeading className={'mt-5 -mb-3 md:-mt-5 lg:mt-5'} heading={"GET IN TOUCH"} />
+          <CenterCustomHeading
+            className={"mt-5 -mb-3 md:-mt-5 lg:mt-5"}
+            heading={"GET IN TOUCH"}
+          />
           <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold font-Roboto text-center -mt-20">
             Reach Out To Get A Free Quote.
           </p>
@@ -126,7 +162,11 @@ const Contact = () => {
                         ? "bg-red-600 text-white shadow-lg"
                         : "bg-black text-red-600 border-white"
                     }  
-                    ${selectedInquiryId === serv.id ? "bg-red-600 text-white" : "bg-black text-red-600"}`}
+                    ${
+                      selectedInquiryId === serv.id
+                        ? "bg-red-600 text-white"
+                        : "bg-black text-red-600"
+                    }`}
                   >
                     <p className="text-[8px] md:text-[14px] font-semibold font-Roboto text-center">
                       {serv.info}
@@ -188,7 +228,7 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </label>
-                  <p className="text-red-400 text-sm lg:text-[16px]">{errMessage}</p>
+                  <p className="text-red-400 text-sm">{emailErorr}</p>
                 </div>
 
                 {/* Phone & Pincode Fields */}
@@ -206,6 +246,7 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </label>
+                  <p className="text-red-400 text-sm">{phoneError}</p>
 
                   <label className="w-full -mt-4 text-sm md:text-md">
                     PIN CODE
@@ -242,7 +283,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <div className="flex justify-center">
                   <CustomButton
-                    type="submit"
+                    // type="submit"
                     className="w-full text-lg lg:text-xl rounded-md border border-black shadow-md shadow-black transition duration-300 hover:scale-105 transform"
                     label="Book a call"
                   />
