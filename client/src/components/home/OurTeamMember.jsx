@@ -5,6 +5,7 @@ import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
 import CustomTeamMember from "../customs/CustomTeamMember";
 
+
 const OurTeamMember = () => {
   return (
     <div className="w-full relative h-full bg-[#011415] py-14">

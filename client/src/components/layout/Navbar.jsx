@@ -25,8 +25,8 @@ const Navbar = () => {
   return (
     <>
       {/* navbar */}
-      <div className="w-full fixed top-0 bg-black left-0 z-50">
-        <div className="w-11/12 text-center mx-auto h-14 md:h-[4.4rem] lg:h-[5.5rem] bg-[#505050] rounded-full py-4 p-5">
+      <div className="w-full fixed top-0 bg-black left-0 py-5 lg:py-6 z-50">
+        <div className="w-[94%] text-center mx-auto h-14 md:h-[4.4rem] lg:h-[5rem] bg-[#505050] rounded-full py-4 p-5">
           <div className="flex justify-between">
             <div className="flex gap-2">
               {/* logo */}

@@ -9,33 +9,35 @@ import Prateek from "../../assets/TeamMemberImage/Prateek.png";
 import CustomButton from "../customs/CustomButton";
 import { useNavigate } from "react-router";
 import CountUp from "react-countup"; // Import CountUp
+import VisibilitySensor from "react-visibility-sensor"; // Import VisibilitySensor
 
 const AboutUs = () => {
   const [startCount, setStartCount] = useState(false);
   const navigate = useNavigate();
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, [isVisible]);
+
   const handleClick = () => {
     navigate("/contact");
   };
 
-// Trigger the count-up animation when the page loads
-  useEffect(() => {
-    setStartCount(true);
-  }, []);
-
   return (
     <div className="w-full relative h-full bg-[#011415] py-24 md:py-8 lg:py-24 xl:py-28">
       <div className="w-11/12 mx-auto p-20">
-        <div className="">
-          <p className="z-10 absolute text-center -mt-20 text-3xl text-white font-bold font-Roboto leading-normal md:ml-[14.5rem] md:mt-3 md:text-[3.5rem] lg:mt-5 lg:text-[4rem] lg:ml-[16rem] lg:tracking-[0.875rem] xl:ml-[33rem] xl: xl:text-[8rem]">
+        <div className="py-5">
+          <p className="z-10 absolute text-center ml-6 -mt-16 text-3xl text-white font-bold font-Roboto leading-normal md:ml-[14.5rem] md:mt-3 md:text-[3.5rem] lg:mt-5 lg:text-[4rem] lg:ml-[16rem] lg:tracking-[0.875rem] xl:ml-[33rem] xl:text-[6rem]">
             About Us
           </p>
 
-          <div className="absolute w-[6rem] h-[6rem] -mt-[6.3rem] -ml-[4.5rem] md:-ml-[6.8rem] md:-mt-4 lg:-ml-[5rem] lg:-mt-[5rem] lg:w-[9rem] lg:h-[9rem] xl:w-[12.5rem] xl:h-[12.5rem] bg-red-600 rounded-full"></div>
+          <div className="absolute w-[5rem] h-[5rem] -mt-[5rem] -ml-[2rem] md:-ml-[6.8rem] md:-mt-4 lg:-ml-[5rem] lg:-mt-[4rem] lg:w-[9rem] lg:h-[9rem] xl:w-[12.5rem] xl:h-[12.5rem] bg-red-600 rounded-full"></div>
 
-          <div className="flex gap-10">
+          <div className="flex justify-center lg:-ml-20 gap-10 ">
             {/* left-section */}
-            <div className="w-1/2 -ml-20 mt-4">
+            <div className="w-1/2 mt-4">
               <div className="w-[18rem] h-[13rem] md:w-[22rem] md:h-[20rem] lg:w-[20rem] lg:h-[26rem] lg:ml-[5rem] xl:w-[40rem] xl:h-[34rem] absolute border-2 border-white rounded-xl">
                 <img
                   src={about2}
@@ -54,7 +56,7 @@ const AboutUs = () => {
                 uses the latest tricks to make your site fast and easy to find
                 on Google. We also handle your social media to keep things fun
                 and exciting. Want to be a star online and get more customers?
-                Unarrow is here to make that happen! Scale Your Buisness Online
+                Unarrow is here to make that happen! Scale Your Business Online
                 Get a Free Consultation From our Experts...
               </p>
 
@@ -95,30 +97,55 @@ const AboutUs = () => {
       {/* happy customer section */}
       <div className="w-full bg-[#2c3b3c] h-[12rem] md:h-[9rem]">
         <div className="flex flex-col-reverse md:flex-row items-center md:justify-around">
-          <div className="flex flex-col">
+          <div className="flex flex-col  lg:gap-5">
             <div className="flex items-center mt-3 gap-5 font-Roboto">
-              {/* Use CountUp for the animated number */}
-              <p className="font-bold text-xl lg:text-[2rem] xl:text-[3rem] text-white">
-                {startCount && (
-                  <CountUp start={0} end={100} duration={5}  />
-                )}{" "}
-                +
-              </p>
-              <p className=" text-xl lg:text-[2.0625rem] text-white font-normal">
+              {/* Use CountUp with VisibilitySensor for animation */}
+              <VisibilitySensor partialVisibility>
+                {({ isVisible }) => (
+                  <h1 className="text-xl lg:text-[2.0625rem] text-white font-normal">
+                    <CountUp
+                      start={0}
+                      end={500}
+                      duration={4}
+                      redraw={true}
+                      delay={0}
+                      useEasing={true}
+                      useGrouping={true}
+                      separator=","
+                      startOnMount={isVisible}
+                    />
+                    + <br />
+                  </h1>
+                )}
+              </VisibilitySensor>
+
+              <p className="text-xl lg:text-[2.0625rem] text-white font-normal">
                 Project Completed
               </p>
             </div>
 
-            <div className="flex items-center lg:mt-6 gap-8 font-Roboto">
-              {/* Use CountUp for the animated number */}
-              <p className="font-bold text-xl lg:text-[2rem] xl:text-[3rem] text-white">
-                {startCount && (
-                  <CountUp start={0} end={95} duration={5} />
-                )}{" "}
-                +
-              </p>
+            <div className="flex items-center mt-3 gap-5 font-Roboto">
+              <VisibilitySensor partialVisibility>
+                {({ isVisible }) => (
+                  <h1 className="text-xl lg:text-[2.0625rem] text-white font-normal">
+                    <CountUp
+                      start={0}
+                      end={95}
+                      duration={4}
+                      redraw={true}
+                      delay={0}
+                      useEasing={true}
+                      useGrouping={true}
+                      separator=","
+                      startOnMount={isVisible}
+                    />
+                    + <br />
+                  </h1>
+                )}
+              </VisibilitySensor>
+
               <p className="text-xl lg:text-[2.0625rem] text-white font-normal">
-                Happy Customer
+                Happy Customers
               </p>
             </div>
           </div>

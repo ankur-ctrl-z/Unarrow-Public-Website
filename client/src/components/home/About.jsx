@@ -90,7 +90,7 @@ const About = () => {
 
             {/* Right Section */}
 
-            <div className="h-[100px] md:[50px] ml-5 lg:w-1/2 md:-ml-[5rem] mb-20 z-10">
+            <div className="h-[100px] md:[50px] ml-5 lg:w-1/2 mb-20 z-10">
               <CustomOverlappinCard image={aboutImage} />
             </div>
           </div>

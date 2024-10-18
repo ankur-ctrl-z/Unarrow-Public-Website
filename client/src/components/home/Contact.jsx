@@ -8,6 +8,11 @@ import toast from "react-hot-toast";
 
 
 const Contact = () => {
+
+  // backend base url
+  const base_url = import.meta.env.VITE_BASE_URL;
+  
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -28,10 +33,9 @@ const Contact = () => {
     if (!firstName || !lastName || !email || !phone || !message) {
       toast.error("All feilds are required!");
     }
-  
-
+   
     try {
-      const response = await axios.post("http://localhost:4000/api/submit-form", {
+      const response = await axios.post(`${base_url}/api/submit-form`, {
         firstName, lastName, email, phone, message
       });
       toast.success(response.data.message);

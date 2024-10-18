@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-//  this is the user schema
+
 const bookCallSchema = new mongoose.Schema({
     firstName:{
         type:String,
@@ -27,14 +27,18 @@ const bookCallSchema = new mongoose.Schema({
         required: true,
     },
 
+    serviceInquiry:{
+        type:String,
+        required: true,
+    },
+
     message:{
         type:String,
         required:true
     },
 
- 
 },{timestamps:true});
 
-//this is the user model
+// book a call model
 const BookCall  = mongoose.model("BookCall", bookCallSchema);
 export default BookCall;
