@@ -74,7 +74,7 @@ function App() {
             <Suspense fallback={<div>Loading Contact...</div>}>
               <Contact />
             </Suspense>
-          } 
+          }
         />
 
 
