@@ -55,7 +55,7 @@ const OurWorks = () => {
               {/* One Touch Image */}
               <div className="p-2">
                 <a href="https://sjacarecenter.com/">
-                  <div className="lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
+                  <div className="w-full h-[17rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
                     <img
                       loading="lazy"
                       src={onetouch}
@@ -97,7 +97,7 @@ const OurWorks = () => {
               {/* SJA Image */}
               <div className="p-2">
                 <a href="https://onetouchagency.com/">
-                  <div className="h-[17.5rem] md:h-[21rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
+                  <div className=" w-full h-[17rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
                     <img
                       loading="lazy"
                       src={sja}
@@ -139,7 +139,7 @@ const OurWorks = () => {
               {/* Journey on Wheel Image */}
               <div className="p-2">
                 <a href="https://journeyonwheel.com/">
-                  <div className="lg:w-[74rem] lg:h-[30rem] border rounded-3xl">
+                  <div className="w-full h-[17rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
                     <img
                       loading="lazy"
                       src={jow}

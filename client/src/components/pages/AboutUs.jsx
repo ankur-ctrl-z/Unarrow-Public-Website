@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import about2 from "../../assets/aboutUsImage/about2.png";
+import about2 from "../../assets/aboutUsImage/about_image.png";
 import Tanul from "../../assets/TeamMemberImage/Tanul.png";
 import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";

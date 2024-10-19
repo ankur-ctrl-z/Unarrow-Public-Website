@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../assets/aboutUsImage/about1.png";
+import aboutImage from "../../assets/aboutUsImage/about.png";
 import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -31,7 +31,7 @@ const About = () => {
 
           <div className="flex flex-col justify-center items-center">
             <div className="h-[100px] flex justify-center items-center -mt-16 mr-[15rem] mb-20 z-10">
-              <CustomOverlappinCard image={aboutImage} />
+              <CustomOverlappinCard image={aboutImage} className={'border-none'} />
             </div>
 
             <p className="w-[280px] text-[13px] mt-[9rem] mb-3 lg:max-w-lg text-white font-Roboto lg:text-[1.5rem] font-normal leading-normal">
@@ -90,7 +90,7 @@ const About = () => {
 
             {/* Right Section */}
 
-            <div className="h-[100px] md:-ml-[50px] ml-5 lg:w-1/2 mb-20 z-10">
+            <div className="h-[100px] md:-ml-[50px] lg:ml-5 ml-5 lg:w-1/2 mb-20 z-10">
               <CustomOverlappinCard image={aboutImage} />
             </div>
           </div>

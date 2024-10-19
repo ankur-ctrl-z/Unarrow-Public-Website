@@ -53,7 +53,7 @@ const WorkProcess = () => {
               <div className="text-[rgba(255,255,255,0.5)] text-start font-Roboto text-[30px] lg:text-[3.75rem] font-normal">
                 {work.serviceNo}
               </div>
-              <div className="text-white font-Roboto max-w-[13.5rem] text-center md:text-left text-[20px] lg:text-[2.1875rem] font-bold">
+              <div className="text-white font-Roboto max-w-[13.5rem] text-center md:text-left text-[20px]  lg:text-[2.1875rem] font-bold">
                 {work.service}
               </div>
               <div className="hidden lg:block text-white font-Roboto max-w-md text-center md:text-left">

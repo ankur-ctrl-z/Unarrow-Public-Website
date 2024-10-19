@@ -41,13 +41,22 @@ const Footer = () => {
       toast.success(response.data.message);
       setEmailError("");
       setEmail("");
-    } catch (error) {
+    }catch (error) {
       if (error.response) {
+        // Conflict error
         if (error.response.status === 409) {
           toast.error(error.response.data.message);
-        } else if (error.response.status === 500) {
-          toast.error(error.response.data.message);
+          return;
         }
+
+        // Internal server error
+        if (error.response.status === 500) {
+          toast.error("Internal server error. Please try again later.");
+          return;
+        }
+      } else {
+        // If no response is received or a network error occurs
+        toast.error("Something went wrong. Please try again.");
       }
     }
   };

@@ -1,5 +1,5 @@
 import React from "react";
-import serviceImage from "../../../assets/servicesImage/servicesImage.png";
+import PPC from "../../../assets/servicesImage/PPC.jpg";
 import LeftCustomHeading from "../../customs/LeftCustomHeading";
 import CenterCustomHeading from "../../customs/CenterCustomHeading";
 import CustomArrow from "../../customs/CustomArrow";
@@ -22,7 +22,7 @@ const SEO = () => {
         {/* Centered heading */}
         <CenterCustomHeading
           className="flex justify-center items-center"
-          heading="WEB DEVELOPMENT"
+          heading="Pay Per Click"
         />
 
         {/* Description paragraph */}
@@ -56,7 +56,7 @@ const SEO = () => {
             </div>
 
             <div className="w-full md:w-1/2 -mt-[11rem] lg:-mt-[36rem] lg:-ml-[5rem] xl:-mb-20 2xl:-mb-40 flex justify-center items-center">
-            <CustomOverlappingCards image={serviceImage} />
+            <CustomOverlappingCards image={PPC} />
           </div>
 
           </div>

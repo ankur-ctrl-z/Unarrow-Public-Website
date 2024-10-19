@@ -1,5 +1,5 @@
 import React from "react";
-import serviceImage from "../../../assets/servicesImage/servicesImage.png";
+import webDev from "../../../assets/servicesImage/website Dev.jpg";
 import LeftCustomHeading from "../../customs/LeftCustomHeading";
 import CenterCustomHeading from "../../customs/CenterCustomHeading";
 import CustomArrow from "../../customs/CustomArrow";
@@ -21,7 +21,7 @@ const SEO = () => {
       <div className="w-11/12 mx-auto p-4 md:p-8">
         {/* Centered heading */}
         <CenterCustomHeading
-          className="flex justify-center items-center"
+          className="flex justify-center mt-5 md:-mt-3 items-center"
           heading="WEB DEVELOPMENT"
         />
 
@@ -43,6 +43,7 @@ const SEO = () => {
           <div className="flex flex-col-reverse mt-[12rem] -ml-12 md:flex-row w-full gap-8">
           
             <div  className="w-full md:w-1/2 mt-[12rem] ml-[2rem] md:-mt-[12rem]" >
+          
               <LeftCustomHeading className={'mt-10 ml-[1px]'} heading="Build Your Identity With A Web Design and Development Company in India" />
               <p className="text-white ml-4 mt-5 font-Roboto text-sm md:text-base lg:text-lg font-normal leading-normal">
                 Websites are a necessity in this tech-savvy world. Web design
@@ -56,7 +57,7 @@ const SEO = () => {
             </div>
 
             <div className="w-full md:w-1/2 -mt-[11rem] lg:-mt-[36rem] lg:-ml-[5rem] xl:-mb-20 2xl:-mb-40 flex justify-center items-center">
-            <CustomOverlappingCards image={serviceImage} />
+            <CustomOverlappingCards image={webDev} />
           </div>
 
           </div>
