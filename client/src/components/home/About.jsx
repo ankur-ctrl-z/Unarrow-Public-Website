@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../assets/aboutUsImage/about1.png";
+import aboutImage from "../../assets/aboutUsImage/about.png";
 import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -31,7 +31,7 @@ const About = () => {
 
           <div className="flex flex-col justify-center items-center">
             <div className="h-[100px] flex justify-center items-center -mt-16 mr-[15rem] mb-20 z-10">
-              <CustomOverlappinCard image={aboutImage} />
+              <CustomOverlappinCard image={aboutImage} className={'border-none'} />
             </div>
 
             <p className="w-[280px] text-[13px] mt-[9rem] mb-3 lg:max-w-lg text-white font-Roboto lg:text-[1.5rem] font-normal leading-normal">
@@ -55,14 +55,14 @@ const About = () => {
       {/* for large view */}
       <div className="hidden md:block w-full relative h-full py-10 bg-[#011415]">
         <div className="w-11/12 mx-auto">
-          <div className="flex flex-col md:flex-row gap-5 md:gap-10  md:-ml-[10rem] lg:gap-40 lg:ml-20 justify-center">
+          <div className="flex flex-col md:flex-row gap-5  md:-ml-[10rem] lg:gap-[5.3rem] xl:gap-48 lg:ml-20 justify-center">
             {/* Left Section */}
             <div className="w-1/2 md:-ml-20">
               <div className="flex flex-col -ml-2">
-                <p className="text-white text-[9px] lg:text-lg font-Roboto lg:ml-[5.6rem] lg:mb-1">
+                <p className="text-white text-[9px] lg:text-lg font-Roboto ml-5 lg:ml-[5.6rem]  lg:mb-1">
                   Designing Tomorrow Today
                 </p>
-                <div className="flex items-center gap-2 mb-6 lg:gap-4 lg:ml-14">
+                <div className="flex items-center gap-2 mb-6 mt-2 lg:gap-4 lg:ml-14">
                   <div className="w-2 h-2 lg:w-4 lg:h-4 mt-1 bg-[#db4a2b]"></div>
                   <h3 className="text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto">
                     About Us
@@ -90,7 +90,7 @@ const About = () => {
 
             {/* Right Section */}
 
-            <div className="h-[100px] md:[50px] ml-5 lg:w-1/2 mb-20 z-10">
+            <div className="h-[100px] md:-ml-[50px] lg:ml-5 ml-5 lg:w-1/2 mb-20 z-10">
               <CustomOverlappinCard image={aboutImage} />
             </div>
           </div>

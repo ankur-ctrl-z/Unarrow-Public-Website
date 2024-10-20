@@ -4,33 +4,29 @@ import bodyParser from 'body-parser';
 import {connectDB, userModel} from './db';
 
 const app = express();
+import contactRouter from './route/contactRouter.js'
+import bockCallRouter from './route/bookCallRouter.js'
+import DBconnection from "./config/DBconnection.js";
 
-connectDB();
+dotenv.config();
+const PORT = process.env.PORT || 4000
 
-app.use(bodyParser.json())
+app.use(cors({
+    origin:'http://localhost:3000',
+    methods:['POST','GET'],
+    credentials:true
+}))
 
-app.post('/submit', async function(req,res){
-    const { firstName, lastName, email, message } = req.body;
+// app.use(cookieParser)
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 
-    try {
-        const data = new userModel({
-            firstName,
-            lastName,
-            email,
-            phone,
-            message
-        });
+// default route
+app.use('/api',contactRouter)
+app.use('/api',bockCallRouter)
 
-        await data.save();
-        res.status(201).json({ message: 'Message saved successfully' });
-        } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to save message' });
-    }
 
+app.listen(PORT, ()=>{
+    DBconnection();
+    console.log(`server is running on port : ${PORT}`)
 })
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {console.log(`Server is running on port &{PORT}`)})
-

@@ -6,12 +6,9 @@ import CardSlider from "./CardSlider";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-
 const Contact = () => {
-
   // backend base url
   const base_url = import.meta.env.VITE_BASE_URL;
-  
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -21,25 +18,47 @@ const Contact = () => {
     message: "",
   });
 
-  // error message showing 
-  const [errMessage, setErrMessage] = useState('')
+  // error message showing
+  const [phoneError, setPhoneError] = useState("");
+  const [emailErorr, setEmailError] = useState("");
 
   // Handle form submission
-  const formDataHandler = async(event) => {
+  const formDataHandler = async (event) => {
     event.preventDefault();
 
     const { firstName, lastName, email, phone, message } = formData;
 
     if (!firstName || !lastName || !email || !phone || !message) {
-      toast.error("All feilds are required!");
+      toast.error("All fields are required!");
+      return;
     }
-   
+
+    // Validate phone number (must be exactly 10 digits)
+    if (phone.length !== 10 || !/^\d+$/.test(phone)) {
+      setPhoneError("Phone number must be 10 digits");
+      return;
+    } else {
+      setPhoneError("");
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEmailError("Invalid email address");
+      return;
+    } else {
+      setEmailError("");
+    }
+
     try {
       const response = await axios.post(`${base_url}/api/submit-form`, {
-        firstName, lastName, email, phone, message
+        firstName,
+        lastName,
+        email,
+        phone,
+        message,
       });
       toast.success(response.data.message);
-      setErrMessage('')
       setFormData({
         firstName: "",
         lastName: "",
@@ -49,16 +68,21 @@ const Contact = () => {
       });
       return;
     } catch (error) {
-      if (error.response && error.response.status === 409) {
-        // toast.error(error.response.data.message);
-        setErrMessage(error.response.data.message)
-        return;
-      }
-      // internal server error
-      else if (error.response && error.response.status === 500) {
-        // toast.error(error.response.data.message);
-        setErrMessage(error.response.data.message);
-        return;
+      if (error.response) {
+        // Conflict error
+        if (error.response.status === 409) {
+          toast.error(error.response.data.message);
+          return;
+        }
+
+        // Internal server error
+        if (error.response.status === 500) {
+          toast.error("Internal server error. Please try again later.");
+          return;
+        }
+      } else {
+        // If no response is received or a network error occurs
+        toast.error("Something went wrong. Please try again.");
       }
     }
   };
@@ -184,7 +208,7 @@ const Contact = () => {
                         onChange={handleChange}
                       />
                     </label>
-                    <p className="text-red-400 text-sm">{errMessage}</p>
+                    <p className="text-red-400 text-sm">{emailErorr}</p>
                   </div>
                   <div className="w-full">
                     <label>
@@ -200,6 +224,7 @@ const Contact = () => {
                         onChange={handleChange}
                       />
                     </label>
+                    <p className="text-red-400 text-sm">{phoneError}</p>
                   </div>
                 </div>
 
@@ -338,7 +363,7 @@ const Contact = () => {
                             onChange={handleChange}
                           />
                         </label>
-                        <p className="text-red-400 text-sm">{errMessage}</p>
+                        <p className="text-red-400 text-sm">{emailErorr}</p>
                       </div>
                       <div className="w-full">
                         <label>
@@ -354,6 +379,7 @@ const Contact = () => {
                             onChange={handleChange}
                           />
                         </label>
+                        <p className="text-red-400 text-sm">{phoneError}</p>
                       </div>
                     </div>
 

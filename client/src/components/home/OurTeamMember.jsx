@@ -11,7 +11,7 @@ const OurTeamMember = () => {
     <div className="w-full relative h-full bg-[#011415] py-14">
       <div className="w-11/12 mx-auto -mt-5 lg:-mt-10">
         <div className="">
-          <p className="text-white text-xs lg:text-lg font-Roboto md:ml-14 md:-mb-10 ">
+          <p className="text-white text-xs lg:text-lg font-Roboto md:ml-4 lg:ml-20 lg:-mb-12">
             Our Team
           </p>
           <div className="flex items-center gap-2 lg:gap-4 mr-5 lg:ml-14 lg:py-14">

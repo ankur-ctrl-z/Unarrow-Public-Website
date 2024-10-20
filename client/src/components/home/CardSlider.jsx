@@ -16,11 +16,11 @@ const CardSlider = () => {
   };
 
   const cards = [
-    { id: 1, content: <div className=" text-red-500">REQUIREMENTS</div> },
+    { id: 1, content: <div style={{ WebkitTextStroke:"3px red "}} className="text-gray-900">REQUIREMENTS</div> },
     { id: 2, content: <div className="">DESIGN</div> },
-    { id: 3, content: <div>IMPLEMENT</div> },
+    { id: 3, content: <div style={{ WebkitTextStroke: "3px red "}} className="text-gray-900">IMPLEMENT</div> },
     { id: 4, content: <div>TESTING</div> },
-    { id: 5, content: <div>DEPLOYMENT</div> },
+    { id: 5, content: <div style={{ WebkitTextStroke: "3px red"}} className="text-gray-900">DEPLOYMENT</div> },
     { id: 6, content: <div>MAINTENANCE</div> },
   ];
 

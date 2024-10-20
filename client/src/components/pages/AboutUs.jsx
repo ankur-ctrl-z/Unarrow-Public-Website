@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import about2 from "../../assets/aboutUsImage/about2.png";
+import about2 from "../../assets/aboutUsImage/about_image.png";
 import Tanul from "../../assets/TeamMemberImage/Tanul.png";
 import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
@@ -63,25 +63,25 @@ const AboutUs = () => {
               {/* social-icons */}
               <div className="flex -ml-10 mt-6 gap-5 text-white text-3xl lg:text-4xl">
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="hover:text-blue-600 duration-300 transition-all"
                   href=""
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="hover:text-green-600 duration-300 transition-all"
                   href=""
                 >
                   <FaWhatsapp />
                 </a>
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="duration-300 transition-all"
                   href=""
                 >
                   <FaSquareXTwitter />
                 </a>
                 <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
+                  className="hover:text-orange-700 duration-300 transition-all"
                   href=""
                 >
                   <FaInstagram />

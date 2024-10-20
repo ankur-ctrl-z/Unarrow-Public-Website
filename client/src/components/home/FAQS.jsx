@@ -47,7 +47,7 @@ const FAQS = () => {
       <div className="w-full mx-auto py-14">
         {/* Title Section */}
         <div className="flex flex-col items-start text-center md:text-left mb-10 md:mb-14">
-          <p className="text-white text-lg font-Roboto mb-2">FAQ’s</p>
+          <p className="text-white text-[9px] sm:text-[10px] font-Roboto mb-2">FAQ’s</p>
           <div className="flex items-center gap-2 mb-6 lg:gap-4">
             <div className="w-2 h-2 lg:w-4 lg:h-4 mt-1 bg-[#db4a2b]"></div>
             <h3 className="md:text-xl lg:text-[2.1875rem] text-white font-bold font-Roboto">
