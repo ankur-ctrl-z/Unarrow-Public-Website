@@ -3,8 +3,9 @@ import Tanul from "../../assets/TeamMemberImage/Tanul.png";
 import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
-import CustomTeamMember from "../customs/CustomTeamMember";
+import './team.css'
 
+import { FaFacebookF, FaTwitter, FaLinkedinIn ,FaInstagram} from 'react-icons/fa';
 
 const OurTeamMember = () => {
   return (
@@ -22,11 +23,176 @@ const OurTeamMember = () => {
           </div>
 
           {/* team-members-image */}
-          <div className="grid grid-cols-2 md:grid-cols-4 justify-center mr-2 gap-2 md:gap-5 mt-4 ">
-            <CustomTeamMember image={Tanul} memberName={'Tanul. Y'} profession={'Web Designer'}/>
-            <CustomTeamMember image={Abhishek} memberName={'Abhishek.'} profession={'Social Media Expert'}/>
-            <CustomTeamMember image={Ankur} memberName={'Ankur.'} profession={'React Developer'}/>
-            <CustomTeamMember image={Prateek} memberName={'Prateek.'} profession={'SEO Expert'}/>
+          <div className="grid grid-cols-2 md:grid-cols-4 justify-center mr-2 gap-2 md:gap-7 mt-4 ">
+
+            <div class=" w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] lg:ml-0 lg:h-[20rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
+              <div class="card profile-two">
+                <div class="card-image profile-img--two">
+                  <img
+                    src={Ankur}
+                    alt="profile two"
+                  />
+                </div>
+
+                <ul class="social-icons flex justify-center items-center lg:mt-5">
+                  <li className="flex justify-center items-center" >
+                    <a href="" >
+                      <FaFacebookF className="m-1 md:m-[6px] lg:m-3 hover:text-[#1877F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                    <FaLinkedinIn className="m-1 md:m-[6px] lg:m-3 hover:text-[#0A66C2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                     <FaTwitter className="m-1 md:m-[6px] lg:m-3 hover:text-[#1DA1F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                      <FaInstagram className="m-1 md:m-[6px] lg:m-3 hover:text-[#F58529]" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="details jane">
+                  <h2 className="font-semibold">
+                   Ankur
+                    <br/>
+                    <span class="job-title font-semibold">Web Developer</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] lg:ml-0 lg:h-[20rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
+              <div class="card profile-two">
+                <div class="card-image profile-img--two">
+                  <img
+                    src={Abhishek}
+                    alt="profile two"
+                  />
+                </div>
+
+                <ul class="social-icons flex justify-center items-center lg:mt-5">
+                  <li className="flex justify-center items-center" >
+                    <a href="" >
+                      <FaFacebookF className="m-1 md:m-[6px] lg:m-3 hover:text-[#1877F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                    <FaLinkedinIn className="m-1 md:m-[6px] lg:m-3 hover:text-[#0A66C2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                     <FaTwitter className="m-1 md:m-[6px] lg:m-3 hover:text-[#1DA1F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                      <FaInstagram className="m-1 md:m-[6px] lg:m-3 hover:text-[#F58529]" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="details jane">
+                  <h2>
+                    Abhishek Gupta
+                    <br/>
+                  <span class="job-title text-">Social Media Expert</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] lg:ml-0 lg:h-[20rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
+              <div class="card profile-two">
+                <div class="card-image profile-img--two">
+                  <img
+                    src={Prateek}
+                    alt="profile two"
+                  />
+                </div>
+
+                <ul class="social-icons flex justify-center items-center lg:mt-5">
+                  <li className="flex justify-center items-center" >
+                    <a href="" >
+                      <FaFacebookF className="m-1 md:m-[6px] lg:m-3 hover:text-[#1877F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                    <FaLinkedinIn className="m-1 md:m-[6px] lg:m-3 hover:text-[#0A66C2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                     <FaTwitter className="m-1 md:m-[6px] lg:m-3 hover:text-[#1DA1F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                      <FaInstagram className="m-1 md:m-[6px] lg:m-3 hover:text-[#F58529]" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="details jane">
+                  <h2 className="font-bold">
+                     Prateek Pandey
+                    <br/>
+                    <span class="job-title">SEO Expert</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] lg:ml-0 lg:h-[20rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
+              <div class="card profile-two">
+                <div class="card-image profile-img--two">
+                  <img
+                    src={Tanul}
+                    alt="profile two"
+                  />
+                </div>
+
+                <ul class="social-icons flex justify-center items-center lg:mt-5">
+                  <li className="flex justify-center items-center" >
+                    <a href="" >
+                      <FaFacebookF className="m-1 md:m-[6px] lg:m-3 hover:text-[#1877F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                    <FaLinkedinIn className="m-1 md:m-[6px] lg:m-3 hover:text-[#0A66C2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                     <FaTwitter className="m-1 md:m-[6px] lg:m-3 hover:text-[#1DA1F2]"/>
+                    </a>
+                  </li>
+                  <li className="flex justify-center items-center">
+                    <a href="">
+                      <FaInstagram className="m-1 md:m-[6px] lg:m-3 hover:text-[#F58529]" />
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="details jane">
+                  <h2 >
+                    Tanul
+                    <br/>
+                    <span class="job-title">UI/UX Designer</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

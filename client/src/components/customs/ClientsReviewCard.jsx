@@ -21,10 +21,10 @@ const ClientsReviewCard = ({ img, feedback, clientName, clientProfession }) => {
                     className="w-[10rem] md:h-[12rem] lg:w-[12rem] -mt-5 lg:h-[12.0625rem] flex-shrink-0"
                     alt=""
                   />
-                  <p className="text-black text-sm lg:text-[1.2rem] font-bold">
+                  <p className="text-black text-sm mt-3 lg:text-[1.2rem] font-bold">
                     {clientName}
                   </p>
-                  <p className="font-serif text-gray-700 text-[9px] lg:text-[0.9375rem] font-normal leading-normal text-center">
+                  <p className="font-serif text-gray-700 mt-1 text-[9px] lg:text-[0.9375rem] font-normal leading-normal text-center">
                     {clientProfession}
                   </p>
                 </div>
