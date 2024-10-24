@@ -10,20 +10,19 @@ import '../styles/Feedback.css';
 
 const ClientsFeedback = () => {
   const settings = {
-    infinite: true, // Enables continuous loop sliding
-    slidesToShow: 1, // Only one slide visible at a time
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Enables autoplay for the slideshow
-    autoplaySpeed: 3000, // Slide transition every 5 seconds
-    speed: 1000, // Slide transition duration (1 second)
-    cssEase: "linear", // Smooth transition
-    // pauseOnHover: true, // Pause on hover for better user interaction
-    dots: true, // Enables navigation dots below the slides
+    infinite: true, 
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true, 
+    autoplaySpeed: 7000, 
+    speed: 1000,
+    cssEase: "linear", 
+    dots: true,
   };
 
   return (
     <div className="w-full relative h-full bg-[#011415] py-2 lg:py-10">
-      <div className="w-11/12 mx-auto flex flex-col justify-center">
+      <div className="w-11/12 mx-auto flex flex-col -mb-[28rem] sm:mb-10 justify-center">
         <div className="text-white font-Roboto font-bold">
           <div className="flex items-center justify-center gap-4 lg:ml-14">
             <div className="w-2 h-2 lg:w-4 lg:h-4 mt-1 bg-[#db4a2b]"></div>

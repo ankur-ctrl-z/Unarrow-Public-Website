@@ -16,7 +16,6 @@ const serviceInfo = [
 const Contact = () => {
   // backend base url
   const base_url = import.meta.env.VITE_BASE_URL;
-  console.log("base_url", base_url);
 
   const [phoneError, setPhoneError] = useState("");
   const [emailErorr, setEmailError] = useState("");
@@ -232,7 +231,7 @@ const Contact = () => {
                 </div>
 
                 {/* Phone & Pincode Fields */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="w-full -mt-4 text-sm md:text-md">
                     PHONE
                     <br />
@@ -249,6 +248,36 @@ const Contact = () => {
                   <p className="text-red-400 text-sm">{phoneError}</p>
 
                   <label className="w-full -mt-4 text-sm md:text-md">
+                    PIN CODE
+                    <br />
+                    <input
+                      className="w-full px-1 bg-transparent md:mt-2 mb-1 focus:outline-none border-b border-b-black"
+                      type="text"
+                      required
+                      placeholder="Enter Your Pincode"
+                      name="pinCode"
+                      value={formData.pinCode}
+                      onChange={handleChange}
+                    />
+                  </label>
+                </div> */}
+
+                <div className="grid text-black grid-cols-1 md:grid-cols-2 gap-6">
+                  <label className="w-full mt-2 text-sm md:text-md">
+                    PHONE
+                    <br />
+                    <input
+                      className="w-full px-1 bg-transparent focus:bg-transparent active:bg-transparent focus:outline-none border-b border-b-black text-black"
+                      type="text"
+                      required
+                      placeholder="+91"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </label>
+
+                  <label className="w-full -mt-5 sm:mt-0 text-sm md:text-md">
                     PIN CODE
                     <br />
                     <input
