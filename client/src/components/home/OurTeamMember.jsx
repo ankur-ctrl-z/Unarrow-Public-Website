@@ -3,7 +3,7 @@ import Tanul from "../../assets/TeamMemberImage/Tanul.png";
 import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
 import Prateek from "../../assets/TeamMemberImage/Prateek.png";
-import './team.css'
+import '../styles/team.css'
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn ,FaInstagram} from 'react-icons/fa';
 

@@ -1,5 +1,5 @@
 import React from "react";
-import SEO1 from "../../../assets/servicesImage/SEO.jpg";
+import SEO1 from "../../../assets/servicesImage/SEO1.jpg";
 import LeftCustomHeading from "../../customs/LeftCustomHeading";
 import CenterCustomHeading from "../../customs/CenterCustomHeading";
 import CustomArrow from "../../customs/CustomArrow";
@@ -17,7 +17,7 @@ const SEO = () => {
   }
 
   return (
-    <div className="w-full relative h-full bg-black py-16 md:py-24 lg:py-32">
+    <div className="w-full relative h-full bg-black py-20 md:py-24 lg:py-32">
       <div className="w-11/12 mx-auto p-4 md:p-8">
         {/* Centered heading */}
         <CenterCustomHeading
@@ -55,7 +55,7 @@ const SEO = () => {
               </p>
             </div>
 
-            <div className="w-full md:w-1/2 -mt-[11rem] lg:-mt-[36rem] lg:-ml-[5rem] xl:-mb-20 2xl:-mb-40 flex justify-center items-center">
+            <div className="w-full md:w-1/2 -mt-[11rem] lg:-mt-[36rem] lg:-ml-[6rem] xl:-ml-[2rem] xl:-mb-20 2xl:-mb-40 flex justify-center items-center">
             <CustomOverlappingCards image={SEO1}/>
           </div>
 
@@ -96,14 +96,6 @@ const SEO = () => {
                 </li>
               </ol>
             </div>
-          
-
-          {/* Right section */}
-
-          {/* <div className="w-full md:w-1/2 flex justify-center items-center">
-            <CustomOverlappingCards image={serviceImage} />
-          </div> */}
-          
         </div>
 
         {/* Responsive Section - Importance of Responsive Design */}
@@ -151,7 +143,7 @@ const SEO = () => {
       </div>
 
       {/* Custom Themes Section */}
-      <div className="w-full flex flex-col justify-center items-center py-10 bg-[#354171]">
+      <div className="w-full flex flex-col justify-center items-center py-10 bg-[#354171] -mb-20 md:-mb-24 lg:-mb-32">
         <div className="text-center text-white max-w-3xl px-4 py-2 font-Roboto text-2xl md:text-3xl lg:text-4xl leading-tight md:leading-snug lg:leading-snug font-bold">
           Call Unarrow, a top-notch Website Designing Company in Mumbai.
         </div>
@@ -180,9 +172,9 @@ const SEO = () => {
       </div>
 
       {/* Clients Feedback */}
-      <div className="mt-16 md:-mb-32">
+      {/* <div className="mt-16 md:-mb-32">
         <ClientsFeedback />
-      </div>
+      </div> */}
     </div>
   );
 };

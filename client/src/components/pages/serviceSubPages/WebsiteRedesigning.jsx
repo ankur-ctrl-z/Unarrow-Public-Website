@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import ClientsFeedback from "../../home/ClientsFeedback";
 import CustomOverlappingCards from "../../customs/CustomOverlappingCards";
 
-const SEO = () => {
+const WebRedesign = () => {
   const navigate = useNavigate();
 
   function handleCall() {
@@ -17,7 +17,7 @@ const SEO = () => {
   }
 
   return (
-    <div className="w-full relative h-full bg-black py-16 md:py-24 lg:py-32">
+    <div className="w-full relative h-full bg-black py-20 md:py-24 lg:py-32">
       <div className="w-11/12 mx-auto p-4 md:p-8">
         {/* Centered heading */}
         <CenterCustomHeading
@@ -55,7 +55,7 @@ const SEO = () => {
               </p>
             </div>
 
-            <div className="w-full md:w-1/2 -mt-[11rem] lg:-mt-[36rem] lg:-ml-[5rem] xl:-mb-20 2xl:-mb-40 flex justify-center items-center">
+            <div className="w-full md:w-1/2 -mt-[11rem] lg:-mt-[36rem] lg:-ml-[6rem] xl:-ml-[2rem] xl:-mb-20 2xl:-mb-40 flex justify-center items-center">
             <CustomOverlappingCards image={webRedesign} />
           </div>
 
@@ -172,11 +172,11 @@ const SEO = () => {
       </div>
 
       {/* Clients Feedback */}
-      <div className="mt-16 md:-mb-32">
+      {/* <div className="mt-16 md:-mb-32">
         <ClientsFeedback />
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default SEO;
+export default WebRedesign;

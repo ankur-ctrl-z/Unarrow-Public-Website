@@ -18,7 +18,7 @@ const AboutServices = [
 
   {
     id: 2,
-    Service: "UI/UX Designing",
+    Service:"UI/UX Designing",
     path:'/services/ui-ux design',
     desc:
       "At Unarrow, we make websites that look great and work perfectly. Our team of expert developers uses the newest tools to build sites that are fast, easy to use, and show up well on .....",

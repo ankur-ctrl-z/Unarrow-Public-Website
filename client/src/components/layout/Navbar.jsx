@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import logo from '../../assets/home/Unarrow.svg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,18 +27,16 @@ const Navbar = () => {
     <>
       {/* navbar */}
       <div className="w-full fixed top-0 bg-black left-0 py-5 lg:py-6 z-50">
-        <div className="w-[94%] text-center mx-auto h-14 md:h-[4.4rem] lg:h-[5rem] bg-[#505050] rounded-full py-4 p-5">
+        <div style={{background:"rgba(216, 216, 216, 0.34)"}} className="w-[94%] text-center mx-auto h-14 md:h-[4.4rem] lg:h-[5rem] rounded-full py-4 p-5">
           <div className="flex justify-between">
             <div className="flex gap-2">
               {/* logo */}
-              <a href="">
-                <img src="" alt="" />
-              </a>
               <Link
                 to={"/"}
-                className="text-[#DB4A2B] text-2xl -mt-1 md:mt-2 -ml-2 font-extrabold lg:text-[2.2rem]"
-              >
-                UNARROW.
+                className="text-[#DB4A2B] flex flex-col  -mt-5 -ml-2 lg:text-[2.2rem]">
+                <p className="font-extrabold mt-1 md:mt-3 lg:mt-[3px] ml-2 text-[1.8rem] lg:text-[2.5rem] lg:ml-5 font-Archivo">unarrow.</p>
+                <p className=" text-[9.5px] ml-14 -mt-2 lg:text-[12px] font-semibold lg:-mt-3 lg:ml-[5.8rem] italic ">DIGITAL SOLUTIONS</p>
+          
               </Link>
             </div>
 
