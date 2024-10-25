@@ -9,7 +9,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import logo from '../../assets/home/Unarrow.svg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +26,7 @@ const Navbar = () => {
     <>
       {/* navbar */}
       <div className="w-full fixed top-0 bg-black left-0 py-5 lg:py-6 z-50">
-        <div style={{background:"rgba(216, 216, 216, 0.34)"}} className="w-[94%] text-center mx-auto h-14 md:h-[4.4rem] lg:h-[5rem] rounded-full py-4 p-5">
+        <div style={{background:"rgba(216, 216, 216, 0.35)"}} className="w-[94%] backdrop-blur-3xl bg-white/60 text-center mx-auto h-14 md:h-[4.4rem] lg:h-[5rem] rounded-full py-4 p-5">
           <div className="flex justify-between">
             <div className="flex gap-2">
               {/* logo */}
