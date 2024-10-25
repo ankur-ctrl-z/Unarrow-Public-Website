@@ -100,7 +100,7 @@ function App() {
           }
         />
         <Route
-          path="/services/ui-ux design"
+          path="/services/ui-ux-design"
           element={
             <Suspense fallback={<></>}>
               <UIUX />
