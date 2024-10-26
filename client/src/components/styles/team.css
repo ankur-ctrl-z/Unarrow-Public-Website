@@ -51,7 +51,6 @@
 
 
 
-/**** Social Icons *****/
 .social-icons {
   position: absolute;
   top: 50%;
@@ -88,7 +87,7 @@
 }
 
 .social-icons li a:hover {
-  /* background: #000; */
+
   transition: 0.2s;
 
   .fab {
@@ -122,7 +121,6 @@
 }
 
 
-/**** Personal Details ****/
 .details {
   position: absolute;
   bottom: 0;
@@ -177,9 +175,9 @@
   opacity: 1;
 }
 
-/**** Media Queries ****/
 
-/* desktop */
+
+/* media query */
 @media (max-width: 1024px) {
    .jane{
     height: 80px;
@@ -197,7 +195,8 @@
 
 }
 
-/* tablet */
+
+/* tablet screen */
 @media(max-width: 768px) {
   .details h2 .job-title {
     font-size: 0.9rem;
@@ -213,7 +212,8 @@
   }
 }
 
-/* mobile */
+
+/* mobile screen */
 @media (max-width: 576px) {
     .jane{
         height: 75px;
