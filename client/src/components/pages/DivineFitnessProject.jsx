@@ -1,7 +1,7 @@
 import React from "react";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
-import CustomOverlappingCards from "../customs/CustomOverlappingCards";
-import onetouch from "../pages/moreWorkImages/onetouch1.png";
+
+import DivineFitness from "../pages/moreWorkImages/Divine.png";
 import ClientsFeedback from "../home/ClientsFeedback";
 import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
@@ -30,7 +30,7 @@ const Services = [
   },
 ];
 
-const OneTouchProject = () => {
+const DivineFitnessProjects = () => {
   const navigate = useNavigate();
   function handleCall() {
     navigate("/contact");
@@ -42,7 +42,7 @@ const OneTouchProject = () => {
         <div>
           <CenterCustomHeading
             className={"-mt-10 md:py-5 mb-2"}
-            heading={"Onetouchagency"}
+            heading={"Divine Fitness"}
           />
           <p className="text-white mb-2 font-bold text-sm lg:text-2xl xl:text-[1.8rem] font-Roboto">
             Project Types
@@ -66,7 +66,7 @@ const OneTouchProject = () => {
           <div className="flex justify-center items-center mt-[8rem] lg:py-14 xl:py-24 mb-[17rem] ">
             <div className="w-[18rem] md:w-[43rem] md:h-[20rem] md:mt-24 lg:w-[58rem] xl:w-[82.5rem] h-[230px] lg:h-[26rem] xl:h-[32rem] absolute border-2 hover:scale-105 duration-300 transition-all rounded-2xl z-30 m-auto ">
               <img
-                src={onetouch}
+                src={DivineFitness}
                 loading="lazy"
                 className="w-full h-full bg-cover rounded-2xl"
                 alt="This is an about image"
@@ -110,7 +110,7 @@ const OneTouchProject = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row w-full gap-5 -mt-10">
-              <p className="text-white lg:mt-28 font-Roboto font-bold lg:text-[1.8rem] mt-14">
+              <p className="text-white lg:mt-28  font-Roboto font-bold lg:text-[1.8rem] mt-14">
                 Problem Statement
               </p>
               <div className="hidden  lg:block lg:mt-[4.2rem]  w-[0.0625rem] lg:h-[14rem] xl:h-[10rem] bg-gray-500"></div>
@@ -138,7 +138,7 @@ const OneTouchProject = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row w-full gap-5 -mt-10">
-              <p className="text-white lg:mt-28 font-Roboto font-bold lg:text-[1.8rem] mt-14">
+              <p className="text-white lg:mt-28  font-Roboto font-bold lg:text-[1.8rem] mt-14">
                 Solutions
               </p>
               <div className="hidden lg:block lg:ml-2 xl:ml-[9rem] lg:mt-[4.2rem] w-[0.0625rem] lg:h-[14rem] xl:h-[10rem] bg-gray-500"></div>
@@ -164,7 +164,7 @@ const OneTouchProject = () => {
       <ClientsFeedback />
 
       {/* custom Theam-section */}
-      <div className="w-full flex -mb-[8rem] flex-col justify-center items-center py-5 bg-[#664d8a]">
+      <div className="w-full flex -mb-[8rem] flex-col justify-center items-center py-10 bg-[#664d8a]">
         <div className="text-center text-white max-w-[66rem]  font-Roboto text-2xl lg:text-[4rem] mt-2 xl:text-[5rem]  leading-[3rem] font-bold">
           Have a Project In Mind ??
         </div>
@@ -181,4 +181,4 @@ const OneTouchProject = () => {
   );
 };
 
-export default OneTouchProject;
+export default DivineFitnessProjects;

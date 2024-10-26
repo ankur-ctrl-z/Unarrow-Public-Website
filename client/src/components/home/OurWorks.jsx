@@ -54,7 +54,7 @@ const OurWorks = () => {
             <Slider {...settings}>
               {/* One Touch Image */}
               <div className="p-2">
-                <a href="https://sjacarecenter.com/">
+                <a href="https://onetouchagency.com/">
                   <div className="w-full h-[17rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
                     <img
                       loading="lazy"
@@ -96,7 +96,7 @@ const OurWorks = () => {
 
               {/* SJA Image */}
               <div className="p-2">
-                <a href="https://onetouchagency.com/">
+                <a href="https://sjacarecenter.com/">
                   <div className=" w-full h-[17rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
                     <img
                       loading="lazy"
@@ -138,7 +138,7 @@ const OurWorks = () => {
 
               {/* Journey on Wheel Image */}
               <div className="p-2">
-                <a href="https://journeyonwheel.com/">
+                <a href="#">
                   <div className="w-full h-[17rem] lg:w-[35rem] lg:h-[30rem] border rounded-3xl">
                     <img
                       loading="lazy"

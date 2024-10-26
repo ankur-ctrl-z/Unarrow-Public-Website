@@ -4,7 +4,7 @@ import career from "../../assets/careerImages/career image.svg";
 
 const Careers = () => {
   return (
-    <div className="w-full relative h-full bg-[#011415] py-10 md:py-20 xl:py-32">
+    <div className="w-full relative h-full bg-[#011415] py-24 md:py-26 xl:py-32">
       <div className="w-11/12 mx-auto p-6 md:p-8">
         <div className="flex flex-col justify-center items-center space-y-6 md:space-y-10">
           {/* Heading */}
