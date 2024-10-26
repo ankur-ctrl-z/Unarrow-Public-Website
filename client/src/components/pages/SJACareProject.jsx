@@ -1,7 +1,6 @@
 import React from "react";
 import CenterCustomHeading from "../customs/CenterCustomHeading";
-import CustomOverlappingCards from "../customs/CustomOverlappingCards";
-import onetouch from "../pages/moreWorkImages/onetouch1.png";
+import sja from "../pages/moreWorkImages/SJA.png";
 import ClientsFeedback from "../home/ClientsFeedback";
 import CustomArrow from "../customs/CustomArrow";
 import CustomButton from "../customs/CustomButton";
@@ -30,7 +29,7 @@ const Services = [
   },
 ];
 
-const OneTouchProject = () => {
+const SJACareProject = () => {
   const navigate = useNavigate();
   function handleCall() {
     navigate("/contact");
@@ -42,7 +41,7 @@ const OneTouchProject = () => {
         <div>
           <CenterCustomHeading
             className={"-mt-10 md:py-5 mb-2"}
-            heading={"Onetouchagency"}
+            heading={"SJA care center"}
           />
           <p className="text-white mb-2 font-bold text-sm lg:text-2xl xl:text-[1.8rem] font-Roboto">
             Project Types
@@ -66,7 +65,7 @@ const OneTouchProject = () => {
           <div className="flex justify-center items-center mt-[8rem] lg:py-14 xl:py-24 mb-[17rem] ">
             <div className="w-[18rem] md:w-[43rem] md:h-[20rem] md:mt-24 lg:w-[58rem] xl:w-[82.5rem] h-[230px] lg:h-[26rem] xl:h-[32rem] absolute border-2 hover:scale-105 duration-300 transition-all rounded-2xl z-30 m-auto ">
               <img
-                src={onetouch}
+                src={sja}
                 loading="lazy"
                 className="w-full h-full bg-cover rounded-2xl"
                 alt="This is an about image"
@@ -161,11 +160,13 @@ const OneTouchProject = () => {
           </div>
         </div>
       </div>
+
+      {/* client-feedback */}
       <ClientsFeedback />
 
       {/* custom Theam-section */}
-      <div className="w-full flex -mb-[8rem] flex-col justify-center items-center py-5 bg-[#664d8a]">
-        <div className="text-center text-white max-w-[66rem]  font-Roboto text-2xl lg:text-[4rem] mt-2 xl:text-[5rem]  leading-[3rem] font-bold">
+      <div className="w-full flex -mb-[8rem] flex-col justify-center items-center py-10 bg-[#664d8a]">
+        <div className="text-center text-white max-w-[66rem]  font-Roboto text-2xl lg:text-[4rem] mt-2 xl:text-[5rem] leading-[3rem] font-bold">
           Have a Project In Mind ??
         </div>
 
@@ -181,4 +182,4 @@ const OneTouchProject = () => {
   );
 };
 
-export default OneTouchProject;
+export default SJACareProject;

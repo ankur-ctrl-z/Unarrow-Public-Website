@@ -18,7 +18,7 @@ const ClientsReviewCard = ({ img, feedback, clientName, clientProfession }) => {
                 >
                   <img
                     src={img}
-                    className="w-[10rem] md:h-[12rem] lg:w-[12rem] -mt-5 lg:h-[12.0625rem] flex-shrink-0"
+                    className="w-[10rem] md:h-[12rem] lg:w-[12rem] -mt-5 md:mt-1 lg:-mt-2 lg:h-[12.0625rem] flex-shrink-0"
                     alt=""
                   />
                   <p className="text-black text-sm mt-3 lg:text-[1.2rem] font-bold">
