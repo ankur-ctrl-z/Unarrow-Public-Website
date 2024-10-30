@@ -104,25 +104,25 @@ const Footer = () => {
               <div className="flex mt-4 gap-5 text-white text-3xl">
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://www.linkedin.com/company/unarrow-digital-solutions"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://wa.me/919021790600"
                 >
                   <FaWhatsapp />
                 </a>
-                <a
+                {/* <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
                   href=""
                 >
                   <FaSquareXTwitter />
-                </a>
+                </a> */}
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
+                  href="https://www.instagram.com/unarrowsolutions"
                 >
                   <FaInstagram />
                 </a>
@@ -134,16 +134,16 @@ const Footer = () => {
               <div className="w-[40%]">
                 <h3 className="text-[#DB4A2B] mt-1 font-semibold text-lg">UNARROW.</h3>
                 <div className="flex mt-2 gap-2 text-white text-xl">
-                  <a className="hover:text-blue-600 duration-300 transition-all" href="">
+                  <a className="hover:text-blue-600 duration-300 transition-all" href="https://www.linkedin.com/company/unarrow-digital-solutions">
                     <FaLinkedin />
                   </a>
-                  <a className="hover:text-green-600 duration-300 transition-all" href="">
+                  <a className="hover:text-green-600 duration-300 transition-all" href="https://wa.me/919021790600">
                     <FaWhatsapp />
                   </a>
-                  <a className="hover:text-gray-900 duration-300 transition-all" href="">
+                  {/* <a className="hover:text-gray-900 duration-300 transition-all" href="">
                     <FaSquareXTwitter />
-                  </a>
-                  <a className="hover:text-orange-700 duration-300 transition-all" href="">
+                  </a> */}
+                  <a className="hover:text-orange-700 duration-300 transition-all" href="https://www.instagram.com/unarrowsolutions">
                     <FaInstagram />
                   </a>
                 </div>
@@ -202,19 +202,19 @@ const Footer = () => {
               </h3>
               <div className="flex justify-center -ml-24 md:ml-0 items-center  gap-2 text-white text-sm lg:text-lg">
                 <TfiEmail />
-                <a href="mailto:tanulyadav@unarrow.com">
-                  tanulyadav@unarrow.com
+                <a href="mailto:info@unarrow.com">
+                  info@unarrow.com
                 </a>
               </div>
 
               <div className="flex justify-start items-center gap-2 text-white text-sm lg:text-lg">
                 <IoCall />
-                <a href="tel:+91 8433700215">+91 8433700215</a>
+                <a href="tel:+91 9021790600">+91 9021790600</a>
               </div>
 
               <div className="flex justify-start items-center gap-2 text-white text-sm lg:text-lg">
                 <ImLocation />
-                <a href="">Mumbai ,Maharashtra</a>
+                <a href="https://maps.app.goo.gl/QZ747fSeJ89J3Kdz5" target="_blank">Mumbai, Maharashtra</a>
               </div>
             </div>
           </div>
