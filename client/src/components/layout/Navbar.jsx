@@ -137,11 +137,11 @@ const Navbar = () => {
           
          
              <div className="text-white text-lg -rotate-90 grid place-items-center h-80">
-                  <a href="tel:91 8433700215">+918433700215</a>
+                  <a href="tel:91 9021790600">+919021790600</a>
                 </div>
 
                 <div className="text-white text-xl -rotate-90 grid place-items-center h-80">
-                  <a href="mailto:tanul@unarrow.com">tanul@unarrow.com</a>
+                  <a href="mailto:info@unarrow.com">info@unarrow.com</a>
                 </div>
              </div>
 
@@ -187,30 +187,30 @@ const Navbar = () => {
 
               <div className="mt-40">
                 <div className="text-white text-center">
-                  Digital Solutions So Good, Even the Internet's Jealous!
+                  Unarrow Digital Solutions So Good, Even the Internet's Jealous!
                 </div>
                 <div className="flex justify-center mt-10 gap-4 text-white text-3xl">
                   <a
                     className="hover:text-[#DB4A2B] duration-300 transition-all"
-                    href=""
+                    href="https://www.linkedin.com/company/unarrow-digital-solutions/"
                   >
                     <FaLinkedin />
                   </a>
                   <a
                     className="hover:text-[#DB4A2B] duration-300 transition-all"
-                    href=""
+                    href="https://wa.me/919021790600"
                   >
                     <FaWhatsapp />
                   </a>
-                  <a
+                  {/* <a
                     className="hover:text-[#DB4A2B] duration-300 transition-all"
                     href=""
                   >
                     <FaSquareXTwitter />
-                  </a>
+                  </a> */}
                   <a
                     className="hover:text-[#DB4A2B] duration-300 transition-all"
-                    href=""
+                    href="https://instagram.com/unarrowsolutions"
                   >
                     <FaInstagram />
                   </a>
