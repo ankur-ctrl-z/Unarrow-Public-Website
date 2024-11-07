@@ -122,29 +122,29 @@ const Contact = () => {
                 <div className="flex items-center gap-3">
                   <TfiEmail className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                   <a
-                    href="mailto:tanul@unarrow.com"
+                    href="mailto:info@unarrow.com"
                     className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-400"
                   >
-                    tanul@unarrow.com
+                    info@unarrow.com
                   </a>
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-3">
                     <IoCall className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                     <a
-                      href="tel:+91 8433700215"
+                      href="tel:+91 9021790600"
                       className="text-sm sm:text-base lg:text-[17px] xl:text-xl text-gray-400"
                     >
-                      +91 8433700215
+                      +91 9021790600
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <IoCall className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                     <a
-                      href="tel:+91 8433700215"
+                      href="tel:+91 6394522829"
                       className="text-sm sm:text-base lg:text-[17px] xl:text-xl text-gray-400"
                     >
-                      +91 8433700215
+                      +91 6394522829
                     </a>
                   </div>
                 </div>
@@ -279,28 +279,28 @@ const Contact = () => {
                   <div className="flex items-center gap-3">
                     <TfiEmail className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                     <a
-                      href="mailto:tanul@unarrow.com"
+                      href="mailto:info@unarrow.com"
                       className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-400"
                     >
-                      tanul@unarrow.com
+                      info@unarrow.com
                     </a>
                   </div>
                   <div className="flex gap-4">
                     <div className="flex items-center gap-1">
                       <IoCall className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                       <a
-                        href="tel:+91 8433700215"
+                        href="tel:+91 9021790600"
                         className="text-sm sm:text-base lg:text-[17px] xl:text-xl text-gray-400"
                       >
-                        +91 8433700215 ,
+                        +91 9021790600 ,
                       </a>
                     </div>
                     <div className="flex items-center gap-1">
                       <a
-                        href="tel:+91 8433700215"
+                        href="tel:+91 6394522829"
                         className="text-sm sm:text-base lg:text-[17px] xl:text-xl text-gray-400"
                       >
-                        +91 8433700215
+                        +91 6394522829
                       </a>
                     </div>
                   </div>

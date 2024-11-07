@@ -3,9 +3,9 @@ import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import about2 from "../../assets/aboutUsImage/about_image.png";
 import Tanul from "../../assets/TeamMemberImage/Tanul.png";
-import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
+import Abhishek from "../../assets/TeamMemberImage/abhishek_gupta.jpg";
 import Ankur from "../../assets/TeamMemberImage//Ankur.png";
-import Prateek from "../../assets/TeamMemberImage/Prateek.png";
+import Prateek from "../../assets/TeamMemberImage/pratik_pandey.jpg";
 import CustomButton from "../customs/CustomButton";
 import { useNavigate } from "react-router";
 import CountUp from "react-countup"; // Import CountUp

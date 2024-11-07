@@ -1,11 +1,11 @@
 import React from "react";
 import Tanul from "../../assets/TeamMemberImage/Tanul.png";
-import Abhishek from "../../assets/TeamMemberImage/Abhishek.png";
+import Abhishek from "../../assets/TeamMemberImage/abhishek_gupta.jpg";
 import Ankur from "../../assets/TeamMemberImage/Ankur.png";
-import Prateek from "../../assets/TeamMemberImage/Prateek.png";
+import Prateek from "../../assets/TeamMemberImage/pratik_pandey.jpg";
 import '../styles/team.css'
 
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const OurTeamMember = () => {
   return (
@@ -24,10 +24,10 @@ const OurTeamMember = () => {
         {/* team-members-image */}
         <div className="grid grid-cols-2 md:grid-cols-4 justify-center mr-2 gap-2 md:gap-7 mt-4">
           {[
-            { img: Ankur, name: "Ankur", title: "Web Developer" },
+            { img: Ankur, name: "Ankur Sharma", title: "Web Developer" },
             { img: Abhishek, name: "Abhishek Gupta", title: "Social Media Expert" },
-            { img: Prateek, name: "Prateek Pandey", title: "SEO Expert" },
-            { img: Tanul, name: "Tanul", title: "UI/UX Designer" }
+            { img: Prateek, name: "Pratik Pandey", title: "SEO Expert" },
+            { img: Tanul, name: "Tanul Yadav", title: "UI/UX Designer" }
           ].map(member => (
             <div key={member.name} className="w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
               <div className="card profile-two">
@@ -46,11 +46,11 @@ const OurTeamMember = () => {
                       <FaLinkedinIn className="m-1 md:m-[6px] lg:m-3 hover:text-[#0A66C2]" />
                     </a>
                   </li>
-                  <li className="flex justify-center items-center">
+                  {/* <li className="flex justify-center items-center">
                     <a href="">
                       <FaTwitter className="m-1 md:m-[6px] lg:m-3 hover:text-[#1DA1F2]" />
                     </a>
-                  </li>
+                  </li> */}
                   <li className="flex justify-center items-center">
                     <a href="">
                       <FaInstagram className="m-1 md:m-[6px] lg:m-3 hover:text-[#F58529]" />
