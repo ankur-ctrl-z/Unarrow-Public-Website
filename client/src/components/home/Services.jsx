@@ -33,6 +33,30 @@ const services = [
     desc:
       "Search Engine Optimization (SEO) is a cornerstone of our digital solutions, designed to enhance your online visibility and drive organic traffic. Our team of SEO specialists employs advanced techniques to improve your website's ranking on major search engines.",
   },
+  {
+    id: 4,
+    serviceNo: "04",
+    service: "UI/UX Designing",
+    path: "/services/website-development",
+    desc:
+      "Our UI/UX design services focus on creating intuitive, user-centered designs that improve engagement and satisfaction. We understand the importance of seamless user experiences, and our designs are crafted to be both visually appealing and functional. From wireframes to final prototypes, we ensure your users enjoy a smooth journey across your digital platforms.",
+  },
+  {
+    id: 5,
+    serviceNo: "05",
+    service: "Pay Per Click",
+    path: "/services/website-development",
+    desc:
+      "Pay Per Click (PPC) advertising offers a strategic way to boost your visibility and drive targeted traffic to your website. We create customized PPC campaigns designed to generate high ROI, leveraging platforms like Google Ads and Bing. With continuous optimization and careful budget management, we help your brand reach the right audience, at the right time.",
+  },
+  {
+    id: 6,
+    serviceNo: "06",
+    service: "Website Redesigning",
+    path: "/services/website-development",
+    desc:
+      "A website redesign breathes new life into your digital presence, combining modern aesthetics with enhanced functionality. Our team specializes in refreshing outdated websites, improving user experience, and optimizing for mobile-first design. We use the latest design trends and technologies to ensure your website is engaging, intuitive, and optimized for all devices",
+  },
 ];
 
 const Services = () => {

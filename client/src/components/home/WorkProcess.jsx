@@ -10,7 +10,7 @@ const workProcessData = [
     service: "Project Idea",
     img: img3,
     desc:
-      "Lorem ipsum dolor sit amet consectetur. Placerat consequat scelerisque pellentesque semper cursus ut. Viverra et at diam ut.",
+      "It all starts with your vision! We listen closely to understand your unique project goals and requirements, setting a solid foundation for what we’ll achieve together.",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const workProcessData = [
     service: "Brainstorming",
     img: img2,
     desc:
-      "Lorem ipsum dolor sit amet consectetur. Placerat consequat scelerisque pellentesque semper cursus ut. Viverra et at diam ut.",
+      "Together, we dive into collaborative brainstorming, exploring innovative solutions, aligning on strategies, and refining ideas to create a roadmap that leads to success.",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const workProcessData = [
     service: "Execution",
     img: img1,
     desc:
-      "Lorem ipsum dolor sit amet consectetur. Placerat consequat scelerisque pellentesque semper cursus ut. Viverra et at diam ut.",
+      "With a clear plan in hand, our expert team brings your vision to life, ensuring precision, quality, and attention to every detail until the project is successfully completed.",
   },
 ];
 

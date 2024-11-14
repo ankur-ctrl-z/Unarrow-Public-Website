@@ -47,7 +47,7 @@ const ClientsFeedback = () => {
             clientName={"Dr. DS Dubey"} 
             clientProfession={'SJA Care Center'} 
             feedback={
-              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non.'
+              'Unarrow Digital Solutions delivered a stunning website that truly represents our brand and continues to manage it with precision. Their social media expertise has also boosted our online presence, keeping our audience engaged and connected. A dedicated and talented team!'
             } 
           />
           <ClientsReviewCard 
@@ -55,7 +55,7 @@ const ClientsFeedback = () => {
             clientName={'Dr. Khushbu Sharma '} 
             clientProfession={'Divine Fitness'}  
             feedback={
-              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, non.'
+              'Unarrow Digital Solutions has been invaluable in managing our social media and digital marketing. Their creative approach and consistent engagement have significantly boosted our online presence, connecting us with our audience in meaningful ways. It’s a pleasure seeing our brand grow with Unarrow’s expertise and dedication.'
             }
           />
         </Slider>

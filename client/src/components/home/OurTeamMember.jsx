@@ -24,10 +24,38 @@ const OurTeamMember = () => {
         {/* team-members-image */}
         <div className="grid grid-cols-2 md:grid-cols-4 justify-center mr-2 gap-2 md:gap-7 mt-4">
           {[
-            { img: Ankur, name: "Ankur Sharma", title: "Web Developer" },
-            { img: Abhishek, name: "Abhishek Gupta", title: "Social Media Expert" },
-            { img: Prateek, name: "Pratik Pandey", title: "SEO Expert" },
-            { img: Tanul, name: "Tanul Yadav", title: "UI/UX Designer" }
+            { 
+              img: Ankur, 
+              name: "Ankur Sharma", 
+              title: "Web Developer",
+              facebook: "#",
+              linkedin: "https://www.linkedin.com/in/ankur-sharma-3a6037226/",
+              instagram: "https://www.instagram.com/_ankur01_/"
+            },
+            { 
+              img: Abhishek, 
+              name: "Abhishek Gupta", 
+              title: "Social Media Expert",
+              facebook: "https://www.facebook.com/share/1CwuhiJs82/",
+              linkedin: "https://www.linkedin.com/in/codeabhi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              instagram: "https://www.instagram.com/abhishek.ads?igsh=dGlldGdocW9jdTB3"
+            },
+            { 
+              img: Prateek, 
+              name: "Pratik Pandey", 
+              title: "SEO Expert",
+              facebook: "https://www.facebook.com/share/1K5rm7611C/",
+              linkedin: "https://www.linkedin.com/in/pratik-pandey-327238183?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              instagram: "https://www.instagram.com/_pratik.pandey?igsh=MzNlNGNkZWQ4Mg=="
+            },
+            { 
+              img: Tanul, 
+              name: "Tanul Yadav", 
+              title: "UI/UX Designer",
+              facebook: "#",
+              linkedin: "https://www.linkedin.com/in/tanulyadav?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              instagram: "https://www.instagram.com/tanul_y/profilecard/?igsh=MTM5eHBhbng1Y2Fp "
+            }
           ].map(member => (
             <div key={member.name} className="w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
               <div className="card profile-two">
@@ -37,22 +65,17 @@ const OurTeamMember = () => {
 
                 <ul className="social-icons flex justify-center items-center lg:mt-5">
                   <li className="flex justify-center items-center">
-                    <a href="">
+                    <a href={member.facebook} target="_blank" rel="noopener noreferrer">
                       <FaFacebookF className="m-1 md:m-[6px] lg:m-3 hover:text-[#1877F2]" />
                     </a>
                   </li>
                   <li className="flex justify-center items-center">
-                    <a href="">
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                       <FaLinkedinIn className="m-1 md:m-[6px] lg:m-3 hover:text-[#0A66C2]" />
                     </a>
                   </li>
-                  {/* <li className="flex justify-center items-center">
-                    <a href="">
-                      <FaTwitter className="m-1 md:m-[6px] lg:m-3 hover:text-[#1DA1F2]" />
-                    </a>
-                  </li> */}
                   <li className="flex justify-center items-center">
-                    <a href="">
+                    <a href={member.instagram} target="_blank" rel="noopener noreferrer">
                       <FaInstagram className="m-1 md:m-[6px] lg:m-3 hover:text-[#F58529]" />
                     </a>
                   </li>
@@ -75,3 +98,4 @@ const OurTeamMember = () => {
 };
 
 export default OurTeamMember;
+

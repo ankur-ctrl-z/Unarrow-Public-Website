@@ -7,31 +7,31 @@ const Faqs = [
     id: 1,
     Question: "What services does your digital agency offer?",
     Answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, impedit.",
+      "At Unarrow Digital Solutions, we offer a comprehensive range of digital marketing and development services tailored to help businesses grow online. Our services include website design and development, social media management, SEO, content creation, paid advertising, and ongoing digital strategy consultation. We work with clients across diverse industries to build and elevate their online presence.",
   },
   {
     id: 2,
     Question: "How do you approach a new project?",
     Answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, impedit.",
+      "We start each project with a detailed consultation to understand your goals, brand, and audience. After establishing a clear roadmap, we brainstorm creative solutions and develop a customized strategy. Throughout each stage design, implementation, and optimization our team collaborates closely with you to ensure the project reflects your vision and meets your expectations.",
   },
   {
     id: 3,
     Question: "Do you offer ongoing support and maintenance?",
     Answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, impedit.",
+      "Yes, we provide ongoing support and maintenance to keep your digital assets performing at their best. Whether it’s managing website updates, monitoring social media, optimizing for SEO, or running analytics, our team is here to ensure your online presence remains strong and up-to-date.",
   },
   {
     id: 4,
     Question: "Do you provide content creation services?",
     Answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, impedit.",
+      "Absolutely. We specialize in creating engaging, tailored content for your brand, including blog posts, social media content, graphics, and multimedia. Our content creation services are designed to align with your brand’s tone and message, helping you connect effectively with your target audience.",
   },
   {
     id: 5,
     Question: "How can I get started with your agency?",
     Answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, impedit.",
+      "Getting started with us is easy! Simply reach out via our contact form, email, or phone, and we will schedule a free consultation to discuss your needs and goals. Our team will guide you through the process, answer any questions, and help develop a personalized plan to kickstart your digital journey with us.",
   },
 ];
 
