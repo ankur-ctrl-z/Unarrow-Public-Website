@@ -150,7 +150,7 @@ const OurWorks = () => {
 
                   <div className="flex flex-col gap-1 font-Roboto mt-1">
                     <h3 className="lg:text-[2.18rem] font-bold leading-normal text-white">
-                      Journey on Wheels
+                      Journey on Wheel
                     </h3>
                     <ul className="flex gap-3 text-gray-300">
                       <li>
@@ -163,16 +163,16 @@ const OurWorks = () => {
                         <div className="flex gap-2">
                           <div className="h-2 w-2 mt-[2px] lg:mt-2 rounded-full bg-red-600"></div>
                           <p className="font-normal text-[9px]">
-                            Web design & Development
+                            Web design
                           </p>
                         </div>
                       </li>
-                      <li>
+                      {/* <li>
                         <div className="flex gap-2">
                           <div className="h-2 w-2 mt-[2px] lg:mt-2 rounded-full bg-red-600"></div>
                           <p className="font-normal text-[9px]">SEO</p>
                         </div>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </a>
@@ -307,18 +307,18 @@ const OurWorks = () => {
                       <div className="flex gap-2">
                         <div className="h-2 w-2 lg:h-4 lg:w-4 mt-[2px] rounded-full bg-red-600"></div>
                         <p className="font-normal text-[9px] lg:text-[13px]">
-                          Web design & Development
+                          Web design 
                         </p>
                       </div>
                     </li>
-                    <li>
+                    {/* <li>
                       <div className="flex gap-2">
                         <div className="h-2 w-2 mt-[2px] lg:h-4 lg:w-4  rounded-full bg-red-600"></div>
                         <p className="font-normal text-[9px] lg:text-[13px]">
                           SEO
                         </p>
                       </div>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>

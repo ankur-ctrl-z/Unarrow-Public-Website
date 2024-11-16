@@ -23,6 +23,9 @@ const OurMoreWorks = () => {
             image={jow}
             projectName={"journeyonwheels"}
             bgColor={"#1a8978"}
+            branding={"Branding"}
+            webdevelopment={"Web design"}
+       
             path={"/ourworks/projects/journeyonwheels"}
           />
         </div>
@@ -32,6 +35,9 @@ const OurMoreWorks = () => {
             image={onetouch}
             projectName={"onetouchagency"}
             bgColor={"#354171"}
+            branding={"Branding"}
+            webdevelopment={"Web design & development"}
+            seo={"SEO"}
             path={"/ourworks/projects/ontouchagency"}
           />
         </div>
@@ -41,6 +47,9 @@ const OurMoreWorks = () => {
             image={sja}
             projectName={"sjacarecenter"}
             bgColor={"#664e8a"}
+            branding={"Branding"}
+            webdevelopment={"Web design & development"}
+            seo={"SEO"}
             path={"/ourworks/projects/sjacarecenter"}
           />
         </div>
@@ -50,6 +59,8 @@ const OurMoreWorks = () => {
             image={divineFitness}
             projectName={"Divine Fitness"}
             bgColor={"#891a43"}
+            branding={"Branding"}
+            webdevelopment={"Social Media Management"}
             path={"/ourworks/projects/divine-fitness"}
           />
         </div>

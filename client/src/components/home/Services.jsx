@@ -132,13 +132,13 @@ const Services = () => {
                       </h2>
 
                       {/* Service Description */}
-                      <p className="text-gray-400 text-[12px] w-[14rem] h-[12rem] lg:w-[16rem] xl:w-[20rem] md:text-[14px] xl:text-[16px] font-Roboto leading-relaxed">
+                      <p className="text-gray-200 text-[12px] w-[14rem] h-[12rem] lg:w-[16rem] xl:w-[20rem] md:text-[14px] xl:text-[16px] font-Roboto leading-relaxed">
                         {s.desc}
                       </p>
                     </div>
 
                     {/* Arrow Button */}
-                    <div className="flex justify-end mt-5">
+                    <div className="flex justify-end  mt-5">
                       <CustomArrow
                         icon={
                           hoveredCard === s.id ? (

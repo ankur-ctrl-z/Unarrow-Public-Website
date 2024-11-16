@@ -30,7 +30,7 @@ const CustomWork = ({ image, projectName, bgColor, path }) => {
             </li>
             <li>
               <div className="flex gap-2">
-                <div className="h-2 w-4 md:w-2 md:mt-1  rounded-full bg-red-600"></div>
+                <div className="h-2 w-4 md:w-2 md:mt-1 rounded-full bg-red-600"></div>
                 <p className="font-normal text-[9px] md:text-[13px]">
                   Web design & Development
                 </p>

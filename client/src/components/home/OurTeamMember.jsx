@@ -1,7 +1,7 @@
 import React from "react";
-import Tanul from "../../assets/TeamMemberImage/Tanul.png";
+import Tanul from "../../assets/TeamMemberImage/tanul.jpg";
 import Abhishek from "../../assets/TeamMemberImage/abhishek_gupta.jpg";
-import Ankur from "../../assets/TeamMemberImage/Ankur.png";
+import Ankur from "../../assets/TeamMemberImage/Ankur.jpg";
 import Prateek from "../../assets/TeamMemberImage/pratik_pandey.jpg";
 import '../styles/team.css'
 
@@ -60,7 +60,7 @@ const OurTeamMember = () => {
             <div key={member.name} className="w-full h-[12rem] md:w-[10.8rem] md:h-[14rem] lg:w-[14.5rem] xl:w-[20rem] xl:h-[24rem] hover:scale-105 duration-500 transition-all flex-shrink-0 border-2 rounded-3xl relative overflow-hidden">
               <div className="card profile-two">
                 <div className="card-image profile-img--two">
-                  <img src={member.img} alt={`profile of ${member.name}`} />
+                  <img src={member.img} className="w-full h-full bg-cover" alt={`profile of ${member.name}`} />
                 </div>
 
                 <ul className="social-icons flex justify-center items-center lg:mt-5">

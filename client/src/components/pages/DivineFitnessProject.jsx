@@ -11,23 +11,13 @@ import { useNavigate } from "react-router-dom";
 const Services = [
   {
     id: 1,
-    service: "UI/UX designing",
+    service: "Branding",
   },
 
   {
     id: 2,
-    service: "Development",
-  },
-
-  {
-    id: 3,
-    service: "SEO",
-  },
-
-  {
-    id: 4,
-    service: "Branding",
-  },
+    service: "Social Media Management",
+  }
 ];
 
 const DivineFitnessProjects = () => {

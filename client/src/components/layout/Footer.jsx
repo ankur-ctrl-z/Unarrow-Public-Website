@@ -95,7 +95,15 @@ const Footer = () => {
           {/* second part */}
           <div className="flex flex-col md:flex-row justify-between gap-10 mt-10">
             <div className="hidden md:block flex-col gap-3">
-              <h3 className="text-[#DB4A2B] font-semibold text-2xl">UNARROW.</h3>
+
+               {/* logo */}
+              <div className="flex gap-2">
+              <div div className="text-[#DB4A2B] flex flex-col  -mt-5 -ml-2 lg:text-[2.2rem]">
+                <p className="font-extrabold mt-1 md:mt-3 lg:mt-[3px] ml-2 text-[1.8rem] lg:text-[2.5rem] lg:ml-5 font-Archivo">unarrow.</p>
+                <p className=" text-[9.5px] ml-14 -mt-2 lg:text-[12px] font-semibold lg:-mt-3 lg:ml-[5.8rem] italic ">DIGITAL SOLUTIONS</p>
+              </div>
+             </div>
+
               <p className="text-white max-w-[12rem] font-Roboto">
                 The best Digital Solution Agency in the Market. We are here to build your Dream website on the go..
               </p>
@@ -114,12 +122,6 @@ const Footer = () => {
                 >
                   <FaWhatsapp />
                 </a>
-                {/* <a
-                  className="hover:text-[#DB4A2B] duration-300 transition-all"
-                  href=""
-                >
-                  <FaSquareXTwitter />
-                </a> */}
                 <a
                   className="hover:text-[#DB4A2B] duration-300 transition-all"
                   href="https://www.instagram.com/unarrowsolutions"
@@ -131,8 +133,14 @@ const Footer = () => {
 
             {/* for mobile view */}
             <div className="flex sm:hidden w-full gap-4">
-              <div className="w-[40%]">
-                <h3 className="text-[#DB4A2B] mt-1 font-semibold text-lg">UNARROW.</h3>
+              <div className="w-[40%]"> 
+
+              <div className="flex gap-2 -ml-2 mt-2">
+              <div div className="text-[#DB4A2B] flex flex-col  -mt-5 -ml-2 lg:text-[2.2rem]">
+                <p className="font-extrabold mt-1 md:mt-3 lg:mt-[3px] ml-2 text-[1.8rem] lg:text-[2.5rem] lg:ml-5 font-Archivo">unarrow.</p>
+                <p className=" text-[9.5px] ml-14 -mt-2 lg:text-[12px] font-semibold lg:-mt-3 lg:ml-[5.8rem] italic ">DIGITAL SOLUTIONS</p>
+              </div>
+             </div>
                 <div className="flex mt-2 gap-2 text-white text-xl">
                   <a className="hover:text-blue-600 duration-300 transition-all" href="https://www.linkedin.com/company/unarrow-digital-solutions">
                     <FaLinkedin />
@@ -140,9 +148,7 @@ const Footer = () => {
                   <a className="hover:text-green-600 duration-300 transition-all" href="https://wa.me/919021790600">
                     <FaWhatsapp />
                   </a>
-                  {/* <a className="hover:text-gray-900 duration-300 transition-all" href="">
-                    <FaSquareXTwitter />
-                  </a> */}
+                 
                   <a className="hover:text-orange-700 duration-300 transition-all" href="https://www.instagram.com/unarrowsolutions">
                     <FaInstagram />
                   </a>
@@ -200,8 +206,8 @@ const Footer = () => {
               <h3 className="flex text-white font-semibold text-sm lg:text-xl">
                 CONTACT
               </h3>
-              <div className="flex justify-center -ml-24 md:ml-0 items-center  gap-2 text-white text-sm lg:text-lg">
-                <TfiEmail />
+              <div className="flex gap-2 text-white text-sm lg:text-lg">
+                <TfiEmail className="mt-1 sm:mt-1.5" />
                 <a href="mailto:info@unarrow.com">
                   info@unarrow.com
                 </a>
