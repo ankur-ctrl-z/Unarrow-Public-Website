@@ -37,7 +37,7 @@ const services = [
     id: 4,
     serviceNo: "04",
     service: "UI/UX Designing",
-    path: "/services/ui-ux-designing",
+    path: "/services/ui-ux-design",
     desc:
       "UI/UX Designing ensures visually appealing and user-friendly digital experiences. Our team focuses on intuitive designs and seamless navigation, crafting wireframes to prototypes that captivate users. We prioritize both aesthetics and functionality, delivering engaging.",
   }
