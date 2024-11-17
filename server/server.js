@@ -1,7 +1,7 @@
 import express from 'express';
-import db from './db';
+import dotenv from 'dotenv';
+import cors from 'cors';
 import bodyParser from 'body-parser';
-import {connectDB, userModel} from './db';
 
 const app = express();
 import contactRouter from './route/contactRouter.js'
