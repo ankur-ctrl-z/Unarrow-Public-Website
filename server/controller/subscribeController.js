@@ -2,6 +2,7 @@ import Subscribe from "../models/subscribeModel.js";
 
 const subscribeController = async(req,res)=>{
     const {email} = req.body;
+    console.log("hiii")
 
     if(!email){
         return res.status(400).json({

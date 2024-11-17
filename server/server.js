@@ -2,11 +2,11 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-
 const app = express();
 import contactRouter from './route/contactRouter.js'
 import bockCallRouter from './route/bookCallRouter.js'
 import DBconnection from "./config/DBconnection.js";
+import subscribeRouter from "./route/subscribeRouter.js"
 
 dotenv.config();
 const PORT = process.env.PORT || 4000
@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 // default route
 app.use('/api',contactRouter)
 app.use('/api',bockCallRouter)
+app.use('/api',subscribeRouter)
 
 
 app.listen(PORT, ()=>{
