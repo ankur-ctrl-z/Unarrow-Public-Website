@@ -15,16 +15,6 @@ const Services = [
 
   {
     id: 2,
-    service: "Development",
-  },
-
-  {
-    id: 3,
-    service: "SEO",
-  },
-
-  {
-    id: 4,
     service: "Branding",
   },
 ];
