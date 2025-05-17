@@ -1,4 +1,4 @@
-# [Unarrow-Public-Website]
+# Unarrow-Public-Website
 
 ## Overview
 Unarrow-Public-Website is the official website for **Unarrow Digital Solutions**, a leading agency specializing in **website and application development**, **SEO**, **social media marketing**, and other digital solutions. Built using the **MERN stack** (MongoDB, Express, React, Node.js) and styled with **Tailwind CSS**, this website is designed to showcase the services, portfolio, and expertise of Unarrow Digital Solutions to the public.
