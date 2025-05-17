@@ -1,5 +1,5 @@
 import Contact from "../models/contactModel.js";
-    
+     
 
 const contactController = async (req, res) => {
     try {
