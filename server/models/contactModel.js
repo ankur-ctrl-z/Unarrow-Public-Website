@@ -1,4 +1,4 @@
-import mongoose from "mongoose"; 
+import mongoose from "mongoose";  
 
 // This is the user schema
 const ContactSchema = new mongoose.Schema({
