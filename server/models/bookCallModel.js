@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const bookCallSchema = new mongoose.Schema({
     firstName:{
         type:String,
-        required: true,
+        required: true, 
         match: [/^[A-Za-z]+$/, 'First name can only contain letters']
     },
 
